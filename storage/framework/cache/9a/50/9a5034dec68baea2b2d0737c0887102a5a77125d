@@ -1,0 +1,14 @@
+1608300569a:1:{s:8:"home.htm";a:8:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:117:"title = "Blog news"
+url = "/"
+layout = "default"
+==
+<div class="container">
+    <div class="row">
+
+    </div>
+</div>
+";s:5:"mtime";i:1608214407;s:6:"markup";s:64:"<div class="container">
+    <div class="row">
+
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:9:"Blog news";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";}}

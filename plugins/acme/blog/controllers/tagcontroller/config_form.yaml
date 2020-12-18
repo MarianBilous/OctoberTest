@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Tag Controller
+
+# Model Form Field configuration
+form: $/acme/blog/models/tagcontroller/fields.yaml
+
+# Model Class name
+modelClass: Acme\Blog\Models\TagController
+
+# Default redirect location
+defaultRedirect: acme/blog/tagcontroller
+
+# Create page
+create:
+    title: Create Tag Controller
+    redirect: acme/blog/tagcontroller/update/:id
+    redirectClose: acme/blog/tagcontroller
+
+# Update page
+update:
+    title: Edit Tag Controller
+    redirect: acme/blog/tagcontroller
+    redirectClose: acme/blog/tagcontroller
+
+# Preview page
+preview:
+    title: Preview Tag Controller
