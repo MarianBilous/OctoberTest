@@ -4,9 +4,9 @@ use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Articles Controller Back-end Controller
+ * Categories Back-end Controller
  */
-class ArticlesController extends Controller
+class Categories extends Controller
 {
     /**
      * @var array Behaviors that are implemented by this controller.
@@ -30,6 +30,6 @@ class ArticlesController extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Acme.Blog', 'blog', 'articlescontroller');
+        BackendMenu::setContext('Acme.Blog', 'blog', 'categories');
     }
 }

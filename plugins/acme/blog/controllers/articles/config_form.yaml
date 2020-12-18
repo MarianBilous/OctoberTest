@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Article
+
+# Model Form Field configuration
+form: $/acme/blog/models/article/fields.yaml
+
+# Model Class name
+modelClass: Acme\Blog\Models\Article
+
+# Default redirect location
+defaultRedirect: acme/blog/articles
+
+# Create page
+create:
+    title: Create Article
+    redirect: acme/blog/articles/update/:id
+    redirectClose: acme/blog/articles
+
+# Update page
+update:
+    title: Edit Article
+    redirect: acme/blog/articles
+    redirectClose: acme/blog/articles
+
+# Preview page
+preview:
+    title: Preview Article

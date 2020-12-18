@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/acme/blog/models/tagcontroller/columns.yaml
+list: $/acme/blog/models/tag/columns.yaml
 
 # Model Class name
-modelClass: Acme\Blog\Models\TagController
+modelClass: Acme\Blog\Models\Tag
 
 # List Title
-title: Manage Tag Controllers
+title: Manage Tags
 
 # Link URL for each record
-recordUrl: acme/blog/tagcontroller/update/:id
+recordUrl: acme/blog/tags/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

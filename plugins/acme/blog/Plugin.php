@@ -84,7 +84,7 @@ class Plugin extends PluginBase
         return [
             'blog' => [
                 'label'       => 'Blog',
-                'url'         => \Backend::url('acme/blog/tagcontroller'),
+                'url'         => \Backend::url('acme/blog/tags'),
                 'icon'        => 'icon-pencil',
                 'order'       => 500,
 
@@ -92,12 +92,17 @@ class Plugin extends PluginBase
                     'posts' => [
                         'label'       => 'Tag',
                         'icon'        => 'icon-copy',
-                        'url'         => \Backend::url('acme/blog/tagcontroller'),
+                        'url'         => \Backend::url('acme/blog/tags'),
                     ],
                     'categories' => [
                         'label'       => 'Categories',
                         'icon'        => 'icon-copy',
-                        'url'         => \Backend::url('acme/blog/category'),
+                        'url'         => \Backend::url('acme/blog/categories'),
+                    ],
+                    'articles' => [
+                        'label'       => 'Articles',
+                        'icon'        => 'icon-copy',
+                        'url'         => \Backend::url('acme/blog/articles'),
                     ]
                 ]
             ],

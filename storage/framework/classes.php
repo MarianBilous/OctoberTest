@@ -89,4 +89,11 @@
   'Acme\\Blog\\Components\\tag' => 'plugins\\acme\\blog\\components\\tag.php',
   'Acme\\Blog\\Components\\articles' => 'plugins\\acme\\blog\\components\\articles.php',
   'acme\\blog\\Controllers\\TagController' => 'plugins\\acme\\blog\\controllers\\TagController.php',
+  'acme\\blog\\Controllers\\tags' => 'plugins\\acme\\blog\\controllers\\tags.php',
+  'Acme\\Blog\\Models\\Tag' => 'plugins\\acme\\blog\\models\\Tag.php',
+  'acme\\blog\\Controllers\\categories' => 'plugins\\acme\\blog\\controllers\\categories.php',
+  'Acme\\Blog\\Models\\Category' => 'plugins\\acme\\blog\\models\\Category.php',
+  'acme\\blog\\Controllers\\articless' => 'plugins\\acme\\blog\\controllers\\articless.php',
+  'acme\\blog\\Controllers\\articles' => 'plugins\\acme\\blog\\controllers\\articles.php',
+  'Acme\\Blog\\Models\\Article' => 'plugins\\acme\\blog\\models\\Article.php',
 );

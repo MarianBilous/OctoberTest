@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/acme/blog/models/articlescontroller/columns.yaml
+list: $/acme/blog/models/article/columns.yaml
 
 # Model Class name
-modelClass: Acme\Blog\Models\ArticlesController
+modelClass: Acme\Blog\Models\Article
 
 # List Title
-title: Manage Articles Controllers
+title: Manage Articles
 
 # Link URL for each record
-recordUrl: acme/blog/articlescontroller/update/:id
+recordUrl: acme/blog/articles/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

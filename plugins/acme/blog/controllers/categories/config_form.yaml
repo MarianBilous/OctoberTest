@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/acme/blog/models/category/fields.yaml
+
+# Model Class name
+modelClass: Acme\Blog\Models\Category
+
+# Default redirect location
+defaultRedirect: acme/blog/categories
+
+# Create page
+create:
+    title: Create Category
+    redirect: acme/blog/categories/update/:id
+    redirectClose: acme/blog/categories
+
+# Update page
+update:
+    title: Edit Category
+    redirect: acme/blog/categories
+    redirectClose: acme/blog/categories
+
+# Preview page
+preview:
+    title: Preview Category

@@ -3,6 +3,36 @@
   <component name="ChangeListManager">
     <list default="true" id="322b4790-99d3-4cda-9a8b-a695c5a14bce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/Plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/Plugin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/ArticlesController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/CategoryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/TagController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/articlescontroller/_list_toolbar.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/articlescontroller/config_form.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/articlescontroller/config_list.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/articlescontroller/create.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/articlescontroller/index.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/articlescontroller/preview.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/articlescontroller/update.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/categorycontroller/_list_toolbar.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/categorycontroller/config_form.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/categorycontroller/config_list.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/categorycontroller/create.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/categorycontroller/index.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/categorycontroller/preview.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/categorycontroller/update.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/tagcontroller/_list_toolbar.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/tagcontroller/config_form.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/tagcontroller/config_list.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/tagcontroller/create.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/tagcontroller/index.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/tagcontroller/preview.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/tagcontroller/update.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/updates/create_articles_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/97/37/9737833e426f53b3dcb4d98fdcb68c76762765de" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/97/37/9737833e426f53b3dcb4d98fdcb68c76762765de" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/0RlpTMC5yDFj4PRRdxQDPDhKTsMiplugwkc2rFSO" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/0RlpTMC5yDFj4PRRdxQDPDhKTsMiplugwkc2rFSO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/system.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/system.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +83,7 @@
       <updated>1608209158732</updated>
       <workItem from="1608209160150" duration="11270000" />
       <workItem from="1608225636442" duration="3508000" />
-      <workItem from="1608277755542" duration="20234000" />
+      <workItem from="1608277755542" duration="21443000" />
     </task>
     <servers />
   </component>

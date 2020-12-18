@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Tag
+
+# Model Form Field configuration
+form: $/acme/blog/models/tag/fields.yaml
+
+# Model Class name
+modelClass: Acme\Blog\Models\Tag
+
+# Default redirect location
+defaultRedirect: acme/blog/tags
+
+# Create page
+create:
+    title: Create Tag
+    redirect: acme/blog/tags/update/:id
+    redirectClose: acme/blog/tags
+
+# Update page
+update:
+    title: Edit Tag
+    redirect: acme/blog/tags
+    redirectClose: acme/blog/tags
+
+# Preview page
+preview:
+    title: Preview Tag

@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('acme/blog/articlescontroller') ?>">Articles Controller</a></li>
+        <li><a href="<?= Backend::url('acme/blog/articles') ?>">Articles</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -19,11 +19,10 @@
                     type="submit"
                     data-request="onSave"
                     data-browser-validate
-                    data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving ArticlesController..."
+                    data-load-indicator="Creating Article..."
                     class="btn btn-primary">
-                    <u>S</u>ave
+                    Create
                 </button>
                 <button
                     type="button"
@@ -31,19 +30,12 @@
                     data-browser-validate
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving ArticlesController..."
+                    data-load-indicator="Creating Article..."
                     class="btn btn-default">
-                    Save and Close
-                </button>
-                <button
-                    type="button"
-                    class="oc-icon-trash-o btn-icon danger pull-right"
-                    data-request="onDelete"
-                    data-load-indicator="Deleting ArticlesController..."
-                    data-request-confirm="Delete this articlescontroller?">
+                    Create and Close
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('acme/blog/articlescontroller') ?>">Cancel</a>
+                    or <a href="<?= Backend::url('acme/blog/articles') ?>">Cancel</a>
                 </span>
             </div>
         </div>
@@ -53,6 +45,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('acme/blog/articlescontroller') ?>" class="btn btn-default">Return to articles controller list</a></p>
+    <p><a href="<?= Backend::url('acme/blog/articles') ?>" class="btn btn-default">Return to articles list</a></p>
 
 <?php endif ?>
