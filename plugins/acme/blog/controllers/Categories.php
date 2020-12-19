@@ -27,6 +27,9 @@ class Categories extends Controller
      */
     public $listConfig = 'config_list.yaml';
 
+    /**
+     * @var string Configuration file for the `ReorderController` behavior.
+     */
     public $reorderConfig = 'config_reorder.yaml';
 
     public function __construct()

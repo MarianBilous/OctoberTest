@@ -16,16 +16,11 @@ class CreateArticlesTable extends Migration
             $table->text('content');
             $table->string('image', 255)->nullable();
             $table->integer('category_id')->unsigned();
-            $table->integer('tag_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('category_id')
                 ->references('id')
                 ->on('acme_blog_categories')
-                ->onDelete('cascade');
-            $table->foreign('tag_id')
-                ->references('id')
-                ->on('acme_blog_tags')
                 ->onDelete('cascade');
         });
     }

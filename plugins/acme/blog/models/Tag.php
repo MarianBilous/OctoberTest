@@ -8,6 +8,24 @@ use Model;
 class Tag extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use \October\Rain\Database\Traits\Sluggable;
+    use \October\Rain\Database\Traits\Sortable;
+
+    /**
+     * @var array Generate slugs for these attributes.
+     */
+    protected $slugs = [
+        'slug' => 'name'
+    ];
+
+    public function beforeValidate()
+    {
+        if (empty($this->sort_order))
+        {
+            $this->sort_order = static::max('sort_order') + 1;
+        }
+    }
+
 
     /**
      * @var string The database table used by the model.
@@ -22,7 +40,11 @@ class Tag extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'name',
+        'slug',
+        'visibility'
+    ];
 
     /**
      * @var array Validation rules for attributes

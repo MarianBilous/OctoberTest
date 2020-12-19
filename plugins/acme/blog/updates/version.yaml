@@ -3,6 +3,8 @@
   - Create articles table
   - Create categories table
   - Create tags table
+  - Create articleTags table
   - create_categories_table.php
   - create_tags_table.php
   - create_articles_table.php
+  - create_article_tags_table.php

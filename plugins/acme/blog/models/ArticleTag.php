@@ -3,41 +3,16 @@
 use Model;
 
 /**
- * Category Model
+ * ArticleTag Model
  */
-class Category extends Model
+class ArticleTag extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    use \October\Rain\Database\Traits\Sluggable;
-    use \October\Rain\Database\Traits\Sortable;
-    //use \October\Rain\Database\Traits\NestedTree;
-
-    /**
-     * @var array Generate slugs for these attributes.
-     */
-    protected $slugs = [
-        'slug' => 'name'
-    ];
-
-//    public function afterSave() {
-//        if ($this->position == null) {
-//            $this->position = $this->id;
-//            $this->save();
-//        }
-//    }
-
-    public function beforeValidate()
-    {
-        if (empty($this->sort_order))
-        {
-            $this->sort_order = static::max('sort_order') + 1;
-        }
-    }
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'acme_blog_categories';
+    public $table = 'acme_blog_article_tags';
 
     /**
      * @var array Guarded fields
@@ -47,11 +22,7 @@ class Category extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [
-        'name',
-        'slug',
-        'visibility',
-    ];
+    protected $fillable = [];
 
     /**
      * @var array Validation rules for attributes
