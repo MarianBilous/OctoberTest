@@ -1,0 +1,20 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: Reorder Categories
+
+
+# Attribute name
+nameFrom: sort_order
+
+# Model Class name
+modelClass: Acme\Blog\Models\Category
+
+
+
+# Toolbar widget configuration
+toolbar:
+  # Partial for toolbar buttons
+  buttons: list_toolbar

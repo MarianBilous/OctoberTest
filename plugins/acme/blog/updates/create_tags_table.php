@@ -13,7 +13,7 @@ class CreateTagsTable extends Migration
             $table->increments('id')->unsigned();
             $table->string('name', 100);
             $table->string('slug')->unique();
-            $table->integer('position');
+            $table->integer('sort_order')->nullable();
             $table->boolean('visibility');
             $table->timestamps();
         });

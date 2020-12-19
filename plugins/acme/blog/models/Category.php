@@ -8,6 +8,28 @@ use Model;
 class Category extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use \October\Rain\Database\Traits\Sluggable;
+    use \October\Rain\Database\Traits\Sortable;
+    //use \October\Rain\Database\Traits\NestedTree;
+
+    protected $slugs = [
+        'slug' => 'name'
+    ];
+
+//    public function afterSave() {
+//        if ($this->position == null) {
+//            $this->position = $this->id;
+//            $this->save();
+//        }
+//    }
+
+    public function beforeValidate()
+    {
+        if (empty($this->sort_order))
+        {
+            $this->sort_order = static::max('sort_order') + 1;
+        }
+    }
 
     /**
      * @var string The database table used by the model.
@@ -22,7 +44,11 @@ class Category extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'name',
+        'slug',
+        'visibility',
+    ];
 
     /**
      * @var array Validation rules for attributes
