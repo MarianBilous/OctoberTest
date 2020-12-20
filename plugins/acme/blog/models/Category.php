@@ -90,7 +90,11 @@ class Category extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [];
+
+    public $hasMany = [
+        'category' => 'Acme\Blog\Models\Article'
+    ];
+
     public $belongsTo = [];
     public $belongsToMany = [];
     public $morphTo = [];

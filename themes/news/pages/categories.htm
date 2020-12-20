@@ -1,0 +1,14 @@
+title = "Categories"
+url = "/categories"
+layout = "default"
+is_hidden = 0
+
+[Articles]
+==
+<ul>
+    {% for category in Articles.getCategory %}
+    <li>{{ category.name }}</li>
+    {% endfor %}
+</ul>
+
+

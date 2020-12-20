@@ -29,14 +29,14 @@ class __TwigTemplate_d0dcb3e97d98279d13a46baea8a56015fc2e7ccfdb8e118b0ff696cbd7f
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array();
-        $filters = array();
+        $tags = array("for" => 3);
+        $filters = array("escape" => 5);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                [],
-                [],
+                ['for'],
+                ['escape'],
                 []
             );
         } catch (SecurityError $e) {
@@ -59,11 +59,40 @@ class __TwigTemplate_d0dcb3e97d98279d13a46baea8a56015fc2e7ccfdb8e118b0ff696cbd7f
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"container\">
-    <div class=\"row\">
+        echo "<div class=\"col-sm-3 navbar-container\" style=\"margin-left: 0px\">
+    <div class=\"list-group\" style=\"cursor: pointer\">
+        ";
+        // line 3
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["Articles"] ?? null), "getCategory", [], "any", false, false, true, 3));
+        foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
+            // line 4
+            echo "        <a class=\"list-group-item list-group-item-action\">
+            ";
+            // line 5
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, true, 5), 5, $this->source), "html", null, true);
+            echo "
+        </a>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 8
+        echo "    </div>
+</div>
 
+<div class=\"col-sm-9 content-container\">
+    <div class=\"m-4\">
+gsdgsdg
     </div>
-</div>";
+</div>
+
+<!--<div class=\"container\">-->
+<!--    <div class=\"row\">-->
+
+<!--    </div>-->
+<!--</div>-->";
     }
 
     public function getTemplateName()
@@ -71,17 +100,38 @@ class __TwigTemplate_d0dcb3e97d98279d13a46baea8a56015fc2e7ccfdb8e118b0ff696cbd7f
         return "C:\\OpenServer\\domains\\October/themes/news/pages/home.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  62 => 1,);
+        return array (  82 => 8,  73 => 5,  70 => 4,  66 => 3,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"container\">
-    <div class=\"row\">
-
+        return new Source("<div class=\"col-sm-3 navbar-container\" style=\"margin-left: 0px\">
+    <div class=\"list-group\" style=\"cursor: pointer\">
+        {% for category in Articles.getCategory %}
+        <a class=\"list-group-item list-group-item-action\">
+            {{ category.name }}
+        </a>
+        {% endfor %}
     </div>
-</div>", "C:\\OpenServer\\domains\\October/themes/news/pages/home.htm", "");
+</div>
+
+<div class=\"col-sm-9 content-container\">
+    <div class=\"m-4\">
+gsdgsdg
+    </div>
+</div>
+
+<!--<div class=\"container\">-->
+<!--    <div class=\"row\">-->
+
+<!--    </div>-->
+<!--</div>-->", "C:\\OpenServer\\domains\\October/themes/news/pages/home.htm", "");
     }
 }

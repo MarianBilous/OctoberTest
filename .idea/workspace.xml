@@ -2,22 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="322b4790-99d3-4cda-9a8b-a695c5a14bce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plugins/acme/blog/controllers/tags/config_reorder.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/acme/blog/controllers/tags/reorder.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/controllers/Categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/Tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/controllers/Tags.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/controllers/tags/_list_toolbar.htm" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/controllers/tags/_list_toolbar.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/Plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/Plugin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/components/Articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/components/Articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/components/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/components/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/ArticleTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/ArticleTag.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/Tag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/tag/columns.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/tag/columns.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/tag/fields.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/tag/fields.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/article/fields.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/article/fields.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/acme/blog/updates/create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/updates/create_articles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/updates/create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/updates/create_tags_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/updates/version.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/updates/version.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/cache/12/3b/default.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/12/3b/default.htm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/cache/c2/0d/header.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/c2/0d/header.htm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/cache/f3/30/home.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/f3/30/home.htm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/twig/82/82bf1ebb8e1252d604a19940f8fb1f48fd45072d012220cd4036ead798c4a457.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/82/82bf1ebb8e1252d604a19940f8fb1f48fd45072d012220cd4036ead798c4a457.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/twig/83/83be4e7ae68274611e45cf2502c4ca794e69b914f93fb69c85fcb5978838b3e8.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/83/83be4e7ae68274611e45cf2502c4ca794e69b914f93fb69c85fcb5978838b3e8.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/twig/e7/e709e13470875551aa37954c2dc87d7bdbe0abe6fe4627b8a06d062c4d5d78d3.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/e7/e709e13470875551aa37954c2dc87d7bdbe0abe6fe4627b8a06d062c4d5d78d3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/11/de/11de31e1eabb2682cf62ee9c9ccb0630f1019006" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/11/de/11de31e1eabb2682cf62ee9c9ccb0630f1019006" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/22/43/2243f500ae1632e1e609a9d4d08e7bad65800071" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/22/43/2243f500ae1632e1e609a9d4d08e7bad65800071" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/5b/48/5b48653e3f656222650fdeacce659f0a7d8c6a1f" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/5b/48/5b48653e3f656222650fdeacce659f0a7d8c6a1f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/72/4d/724d64623b82cdd367a46a1a3611b8fce75faedf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/72/4d/724d64623b82cdd367a46a1a3611b8fce75faedf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/77/61/77616e1c5e0d202cb4cf522bddafaebf56f27660" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/77/61/77616e1c5e0d202cb4cf522bddafaebf56f27660" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/97/37/9737833e426f53b3dcb4d98fdcb68c76762765de" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/97/37/9737833e426f53b3dcb4d98fdcb68c76762765de" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/R4yQdjGcvdmb7QFfbnwSMQPazWBYZkfqPOb4cobi" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/R4yQdjGcvdmb7QFfbnwSMQPazWBYZkfqPOb4cobi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/9a/50/9a5034dec68baea2b2d0737c0887102a5a77125d" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/9a/50/9a5034dec68baea2b2d0737c0887102a5a77125d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/a0/c9/a0c910eb995ad1e9281e5bb05187281e039e242f" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/a0/c9/a0c910eb995ad1e9281e5bb05187281e039e242f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/b1/b6/b1b6b61b6cd58fcbec08f9d00687d524901e8a6d" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/b1/b6/b1b6b61b6cd58fcbec08f9d00687d524901e8a6d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/b8/08/b8081fe352bd0635d067d740a4b1ba44a401d6d0" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/b8/08/b8081fe352bd0635d067d740a4b1ba44a401d6d0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/d0/1e/d01e8e95ac402ba16ad83ad09f6851991c3b6212" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/d0/1e/d01e8e95ac402ba16ad83ad09f6851991c3b6212" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/R4yQdjGcvdmb7QFfbnwSMQPazWBYZkfqPOb4cobi" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/system.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/system.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/news/layouts/default.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/layouts/default.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/news/pages/home.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/pages/home.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/news/partials/site/header.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/partials/site/header.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +88,8 @@
       <workItem from="1608225636442" duration="3508000" />
       <workItem from="1608277755542" duration="22366000" />
       <workItem from="1608310741569" duration="2242000" />
-      <workItem from="1608366478329" duration="18391000" />
+      <workItem from="1608366478329" duration="20077000" />
+      <workItem from="1608450621470" duration="17083000" />
     </task>
     <servers />
   </component>

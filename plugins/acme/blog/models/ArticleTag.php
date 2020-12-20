@@ -22,7 +22,10 @@ class ArticleTag extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'article_id',
+        'tag_id',
+    ];
 
     /**
      * @var array Validation rules for attributes

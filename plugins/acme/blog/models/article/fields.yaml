@@ -3,6 +3,39 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    name:
+        label: Name
+    content:
+        type: richeditor
+        toolbarButtons: bold|italic|underline|align|formatOL|formatUL|outdent|indent
+        size: huge
+    category_id:
+        label: Categories
+        type: relation
+        nameFrom: name
+#        span: right
+    tags:
+        label: Tags
+        type: tagselector
+#        span: left
+    visibility:
+        label: Display content
+        type: checkbox
+        default: true
+        span: right
+    image:
+        label: Avatar
+        type: fileupload
+        mode: image
+        imageHeight: auto
+        imageWidth: 260
+        span: left
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto

@@ -16,6 +16,7 @@ class CreateArticlesTable extends Migration
             $table->text('content');
             $table->string('image', 255)->nullable();
             $table->integer('category_id')->unsigned();
+            $table->boolean('visibility');
             $table->timestamps();
 
             $table->foreign('category_id')

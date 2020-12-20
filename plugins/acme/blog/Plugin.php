@@ -73,6 +73,13 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerFormWidgets()
+    {
+        return [
+            'Acme\Blog\FormWidgets\TagSelector' => 'tagselector'
+        ];
+    }
+
     /**
      * Registers back-end navigation items for this plugin.
      *

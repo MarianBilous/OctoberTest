@@ -65,17 +65,30 @@ class __TwigTemplate_05708050dfaee144c3a5b9c3deff7f65796f1abe772845314a99c27e575
         // line 3
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\">
-            Home
+            <h4>
+                <b>Home</b>
+            </h4>
         </a>
 
         <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
             <!-- Left Side Of Navbar -->
             <ul class=\"navbar-nav mr-auto\">
+                <a class=\"navbar-brand\" href=\"";
+        // line 12
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories");
+        echo "\">
+                    Category
+                </a>
+                <a class=\"navbar-brand\" href=\"";
+        // line 15
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("tags");
+        echo "\">
+                    Tags
+                </a>
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class=\"navbar-nav ml-auto\">
-
             </ul>
         </div>
     </div>
@@ -94,7 +107,7 @@ class __TwigTemplate_05708050dfaee144c3a5b9c3deff7f65796f1abe772845314a99c27e575
 
     public function getDebugInfo()
     {
-        return array (  66 => 3,  62 => 1,);
+        return array (  84 => 15,  78 => 12,  66 => 3,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -102,17 +115,24 @@ class __TwigTemplate_05708050dfaee144c3a5b9c3deff7f65796f1abe772845314a99c27e575
         return new Source("<nav class=\"navbar navbar-expand-md navbar-dark bg-dark shadow-sm\">
     <div class=\"container\">
         <a class=\"navbar-brand\" href=\"{{ 'home'|page }}\">
-            Home
+            <h4>
+                <b>Home</b>
+            </h4>
         </a>
 
         <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
             <!-- Left Side Of Navbar -->
             <ul class=\"navbar-nav mr-auto\">
+                <a class=\"navbar-brand\" href=\"{{ 'categories'|page }}\">
+                    Category
+                </a>
+                <a class=\"navbar-brand\" href=\"{{ 'tags'|page }}\">
+                    Tags
+                </a>
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class=\"navbar-nav ml-auto\">
-
             </ul>
         </div>
     </div>

@@ -1,34 +1,48 @@
-1608296827a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:518:"<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+1608469873a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:804:"<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ 'home'|page }}">
-            Home
+            <h4>
+                <b>Home</b>
+            </h4>
         </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
+                <a class="navbar-brand" href="{{ 'categories'|page }}">
+                    Category
+                </a>
+                <a class="navbar-brand" href="{{ 'tags'|page }}">
+                    Tags
+                </a>
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-
             </ul>
         </div>
     </div>
-</nav>";s:5:"mtime";i:1608212270;s:6:"markup";s:518:"<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+</nav>";s:5:"mtime";i:1608468649;s:6:"markup";s:804:"<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ 'home'|page }}">
-            Home
+            <h4>
+                <b>Home</b>
+            </h4>
         </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
+                <a class="navbar-brand" href="{{ 'categories'|page }}">
+                    Category
+                </a>
+                <a class="navbar-brand" href="{{ 'tags'|page }}">
+                    Tags
+                </a>
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-
             </ul>
         </div>
     </div>

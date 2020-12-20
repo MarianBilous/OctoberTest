@@ -11,6 +11,10 @@ class Tag extends ComponentBase
             'description' => 'No description provided yet...'
         ];
     }
+    public function getTag()
+    {
+        return \Acme\Blog\Models\Tag::all();
+    }
 
     public function defineProperties()
     {

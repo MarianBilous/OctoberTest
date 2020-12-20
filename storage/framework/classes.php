@@ -96,4 +96,5 @@
   'acme\\blog\\Controllers\\articless' => 'plugins\\acme\\blog\\controllers\\articless.php',
   'acme\\blog\\Controllers\\articles' => 'plugins\\acme\\blog\\controllers\\articles.php',
   'Acme\\Blog\\Models\\Article' => 'plugins\\acme\\blog\\models\\Article.php',
+  'Acme\\Blog\\FormWidgets\\TagSelector' => 'plugins\\acme\\blog\\formwidgets\\TagSelector.php',
 );

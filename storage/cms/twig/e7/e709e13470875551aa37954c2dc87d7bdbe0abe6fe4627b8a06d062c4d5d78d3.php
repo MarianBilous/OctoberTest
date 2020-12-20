@@ -29,7 +29,7 @@ class __TwigTemplate_c90b6314f01bc7c502ed664fe7281d1ece6ce3d8364965ead71585fb578
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("styles" => 7, "partial" => 13, "page" => 18, "framework" => 23, "scripts" => 24);
+        $tags = array("styles" => 7, "partial" => 13, "page" => 20, "framework" => 28, "scripts" => 29);
         $filters = array("escape" => 5, "theme" => 6);
         $functions = array();
 
@@ -91,19 +91,24 @@ class __TwigTemplate_c90b6314f01bc7c502ed664fe7281d1ece6ce3d8364965ead71585fb578
 
         <!-- Content -->
         <section id=\"layout-content\">
-            ";
-        // line 18
+            <div class=\"container-fluid\">
+                <div class=\"row\">
+                    ";
+        // line 20
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 19
-        echo "        </section>
+        // line 21
+        echo "                </div>
+            </div>
+
+        </section>
 
         <!-- Scripts -->
         <script src=\"";
-        // line 22
+        // line 27
         echo "assets/js/bootstrap.js|theme";
         echo "\"></script>
         ";
-        // line 23
+        // line 28
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -114,11 +119,11 @@ class __TwigTemplate_c90b6314f01bc7c502ed664fe7281d1ece6ce3d8364965ead71585fb578
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 24
+        // line 29
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 25
+        // line 30
         echo "    </body>
 </html>";
     }
@@ -135,7 +140,7 @@ class __TwigTemplate_c90b6314f01bc7c502ed664fe7281d1ece6ce3d8364965ead71585fb578
 
     public function getDebugInfo()
     {
-        return array (  122 => 25,  118 => 24,  107 => 23,  103 => 22,  98 => 19,  96 => 18,  90 => 14,  86 => 13,  79 => 8,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
+        return array (  127 => 30,  123 => 29,  112 => 28,  108 => 27,  100 => 21,  98 => 20,  90 => 14,  86 => 13,  79 => 8,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -157,7 +162,12 @@ class __TwigTemplate_c90b6314f01bc7c502ed664fe7281d1ece6ce3d8364965ead71585fb578
 
         <!-- Content -->
         <section id=\"layout-content\">
-            {% page %}
+            <div class=\"container-fluid\">
+                <div class=\"row\">
+                    {% page %}
+                </div>
+            </div>
+
         </section>
 
         <!-- Scripts -->

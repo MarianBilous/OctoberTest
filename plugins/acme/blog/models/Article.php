@@ -22,7 +22,14 @@ class Article extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'name',
+        'slug',
+        'content',
+        'image',
+        'category_id',
+        'visibility',
+    ];
 
     /**
      * @var array Validation rules for attributes
@@ -60,13 +67,29 @@ class Article extends Model
     /**
      * @var array Relations
      */
-    public $hasOne = [];
+    public $hasOne = [
+
+    ];
     public $hasMany = [];
-    public $belongsTo = [];
-    public $belongsToMany = [];
+    public $belongsTo = [
+        'category_id' => 'Acme\Blog\Models\Category'
+//        [
+//            'table' => 'acme_blog_categories',
+//            'order' => 'name'
+//        ]
+    ];
+    public $belongsToMany = [
+        'tags' => [
+            'Acme\Blog\Models\Tag',
+            'table' => 'acme_blog_article_tags',
+            'order' => 'name'
+        ]
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
+    public $attachOne = [
+        'image' => 'System\Models\File'
+    ];
     public $attachMany = [];
 }

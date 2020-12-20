@@ -1,0 +1,19 @@
+1608469873a:1:{s:14:"categories.htm";a:10:{s:8:"fileName";s:14:"categories.htm";s:7:"content";s:213:"title = "Categories"
+url = "/categories"
+layout = "default"
+is_hidden = 0
+
+[Articles]
+==
+<ul>
+    {% for category in Articles.getCategory %}
+    <li>{{ category.name }}</li>
+    {% endfor %}
+</ul>
+
+
+";s:5:"mtime";i:1608468649;s:6:"markup";s:111:"<ul>
+    {% for category in Articles.getCategory %}
+    <li>{{ category.name }}</li>
+    {% endfor %}
+</ul>";s:4:"code";N;s:5:"title";s:10:"Categories";s:3:"url";s:11:"/categories";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:8:"Articles";a:0:{}}}

@@ -1,9 +1,28 @@
 title = "Blog news"
 url = "/"
 layout = "default"
-==
-<div class="container">
-    <div class="row">
+is_hidden = 0
 
+[Articles]
+==
+<div class="col-sm-3 navbar-container" style="margin-left: 0px">
+    <div class="list-group" style="cursor: pointer">
+        {% for category in Articles.getCategory %}
+        <a class="list-group-item list-group-item-action">
+            {{ category.name }}
+        </a>
+        {% endfor %}
     </div>
 </div>
+
+<div class="col-sm-9 content-container">
+    <div class="m-4">
+gsdgsdg
+    </div>
+</div>
+
+<!--<div class="container">-->
+<!--    <div class="row">-->
+
+<!--    </div>-->
+<!--</div>-->

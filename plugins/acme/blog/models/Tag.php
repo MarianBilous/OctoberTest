@@ -85,7 +85,14 @@ class Tag extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [];
-    public $belongsToMany = [];
+
+    public $belongsToMany = [
+        'articles' => [
+            'Acme\Blog\Models\Article',
+            'table' => 'acme_blog_article_tags',
+            'order' => 'name'
+        ]
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
