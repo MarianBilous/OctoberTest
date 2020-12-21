@@ -3,12 +3,10 @@ url = "/categories"
 layout = "default"
 is_hidden = 0
 
-[Articles]
+[Category]
 ==
 <ul>
-    {% for category in Articles.getCategory %}
+    {% for category in Category.getCategory %}
     <li>{{ category.name }}</li>
     {% endfor %}
 </ul>
-
-

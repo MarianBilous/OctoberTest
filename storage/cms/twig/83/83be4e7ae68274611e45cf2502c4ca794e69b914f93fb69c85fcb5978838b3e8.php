@@ -64,7 +64,7 @@ class __TwigTemplate_d0dcb3e97d98279d13a46baea8a56015fc2e7ccfdb8e118b0ff696cbd7f
         ";
         // line 3
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["Articles"] ?? null), "getCategory", [], "any", false, false, true, 3));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["Category"] ?? null), "getCategory", [], "any", false, false, true, 3));
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
             // line 4
             echo "        <a class=\"list-group-item list-group-item-action\">
@@ -114,7 +114,7 @@ gsdgsdg
     {
         return new Source("<div class=\"col-sm-3 navbar-container\" style=\"margin-left: 0px\">
     <div class=\"list-group\" style=\"cursor: pointer\">
-        {% for category in Articles.getCategory %}
+        {% for category in Category.getCategory %}
         <a class=\"list-group-item list-group-item-action\">
             {{ category.name }}
         </a>

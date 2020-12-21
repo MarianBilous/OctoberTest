@@ -8,7 +8,12 @@ use Model;
 class Article extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use \October\Rain\Database\Traits\Sluggable;
 
+
+    protected $slugs = [
+        'slug' => 'name'
+    ];
     /**
      * @var string The database table used by the model.
      */
@@ -44,7 +49,7 @@ class Article extends Model
     /**
      * @var array Attributes to be cast to JSON
      */
-    protected $jsonable = [];
+    //protected $jsonable = [];
 
     /**
      * @var array Attributes to be appended to the API representation of the model (ex. toArray())
@@ -72,14 +77,10 @@ class Article extends Model
     ];
     public $hasMany = [];
     public $belongsTo = [
-        'category_id' => 'Acme\Blog\Models\Category'
-//        [
-//            'table' => 'acme_blog_categories',
-//            'order' => 'name'
-//        ]
+        'category' => 'Acme\Blog\Models\Category'
     ];
     public $belongsToMany = [
-        'tags' => [
+        'tag' => [
             'Acme\Blog\Models\Tag',
             'table' => 'acme_blog_article_tags',
             'order' => 'name'

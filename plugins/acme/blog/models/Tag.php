@@ -87,7 +87,7 @@ class Tag extends Model
     public $belongsTo = [];
 
     public $belongsToMany = [
-        'articles' => [
+        'article' => [
             'Acme\Blog\Models\Article',
             'table' => 'acme_blog_article_tags',
             'order' => 'name'

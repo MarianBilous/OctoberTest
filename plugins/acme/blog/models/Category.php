@@ -92,7 +92,7 @@ class Category extends Model
     public $hasOne = [];
 
     public $hasMany = [
-        'category' => 'Acme\Blog\Models\Article'
+        'article' => 'Acme\Blog\Models\Article'
     ];
 
     public $belongsTo = [];

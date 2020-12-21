@@ -1,7 +1,7 @@
 <?php namespace Acme\Blog\Components;
 
 use Cms\Classes\ComponentBase;
-use Acme\Blog\Models\Category;
+use Acme\Blog\Models\Article;
 
 class Articles extends ComponentBase
 {
@@ -13,9 +13,9 @@ class Articles extends ComponentBase
         ];
     }
 
-    public function getCategory()
+    public function getArticle()
     {
-        return Category::all();
+        return Article::all();
     }
 
     public function defineProperties()

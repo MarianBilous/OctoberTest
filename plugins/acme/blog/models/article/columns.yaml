@@ -3,6 +3,17 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
+    name:
+        label: Name
         searchable: true
+    slug:
+        label: Slug
+    content:
+        label: Content
+    category:
+        label: Category
+    image:
+        label: Image
+    visibility:
+        label: Display visibility
+

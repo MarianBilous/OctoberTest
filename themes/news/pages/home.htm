@@ -4,10 +4,12 @@ layout = "default"
 is_hidden = 0
 
 [Articles]
+
+[Category]
 ==
 <div class="col-sm-3 navbar-container" style="margin-left: 0px">
     <div class="list-group" style="cursor: pointer">
-        {% for category in Articles.getCategory %}
+        {% for category in Category.getCategory %}
         <a class="list-group-item list-group-item-action">
             {{ category.name }}
         </a>

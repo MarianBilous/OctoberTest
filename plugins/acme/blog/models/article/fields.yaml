@@ -9,12 +9,12 @@ fields:
         type: richeditor
         toolbarButtons: bold|italic|underline|align|formatOL|formatUL|outdent|indent
         size: huge
-    category_id:
+    category:
         label: Categories
         type: relation
         nameFrom: name
 #        span: right
-    tags:
+    tag:
         label: Tags
         type: tagselector
 #        span: left
@@ -24,7 +24,7 @@ fields:
         default: true
         span: right
     image:
-        label: Avatar
+        label: Image
         type: fileupload
         mode: image
         imageHeight: auto

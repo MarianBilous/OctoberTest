@@ -10,18 +10,10 @@ class CreateArticleTagsTable extends Migration
     {
         Schema::create('acme_blog_article_tags', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->integer('article_id')->unsigned()->nullable();
-            $table->integer('tag_id')->unsigned()->nullable();
-            $table->timestamps();
+            $table->integer('article_id')->unsigned();
+            $table->integer('tag_id')->unsigned();
+            $table->primary(['article_id','tag_id']);
 
-            $table->foreign('article_id')
-                ->references('id')
-                ->on('acme_blog_articles')
-                ->onDelete('cascade');
-            $table->foreign('tag_id')
-                ->references('id')
-                ->on('acme_blog_tags')
-                ->onDelete('cascade');
         });
     }
 

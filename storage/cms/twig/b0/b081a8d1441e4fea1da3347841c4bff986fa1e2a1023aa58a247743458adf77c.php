@@ -63,7 +63,7 @@ class __TwigTemplate_a52fcdb4a23c8fe3984ef6baf7de580ac4ef006adb09add5e497d698d34
     ";
         // line 2
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["Articles"] ?? null), "getCategory", [], "any", false, false, true, 2));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["Category"] ?? null), "getCategory", [], "any", false, false, true, 2));
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
             // line 3
             echo "    <li>";
@@ -96,7 +96,7 @@ class __TwigTemplate_a52fcdb4a23c8fe3984ef6baf7de580ac4ef006adb09add5e497d698d34
     public function getSourceContext()
     {
         return new Source("<ul>
-    {% for category in Articles.getCategory %}
+    {% for category in Category.getCategory %}
     <li>{{ category.name }}</li>
     {% endfor %}
 </ul>", "C:\\OpenServer\\domains\\October/themes/news/pages/categories.htm", "");

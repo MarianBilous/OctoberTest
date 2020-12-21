@@ -1,7 +1,8 @@
 <?php namespace Acme\Blog\FormWidgets;
 
-use Acme\Blog\Models\Tag;
+
 use Backend\Classes\FormWidgetBase;
+use \Acme\Blog\Models\Tag;
 
 /**
  * TagSelector Form Widget
@@ -11,7 +12,7 @@ class TagSelector extends FormWidgetBase
     /**
      * @inheritDoc
      */
-    protected $defaultAlias = 'acme_blog_tag_selector';
+    //protected $defaultAlias = 'acme_blog_tag_selector';
 
     /**
      * @inheritDoc
@@ -27,7 +28,6 @@ class TagSelector extends FormWidgetBase
     public function render()
     {
         $this->prepareVars();
-        //dump($this->vars['tags']);
         return $this->makePartial('tagselector');
     }
 
@@ -38,6 +38,7 @@ class TagSelector extends FormWidgetBase
     {
         $this->vars['id'] = $this->model->id;
         $this->vars['tags'] = Tag::all()->lists('name', 'id');
+        $this->vars['name'] = $this->formField->getName().'[]';
 
         if (!empty($this->getLoadValue())) {
             $this->vars['selectedValues'] = $this->getLoadValue();
