@@ -2,36 +2,149 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="322b4790-99d3-4cda-9a8b-a695c5a14bce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/plugins/acme/blog/views/message.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/javascript/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/affix.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/alert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/collapse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/popover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/scrollspy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/js/transition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/alerts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/badges.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/bootstrap.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/breadcrumbs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/button-groups.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/carousel.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/close.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/component-animations.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/dropdowns.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/forms.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/glyphicons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/grid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/input-groups.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/jumbotron.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/labels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/list-group.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/media.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/alerts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/background-variant.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/border-radius.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/center-block.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/clearfix.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/forms.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/gradients.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/grid-framework.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/grid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/hide-text.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/image.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/labels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/list-group.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/nav-divider.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/nav-vertical-align.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/opacity.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/pagination.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/panels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/progress-bar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/reset-filter.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/reset-text.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/resize.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/responsive-visibility.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/size.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/tab-focus.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/table-row.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/text-emphasis.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/text-overflow.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/mixins/vendor-prefixes.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/modals.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/navs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/normalize.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/pager.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/pagination.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/panels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/popovers.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/print.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/progress-bars.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/responsive-embed.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/responsive-utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/scaffolding.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/tables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/theme.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/thumbnails.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/tooltip.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/type.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/bootstrap/less/wells.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/font/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/font/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/font/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/font/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/font/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/less/bootstrap.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/less/extras.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/less/font-awesome-ie7.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/font-awesome/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/news/assets/vendor/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/components/Articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/components/Articles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/components/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/components/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/Plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/Plugin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/acme/blog/formwidgets/TagSelector.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/formwidgets/TagSelector.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/formwidgets/tagselector/assets/css/select2.css" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/formwidgets/tagselector/assets/css/select2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/formwidgets/tagselector/assets/css/select2.min.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/acme/blog/formwidgets/tagselector/partials/_tagselector.htm" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/formwidgets/tagselector/partials/_tagselector.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/ArticleTag.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/Tag.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/article/columns.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/article/columns.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/article/fields.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/article/fields.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/articletag/columns.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/articletag/fields.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/updates/create_article_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/updates/create_article_tags_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cms/cache/a1/73/categories.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/a1/73/categories.htm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cms/cache/f3/30/home.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/f3/30/home.htm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cms/twig/83/83be4e7ae68274611e45cf2502c4ca794e69b914f93fb69c85fcb5978838b3e8.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/83/83be4e7ae68274611e45cf2502c4ca794e69b914f93fb69c85fcb5978838b3e8.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cms/twig/b0/b081a8d1441e4fea1da3347841c4bff986fa1e2a1023aa58a247743458adf77c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/b0/b081a8d1441e4fea1da3347841c4bff986fa1e2a1023aa58a247743458adf77c.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/5b/48/5b48653e3f656222650fdeacce659f0a7d8c6a1f" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/5b/48/5b48653e3f656222650fdeacce659f0a7d8c6a1f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/category/fields.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/category/fields.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/tag/fields.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/tag/fields.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/updates/create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/updates/create_articles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/updates/version.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/updates/version.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/uploads/public/5fe/057/1e3/thumb_10_260_0_0_0_crop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/cache/12/3b/default.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/12/3b/default.htm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/cache/c2/0d/header.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/c2/0d/header.htm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/twig/82/82bf1ebb8e1252d604a19940f8fb1f48fd45072d012220cd4036ead798c4a457.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/82/82bf1ebb8e1252d604a19940f8fb1f48fd45072d012220cd4036ead798c4a457.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/twig/e7/e709e13470875551aa37954c2dc87d7bdbe0abe6fe4627b8a06d062c4d5d78d3.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/e7/e709e13470875551aa37954c2dc87d7bdbe0abe6fe4627b8a06d062c4d5d78d3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/0b/ff/0bff53afae786a8cfea3277d50af778cb2d9d9e9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/11/de/11de31e1eabb2682cf62ee9c9ccb0630f1019006" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/11/de/11de31e1eabb2682cf62ee9c9ccb0630f1019006" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/22/43/2243f500ae1632e1e609a9d4d08e7bad65800071" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/22/43/2243f500ae1632e1e609a9d4d08e7bad65800071" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/42/db/42db8be3644cdb45b3f8de5fccf6c2ce7d0ba4d5" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/60/4e/604e191d07f2f6261d65a592a31abd6ca4a60156" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/60/4e/604e191d07f2f6261d65a592a31abd6ca4a60156" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/72/4d/724d64623b82cdd367a46a1a3611b8fce75faedf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/72/4d/724d64623b82cdd367a46a1a3611b8fce75faedf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/77/61/77616e1c5e0d202cb4cf522bddafaebf56f27660" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/77/61/77616e1c5e0d202cb4cf522bddafaebf56f27660" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/96/50/965016786cc2d1aeaae0c92353ae5a20662fad40" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/97/37/9737833e426f53b3dcb4d98fdcb68c76762765de" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/97/37/9737833e426f53b3dcb4d98fdcb68c76762765de" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/99/01/9901f87c69b4762a9d0d943d44bef647f5e91837" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/99/01/9901f87c69b4762a9d0d943d44bef647f5e91837" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/9a/50/9a5034dec68baea2b2d0737c0887102a5a77125d" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/9a/50/9a5034dec68baea2b2d0737c0887102a5a77125d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/b8/08/b8081fe352bd0635d067d740a4b1ba44a401d6d0" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/b8/08/b8081fe352bd0635d067d740a4b1ba44a401d6d0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/d0/1e/d01e8e95ac402ba16ad83ad09f6851991c3b6212" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/d0/1e/d01e8e95ac402ba16ad83ad09f6851991c3b6212" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/a0/c9/a0c910eb995ad1e9281e5bb05187281e039e242f" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/a0/c9/a0c910eb995ad1e9281e5bb05187281e039e242f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/b1/b6/b1b6b61b6cd58fcbec08f9d00687d524901e8a6d" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/b1/b6/b1b6b61b6cd58fcbec08f9d00687d524901e8a6d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/d9/d3/d9d32e8104b647bfea87122b9b9ffca08c9b0a92" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/d9/d3/d9d32e8104b647bfea87122b9b9ffca08c9b0a92" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/g6xsU4AceejtrmLyZvwACVGnBGer7QB1Cb1sHv1v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/EIq7lMYM7SV9cYoktGL7Ypw8CVmtX6ryvC2E8zNP" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/system.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/system.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/news/pages/categories.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/pages/categories.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/news/pages/home.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/pages/home.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/news/layouts/default.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/layouts/default.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/news/partials/site/header.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/partials/site/header.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,15 +175,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/plugins/acme/blog/controllers/tags" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/themes/news/assets" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\October\themes\news\assets" />
+      <recent name="C:\OpenServer\domains\October\themes\news\assets\js" />
+      <recent name="C:\OpenServer\domains\October\plugins\acme\blog\formwidgets\tagselector\assets\css" />
       <recent name="C:\OpenServer\domains\October\plugins\acme\blog\controllers\tags" />
       <recent name="C:\OpenServer\domains\October\themes\blog\content" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\October\plugins\acme\blog" />
+      <recent name="C:\OpenServer\domains\October\plugins\acme\blog\components" />
+      <recent name="C:\OpenServer\domains\October\plugins\acme\blog\components\contact\view" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,7 +208,8 @@
       <workItem from="1608310741569" duration="2242000" />
       <workItem from="1608366478329" duration="20077000" />
       <workItem from="1608450621470" duration="21308000" />
-      <workItem from="1608535490327" duration="4679000" />
+      <workItem from="1608535490327" duration="26136000" />
+      <workItem from="1608620385301" duration="8204000" />
     </task>
     <servers />
   </component>

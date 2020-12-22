@@ -8,3 +8,6 @@
   - create_tags_table.php
   - create_articles_table.php
   - create_article_tags_table.php
+1.0.3:
+  - Create contacts table
+  - create_contacts_table.php

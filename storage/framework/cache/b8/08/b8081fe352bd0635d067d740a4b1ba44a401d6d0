@@ -1,0 +1,68 @@
+1608629300a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:938:"description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ this.page.title }}</title>
+        <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css'|theme }}">
+        {% styles %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+            <div class="container-fluid">
+                <div class="row">
+                    {% page %}
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Scripts -->
+<!--        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>-->
+        <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+    </body>
+</html>
+";s:5:"mtime";i:1608563701;s:6:"markup";s:903:"<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ this.page.title }}</title>
+        <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css'|theme }}">
+        {% styles %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+            <div class="container-fluid">
+                <div class="row">
+                    {% page %}
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Scripts -->
+<!--        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>-->
+        <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+    </body>
+</html>";s:4:"code";N;s:11:"description";s:14:"Default layout";}}

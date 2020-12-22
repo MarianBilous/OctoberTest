@@ -3,18 +3,8 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
     name:
         label: Name
-    slug:
-        label: Slug
-        preset: name
-        disabled: true
-    sort_order:
-        label: Position
-        disabled: true
     visibility:
         label: Display content
         type: checkbox

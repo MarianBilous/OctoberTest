@@ -1,0 +1,28 @@
+<style>
+    span{
+        color: red;
+    }
+</style>
+
+<div class="row">
+    <div class="row" style="margin-left: 50px">
+        <form data-request="onSend"
+              data-request-validate
+              data-request-flash
+              class="form-group">
+
+            <label>Name:</label>
+            <input type="text" class="form-control" name="name">
+            <span data-validate-for="name">Enter your name</span><br>
+
+            <label>Email:</label>
+            <input type="email" class="form-control" name="email">
+            <span data-validate-for="email">Enter email</span><br>
+
+            <label>Message:</label>
+            <textarea type="text" name="message" class="form-control" cols="65" rows="7"></textarea>
+
+            <button type="submit" class="btn btn-outline-dark mt-3">Send</button>
+        </form>
+    </div>
+</div>

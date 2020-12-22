@@ -1,0 +1,17 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Name
+    email:
+        label: Email
+        searchable: true
+    message:
+        lanel: Message
+    created_at:
+        lanel: Send

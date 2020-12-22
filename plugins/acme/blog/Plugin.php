@@ -54,6 +54,7 @@ class Plugin extends PluginBase
             'Acme\Blog\Components\category' => 'Category',
             'Acme\Blog\Components\tag' => 'Tag',
             'Acme\Blog\Components\articles' => 'Articles',
+            'Acme\Blog\Components\contactcomponent' => 'Contact',
         ];
     }
 
@@ -98,7 +99,7 @@ class Plugin extends PluginBase
                 'sideMenu' => [
                     'posts' => [
                         'label'       => 'Tag',
-                        'icon'        => 'icon-copy',
+                        'icon'        => 'icon-tags',
                         'url'         => \Backend::url('acme/blog/tags'),
                     ],
                     'categories' => [
@@ -108,8 +109,13 @@ class Plugin extends PluginBase
                     ],
                     'articles' => [
                         'label'       => 'Articles',
-                        'icon'        => 'icon-copy',
+                        'icon'        => 'icon-newspaper-o',
                         'url'         => \Backend::url('acme/blog/articles'),
+                    ],
+                    'contact' => [
+                        'label'       => 'Contact',
+                        'icon'        => 'icon-envelope',
+                        'url'         => \Backend::url('acme/blog/contacts'),
                     ]
                 ]
             ],

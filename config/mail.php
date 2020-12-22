@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME', null),
+    'username' => env('MAIL_USERNAME', 'some@gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -108,5 +108,9 @@ return [
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+    'to' =>[
+        'address' => 'bilous.marian@gmail.com',
+        'name' => 'Catch all email'
+    ]
 
 ];

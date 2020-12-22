@@ -13,11 +13,9 @@ fields:
         label: Categories
         type: relation
         nameFrom: name
-#        span: right
     tag:
         label: Tags
         type: tagselector
-#        span: left
     visibility:
         label: Display content
         type: checkbox

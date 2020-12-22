@@ -52,7 +52,7 @@ class TagSelector extends FormWidgetBase
      */
     public function loadAssets()
     {
-        $this->addCss('css/select2.css', 'Acme.Blog');
+        //$this->addCss('css/select2.css', 'Acme.Blog');
         $this->addJs('js/select2.js', 'Acme.Blog');
     }
 

@@ -39,17 +39,17 @@ class Article extends Model
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'name' => 'required',
+        'slug' => 'required',
+        'content' => 'required',
+        'image' => 'required'
+    ];
 
     /**
      * @var array Attributes to be cast to native types
      */
     protected $casts = [];
-
-    /**
-     * @var array Attributes to be cast to JSON
-     */
-    //protected $jsonable = [];
 
     /**
      * @var array Attributes to be appended to the API representation of the model (ex. toArray())

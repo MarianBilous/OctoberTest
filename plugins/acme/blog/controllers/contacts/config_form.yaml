@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Contact
+
+# Model Form Field configuration
+form: $/acme/blog/models/contact/fields.yaml
+
+# Model Class name
+modelClass: Acme\Blog\Models\Contact
+
+# Default redirect location
+defaultRedirect: acme/blog/contacts
+
+# Create page
+create:
+    title: Create Contact
+    redirect: acme/blog/contacts/update/:id
+    redirectClose: acme/blog/contacts
+
+# Update page
+update:
+    title: Edit Contact
+    redirect: acme/blog/contacts
+    redirectClose: acme/blog/contacts
+
+# Preview page
+preview:
+    title: Preview Contact

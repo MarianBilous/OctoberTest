@@ -56,7 +56,10 @@ class Category extends Model
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'name' => 'required',
+        'slug' => 'required'
+    ];
 
     /**
      * @var array Attributes to be cast to native types

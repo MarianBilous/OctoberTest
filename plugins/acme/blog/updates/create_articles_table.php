@@ -14,15 +14,14 @@ class CreateArticlesTable extends Migration
             $table->string('name', 100);
             $table->string('slug')->unique();
             $table->text('content');
-            $table->string('image', 255)->nullable();
-            $table->integer('category_id')->unsigned();
+            $table->integer('category_id')->unsigned()->nullable();
             $table->boolean('visibility');
             $table->timestamps();
 
             $table->foreign('category_id')
                 ->references('id')
                 ->on('acme_blog_categories')
-                ->onDelete('cascade');
+                ->onDelete('SET NULL');
         });
     }
 
