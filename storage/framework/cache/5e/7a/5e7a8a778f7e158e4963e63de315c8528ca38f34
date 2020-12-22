@@ -1,12 +1,7 @@
-1608629300a:1:{s:16:"contact-form.htm";a:10:{s:8:"fileName";s:16:"contact-form.htm";s:7:"content";s:132:"title = "Contact Form"
-url = "/contact-form"
-layout = "default"
+1608644308a:1:{s:16:"contact-form.htm";a:9:{s:8:"fileName";s:16:"contact-form.htm";s:7:"content";s:102:"title = "Contact"
+url = "/contact"
 is_hidden = 0
 
-[Contact]
+[contactform]
 ==
-
-
-{% component 'Contact' %}
-
-";s:5:"mtime";i:1608560778;s:6:"markup";s:25:"{% component 'Contact' %}";s:4:"code";N;s:5:"title";s:12:"Contact Form";s:3:"url";s:13:"/contact-form";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:7:"Contact";a:0:{}}}
+{% component 'contactform' %}";s:5:"mtime";i:1608643679;s:6:"markup";s:29:"{% component 'contactform' %}";s:4:"code";N;s:5:"title";s:7:"Contact";s:3:"url";s:8:"/contact";s:9:"is_hidden";s:1:"0";s:11:"contactform";a:0:{}}}

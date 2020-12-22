@@ -29,8 +29,8 @@ class __TwigTemplate_d0dcb3e97d98279d13a46baea8a56015fc2e7ccfdb8e118b0ff696cbd7f
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("for" => 3);
-        $filters = array("escape" => 5);
+        $tags = array("for" => 4);
+        $filters = array("escape" => 7);
         $functions = array();
 
         try {
@@ -59,40 +59,48 @@ class __TwigTemplate_d0dcb3e97d98279d13a46baea8a56015fc2e7ccfdb8e118b0ff696cbd7f
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"col-sm-3 navbar-container\" style=\"margin-left: 0px\">
-    <div class=\"list-group\" style=\"cursor: pointer\">
-        ";
-        // line 3
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["Category"] ?? null), "getCategory", [], "any", false, false, true, 3));
-        foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-            // line 4
-            echo "        <a class=\"list-group-item list-group-item-action\">
+        echo "<div class=\"col-sm-9 content-container\">
+    <div class=\"m-4\">
+        <div class=\"row\">
             ";
+        // line 4
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["articles"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
             // line 5
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, true, 5), 5, $this->source), "html", null, true);
-            echo "
-        </a>
-        ";
+            echo "            <div class='col-lg-4 col-md-6 mb-4 p-3'>
+                <div class=\"card h-100\">
+                    <a href=\"/info-article/";
+            // line 7
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["article"], "slug", [], "any", false, false, true, 7), 7, $this->source), "html", null, true);
+            echo "\" style=\"text-align: center\">
+                        <img class=\"img-fluid\" src=\"";
+            // line 8
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "image", [], "any", false, false, true, 8), "thumb", [0 => 200, 1 => ($context["auto"] ?? null)], "method", false, false, true, 8), 8, $this->source), "html", null, true);
+            echo "\" style=\"width: auto; height:140px;\">
+                    </a>
+                    <div class=\"card-body\" style=\"alignment: inherit\">
+                        <a href=\"/info-article/";
+            // line 11
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["article"], "slug", [], "any", false, false, true, 11), 11, $this->source), "html", null, true);
+            echo "\">
+                            <p class=\"card-text\">";
+            // line 12
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["article"], "name", [], "any", false, false, true, 12), 12, $this->source), "html", null, true);
+            echo "</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 8
-        echo "    </div>
-</div>
-
-<div class=\"col-sm-9 content-container\">
-    <div class=\"m-4\">
-gsdgsdg
+        // line 18
+        echo "        </div>
     </div>
-</div>
-
-<!--<div class=\"container\">-->
-<!--    <div class=\"row\">-->
-
-<!--    </div>-->
-<!--</div>-->";
+</div>";
     }
 
     public function getTemplateName()
@@ -107,31 +115,30 @@ gsdgsdg
 
     public function getDebugInfo()
     {
-        return array (  82 => 8,  73 => 5,  70 => 4,  66 => 3,  62 => 1,);
+        return array (  101 => 18,  89 => 12,  85 => 11,  79 => 8,  75 => 7,  71 => 5,  67 => 4,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"col-sm-3 navbar-container\" style=\"margin-left: 0px\">
-    <div class=\"list-group\" style=\"cursor: pointer\">
-        {% for category in Category.getCategory %}
-        <a class=\"list-group-item list-group-item-action\">
-            {{ category.name }}
-        </a>
-        {% endfor %}
-    </div>
-</div>
-
-<div class=\"col-sm-9 content-container\">
+        return new Source("<div class=\"col-sm-9 content-container\">
     <div class=\"m-4\">
-gsdgsdg
+        <div class=\"row\">
+            {% for article in articles %}
+            <div class='col-lg-4 col-md-6 mb-4 p-3'>
+                <div class=\"card h-100\">
+                    <a href=\"/info-article/{{ article.slug }}\" style=\"text-align: center\">
+                        <img class=\"img-fluid\" src=\"{{ article.image.thumb(200,auto) }}\" style=\"width: auto; height:140px;\">
+                    </a>
+                    <div class=\"card-body\" style=\"alignment: inherit\">
+                        <a href=\"/info-article/{{ article.slug }}\">
+                            <p class=\"card-text\">{{ article.name }}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
-</div>
-
-<!--<div class=\"container\">-->
-<!--    <div class=\"row\">-->
-
-<!--    </div>-->
-<!--</div>-->", "C:\\OpenServer\\domains\\October/themes/news/pages/home.htm", "");
+</div>", "C:\\OpenServer\\domains\\October/themes/news/pages/home.htm", "");
     }
 }

@@ -5,26 +5,34 @@ is_hidden = 0
 
 [Articles]
 
-[Category]
 ==
-<div class="col-sm-3 navbar-container" style="margin-left: 0px">
-    <div class="list-group" style="cursor: pointer">
-        {% for category in Category.getCategory %}
-        <a class="list-group-item list-group-item-action">
-            {{ category.name }}
-        </a>
-        {% endfor %}
-    </div>
-</div>
+<?php
+use Acme\Blog\Models\Article;
+    function onStart(){
+        $this['articles'] = Article::orderBy('created_at', 'DESC')->paginate(3);
+}
+?>
+==
+
 
 <div class="col-sm-9 content-container">
     <div class="m-4">
-gsdgsdg
+        <div class="row">
+            {% for article in articles %}
+            <div class='col-lg-4 col-md-6 mb-4 p-3'>
+                <div class="card h-100">
+                    <a href="/info-article/{{ article.slug }}" style="text-align: center">
+                        <img class="img-fluid" src="{{ article.image.thumb(200,auto) }}" style="width: auto; height:140px;">
+                    </a>
+                    <div class="card-body" style="alignment: inherit">
+                        <a href="/info-article/{{ article.slug }}">
+                            <p class="card-text">{{ article.name }}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 
-<!--<div class="container">-->
-<!--    <div class="row">-->
-
-<!--    </div>-->
-<!--</div>-->

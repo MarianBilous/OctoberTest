@@ -87,14 +87,10 @@ class __TwigTemplate_05708050dfaee144c3a5b9c3deff7f65796f1abe772845314a99c27e575
                 </a>
                 <a class=\"navbar-brand\" href=\"";
         // line 18
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("contact-form");
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("contact");
         echo "\">
                     Contact Us
                 </a>
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class=\"navbar-nav ml-auto\">
             </ul>
         </div>
     </div>
@@ -135,13 +131,9 @@ class __TwigTemplate_05708050dfaee144c3a5b9c3deff7f65796f1abe772845314a99c27e575
                 <a class=\"navbar-brand\" href=\"{{ 'tags'|page }}\">
                     Tags
                 </a>
-                <a class=\"navbar-brand\" href=\"{{ 'contact-form'|page }}\">
+                <a class=\"navbar-brand\" href=\"{{ 'contact'|page }}\">
                     Contact Us
                 </a>
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class=\"navbar-nav ml-auto\">
             </ul>
         </div>
     </div>

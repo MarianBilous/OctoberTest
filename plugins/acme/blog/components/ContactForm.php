@@ -1,6 +1,5 @@
 <?php namespace Acme\Blog\Components;
 
-use Acme\Blog\Models\Contact;
 use Cms\Classes\ComponentBase;
 
 use Validator;
@@ -9,16 +8,20 @@ use Input;
 use Mail;
 use Flash;
 
-class ContactComponent extends ComponentBase
+class ContactForm extends ComponentBase
 {
     public function componentDetails()
     {
         return [
-            'name'        => 'Contact Component',
+            'name'        => 'ContactForm Component',
             'description' => 'No description provided yet...'
         ];
     }
 
+    public function defineProperties()
+    {
+        return [];
+    }
     public function onSend()
     {
         $data = post();
@@ -35,12 +38,12 @@ class ContactComponent extends ComponentBase
         } else {
             Mail::send('acme.blog::message',
                 array('name' => Input::get('name'),
-                      'email' => Input::get('email'),
-                      'user_message' => Input::get('message')
+                    'email' => Input::get('email'),
+                    'user_message' => Input::get('message')
                 ), function($message) {
                     $message->to('bilous.marian@gmail.com', 'Admin');
                     $message->subject('Test message');
-            });
+                });
         }
 
         Flash::success('Jobs done!');
@@ -49,7 +52,7 @@ class ContactComponent extends ComponentBase
 
     public function saveToDB($data)
     {
-        $contact = new Contact;
+        $contact = new \Acme\Blog\Models\Contact;
         $contact->name = $data['name'];
         $contact->email = $data['email'];
         $contact->message = $data['message'];

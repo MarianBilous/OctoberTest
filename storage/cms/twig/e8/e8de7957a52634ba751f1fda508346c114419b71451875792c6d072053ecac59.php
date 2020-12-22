@@ -29,8 +29,8 @@ class __TwigTemplate_b935abfef562049bf60a51a703f26a76dcee0ab75f3d3c98acb67403206
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("for" => 2);
-        $filters = array("escape" => 3);
+        $tags = array("for" => 3);
+        $filters = array("escape" => 4);
         $functions = array();
 
         try {
@@ -59,23 +59,30 @@ class __TwigTemplate_b935abfef562049bf60a51a703f26a76dcee0ab75f3d3c98acb67403206
     {
         $macros = $this->macros;
         // line 1
-        echo "<ul>
-    ";
-        // line 2
+        echo "<div class=\"col-sm-3 navbar-container\" style=\"margin-left: 0px\">
+    <div class=\"list-group\" style=\"cursor: pointer\">
+        ";
+        // line 3
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["Tag"] ?? null), "getTag", [], "any", false, false, true, 2));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["Tag"] ?? null), "getTag", [], "any", false, false, true, 3));
         foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
-            // line 3
-            echo "    <li>";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["tag"], "name", [], "any", false, false, true, 3), 3, $this->source), "html", null, true);
-            echo "</li>
-    ";
+            // line 4
+            echo "        <a href=\"/concrete-tag/";
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["tag"], "slug", [], "any", false, false, true, 4), 4, $this->source), "html", null, true);
+            echo "\" class=\"list-group-item list-group-item-action\">
+            ";
+            // line 5
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["tag"], "name", [], "any", false, false, true, 5), 5, $this->source), "html", null, true);
+            echo "
+        </a>
+        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 5
-        echo "</ul>";
+        // line 8
+        echo "    </div>
+</div>";
     }
 
     public function getTemplateName()
@@ -90,15 +97,19 @@ class __TwigTemplate_b935abfef562049bf60a51a703f26a76dcee0ab75f3d3c98acb67403206
 
     public function getDebugInfo()
     {
-        return array (  78 => 5,  69 => 3,  65 => 2,  62 => 1,);
+        return array (  84 => 8,  75 => 5,  70 => 4,  66 => 3,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<ul>
-    {% for tag in Tag.getTag %}
-    <li>{{ tag.name }}</li>
-    {% endfor %}
-</ul>", "C:\\OpenServer\\domains\\October/themes/news/pages/tags.htm", "");
+        return new Source("<div class=\"col-sm-3 navbar-container\" style=\"margin-left: 0px\">
+    <div class=\"list-group\" style=\"cursor: pointer\">
+        {% for tag in Tag.getTag %}
+        <a href=\"/concrete-tag/{{ tag.slug }}\" class=\"list-group-item list-group-item-action\">
+            {{ tag.name }}
+        </a>
+        {% endfor %}
+    </div>
+</div>", "C:\\OpenServer\\domains\\October/themes/news/pages/tags.htm", "");
     }
 }

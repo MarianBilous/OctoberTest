@@ -18,9 +18,9 @@ fields:
         type: tagselector
     visibility:
         label: Display content
-        type: checkbox
-        default: true
-        span: right
+        type: switch
+        on: On
+        off: Off
     image:
         label: Image
         type: fileupload

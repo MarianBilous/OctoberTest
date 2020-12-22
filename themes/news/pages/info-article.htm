@@ -1,0 +1,38 @@
+title = "Info article"
+url = "/info-article/:slug"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use Acme\Blog\Models\Article;
+    function onStart(){
+        $this['article'] = Article::where('slug', $this->param('slug'))->first();
+    }
+?>
+==
+<div class="card mt-4">
+    <div style="text-align: center">
+        <img class="card-img-top img-fluid" src="{{ article.image.thumb(200,auto) }}" style="width: 440px; height: auto;">
+    </div>
+
+    <div class="card-body">
+        <h3 class="card-title">{{ article.name }} </h3>
+        {{ article.content|raw }}
+        <div>
+            Date created: {{ article.created_at }}
+        </div>
+        <div>
+            Date updated: {{ article.updated_at }}
+        </div>
+
+        <h3>Category</h3>
+
+        {{ article.category.name }}
+
+        <h3>Tags</h3>
+
+        {% for tag in article.tag %}
+            {{ tag.name }}
+        {% endfor %}
+    </div>
+</div>

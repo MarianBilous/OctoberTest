@@ -97,8 +97,8 @@
   'acme\\blog\\Controllers\\articles' => 'plugins\\acme\\blog\\controllers\\articles.php',
   'Acme\\Blog\\Models\\Article' => 'plugins\\acme\\blog\\models\\Article.php',
   'Acme\\Blog\\FormWidgets\\TagSelector' => 'plugins\\acme\\blog\\formwidgets\\TagSelector.php',
-  'Acme\\Blog\\Components\\ContactComponent' => 'plugins\\acme\\blog\\components\\contact.php',
-  'Acme\\Blog\\Components\\contactcomponent' => 'plugins\\acme\\blog\\components\\contactcomponent.php',
+  'Acme\\Blog\\Components\\Contact' => 'plugins\\acme\\blog\\components\\Contact.php',
   'acme\\blog\\Controllers\\contacts' => 'plugins\\acme\\blog\\controllers\\contacts.php',
   'Acme\\Blog\\Models\\Contact' => 'plugins\\acme\\blog\\models\\Contact.php',
+  'Acme\\Blog\\Components\\ContactForm' => 'plugins\\acme\\blog\\components\\ContactForm.php',
 );

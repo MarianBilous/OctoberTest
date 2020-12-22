@@ -1,0 +1,66 @@
+1608644242a:1:{s:16:"info-article.htm";a:9:{s:8:"fileName";s:16:"info-article.htm";s:7:"content";s:942:"title = "Info article"
+url = "/info-article/:slug"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use Acme\Blog\Models\Article;
+    function onStart(){
+        $this['article'] = Article::where('slug', $this->param('slug'))->first();
+    }
+?>
+==
+<div class="card mt-4">
+    <div style="text-align: center">
+        <img class="card-img-top img-fluid" src="{{ article.image.thumb(200,auto) }}" style="width: 440px; height: auto;">
+    </div>
+
+    <div class="card-body">
+        <h3 class="card-title">{{ article.name }} </h3>
+        {{ article.content|raw }}
+        <div>
+            Date created: {{ article.created_at }}
+        </div>
+        <div>
+            Date updated: {{ article.updated_at }}
+        </div>
+
+        <h3>Category</h3>
+
+        {{ article.category.name }}
+
+        <h3>Tags</h3>
+
+        {% for tag in article.tag %}
+            {{ tag.name }}
+        {% endfor %}
+    </div>
+</div>";s:5:"mtime";i:1608640285;s:6:"markup";s:689:"<div class="card mt-4">
+    <div style="text-align: center">
+        <img class="card-img-top img-fluid" src="{{ article.image.thumb(200,auto) }}" style="width: 440px; height: auto;">
+    </div>
+
+    <div class="card-body">
+        <h3 class="card-title">{{ article.name }} </h3>
+        {{ article.content|raw }}
+        <div>
+            Date created: {{ article.created_at }}
+        </div>
+        <div>
+            Date updated: {{ article.updated_at }}
+        </div>
+
+        <h3>Category</h3>
+
+        {{ article.category.name }}
+
+        <h3>Tags</h3>
+
+        {% for tag in article.tag %}
+            {{ tag.name }}
+        {% endfor %}
+    </div>
+</div>";s:4:"code";s:144:"use Acme\Blog\Models\Article;
+    function onStart(){
+        $this['article'] = Article::where('slug', $this->param('slug'))->first();
+    }";s:5:"title";s:12:"Info article";s:3:"url";s:19:"/info-article/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

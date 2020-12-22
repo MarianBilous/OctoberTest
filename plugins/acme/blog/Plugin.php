@@ -54,7 +54,7 @@ class Plugin extends PluginBase
             'Acme\Blog\Components\category' => 'Category',
             'Acme\Blog\Components\tag' => 'Tag',
             'Acme\Blog\Components\articles' => 'Articles',
-            'Acme\Blog\Components\contactcomponent' => 'Contact',
+            'Acme\Blog\Components\ContactForm' => 'contactform',
         ];
     }
 

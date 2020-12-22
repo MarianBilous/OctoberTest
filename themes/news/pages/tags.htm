@@ -5,8 +5,12 @@ is_hidden = 0
 
 [Tag]
 ==
-<ul>
-    {% for tag in Tag.getTag %}
-    <li>{{ tag.name }}</li>
-    {% endfor %}
-</ul>
+<div class="col-sm-3 navbar-container" style="margin-left: 0px">
+    <div class="list-group" style="cursor: pointer">
+        {% for tag in Tag.getTag %}
+        <a href="/concrete-tag/{{ tag.slug }}" class="list-group-item list-group-item-action">
+            {{ tag.name }}
+        </a>
+        {% endfor %}
+    </div>
+</div>
