@@ -4,33 +4,35 @@
     <list default="true" id="322b4790-99d3-4cda-9a8b-a695c5a14bce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/acme/blog/Plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/Plugin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/components/ContactComponent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/components/contact/default.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/models/article/fields.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/models/article/fields.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cms/cache/84/c8/tags.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/84/c8/tags.htm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cms/cache/a1/73/categories.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/a1/73/categories.htm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cms/cache/c2/0d/header.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/c2/0d/header.htm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cms/cache/c5/13/contact-form.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/c5/13/contact-form.htm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/components/Articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/components/Articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/components/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/components/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/acme/blog/components/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/acme/blog/components/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/cache/6d/b3/info-article.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/6d/b3/info-article.htm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/cache/7c/46/concrete-tag.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/7c/46/concrete-tag.htm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/cache/f1/bf/concrete-category.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/f1/bf/concrete-category.htm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/cms/cache/f3/30/home.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/cache/f3/30/home.htm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cms/twig/82/82bf1ebb8e1252d604a19940f8fb1f48fd45072d012220cd4036ead798c4a457.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/82/82bf1ebb8e1252d604a19940f8fb1f48fd45072d012220cd4036ead798c4a457.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/twig/5a/5a042924d6cfcbdb6606ff3048feec89113f151f265650f4ad700a22112e1635.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/5a/5a042924d6cfcbdb6606ff3048feec89113f151f265650f4ad700a22112e1635.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/cms/twig/83/83be4e7ae68274611e45cf2502c4ca794e69b914f93fb69c85fcb5978838b3e8.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/83/83be4e7ae68274611e45cf2502c4ca794e69b914f93fb69c85fcb5978838b3e8.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cms/twig/b0/b081a8d1441e4fea1da3347841c4bff986fa1e2a1023aa58a247743458adf77c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/b0/b081a8d1441e4fea1da3347841c4bff986fa1e2a1023aa58a247743458adf77c.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cms/twig/e8/e8de7957a52634ba751f1fda508346c114419b71451875792c6d072053ecac59.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/e8/e8de7957a52634ba751f1fda508346c114419b71451875792c6d072053ecac59.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/5e/7a/5e7a8a778f7e158e4963e63de315c8528ca38f34" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/5e/7a/5e7a8a778f7e158e4963e63de315c8528ca38f34" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/twig/93/93865f86fcf0f923e5cbcf916870617be059038f47dbd671df2eff92efc32ad1.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/93/93865f86fcf0f923e5cbcf916870617be059038f47dbd671df2eff92efc32ad1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/cms/twig/d5/d58d5995ea76e02267b303ab90ff19acbbe19842550b9077dc9c0d89206c8d24.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/cms/twig/d5/d58d5995ea76e02267b303ab90ff19acbbe19842550b9077dc9c0d89206c8d24.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/3a/c9/3ac908cc1de6711e8a18f7b3161ffd01199bedff" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/3a/c9/3ac908cc1de6711e8a18f7b3161ffd01199bedff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/5b/48/5b48653e3f656222650fdeacce659f0a7d8c6a1f" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/5b/48/5b48653e3f656222650fdeacce659f0a7d8c6a1f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/60/4e/604e191d07f2f6261d65a592a31abd6ca4a60156" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/60/4e/604e191d07f2f6261d65a592a31abd6ca4a60156" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/74/8c/748c08e573c5887923b3bf6ac9ee7b19eea566f7" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/74/8c/748c08e573c5887923b3bf6ac9ee7b19eea566f7" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/97/37/9737833e426f53b3dcb4d98fdcb68c76762765de" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/97/37/9737833e426f53b3dcb4d98fdcb68c76762765de" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/9a/50/9a5034dec68baea2b2d0737c0887102a5a77125d" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/9a/50/9a5034dec68baea2b2d0737c0887102a5a77125d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/aa/1f/aa1f76558dd1682b1279a157d6509952ae0435c4" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/aa/1f/aa1f76558dd1682b1279a157d6509952ae0435c4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/b8/08/b8081fe352bd0635d067d740a4b1ba44a401d6d0" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/b8/08/b8081fe352bd0635d067d740a4b1ba44a401d6d0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/bb/49/bb49a3b28aa9bb7daddd4b14b64fb5679c0c3842" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/bb/49/bb49a3b28aa9bb7daddd4b14b64fb5679c0c3842" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/d0/1e/d01e8e95ac402ba16ad83ad09f6851991c3b6212" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/d0/1e/d01e8e95ac402ba16ad83ad09f6851991c3b6212" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/d9/d3/d9d32e8104b647bfea87122b9b9ffca08c9b0a92" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/d9/d3/d9d32e8104b647bfea87122b9b9ffca08c9b0a92" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/fc/54/fc54310cfd9a255cfb897812cd8ecbfa7480c730" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/fc/54/fc54310cfd9a255cfb897812cd8ecbfa7480c730" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/classes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/BvM45AHy58A821LrQjZW3iVunIbmL6auQN4EUINT" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/BvM45AHy58A821LrQjZW3iVunIbmL6auQN4EUINT" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/system.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/system.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/news/pages/categories.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/pages/categories.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/news/pages/contact-form.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/pages/contact-form.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/news/pages/concrete-category.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/pages/concrete-category.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/news/pages/concrete-tag.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/pages/concrete-tag.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/news/pages/home.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/pages/home.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/news/pages/tags.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/pages/tags.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/news/partials/site/header.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/partials/site/header.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/news/pages/info-article.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/news/pages/info-article.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +97,8 @@
       <workItem from="1608366478329" duration="20077000" />
       <workItem from="1608450621470" duration="21308000" />
       <workItem from="1608535490327" duration="26136000" />
-      <workItem from="1608620385301" duration="22154000" />
+      <workItem from="1608620385301" duration="23984000" />
+      <workItem from="1608709286817" duration="4303000" />
     </task>
     <servers />
   </component>

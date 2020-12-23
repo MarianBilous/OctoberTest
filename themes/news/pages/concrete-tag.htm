@@ -3,21 +3,13 @@ url = "/concrete-tag/:slug"
 layout = "default"
 is_hidden = 0
 
-[Tag]
-==
-<?php
-use Acme\Blog\Models\Article;
-use Acme\Blog\Models\Tag;
-    function onStart(){
-        $this['tag'] = $category = Tag::where('slug', $this->param('slug'))->first();
-}
-?>
+[tagDetail]
 ==
 <div class="container">
-<h2>{{ tag.name }}</h2>
+<h2>{{ tagDetail.getSlug.name }}</h2>
 
 <div class="row">
-    {% for article in tag.article %}
+    {% for article in tagDetail.getSlug.article %}
     <div class='col-lg-4 col-md-6 mb-4 p-3'>
         <div class="card h-100">
             <a href="/info-article/{{ article.slug }}" style="text-align: center">

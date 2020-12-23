@@ -63,29 +63,29 @@ class __TwigTemplate_8cb18f5bf5381efeb39bcefa47996fe30f1938e5e53dffb3be7ce28ff8b
     <div style=\"text-align: center\">
         <img class=\"card-img-top img-fluid\" src=\"";
         // line 3
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["article"] ?? null), "image", [], "any", false, false, true, 3), "thumb", [0 => 200, 1 => ($context["auto"] ?? null)], "method", false, false, true, 3), 3, $this->source), "html", null, true);
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["articleDetail"] ?? null), "getSlug", [], "any", false, false, true, 3), "image", [], "any", false, false, true, 3), "thumb", [0 => 200, 1 => ($context["auto"] ?? null)], "method", false, false, true, 3), 3, $this->source), "html", null, true);
         echo "\" style=\"width: 440px; height: auto;\">
     </div>
 
     <div class=\"card-body\">
         <h3 class=\"card-title\">";
         // line 7
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["article"] ?? null), "name", [], "any", false, false, true, 7), 7, $this->source), "html", null, true);
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["articleDetail"] ?? null), "getSlug", [], "any", false, false, true, 7), "name", [], "any", false, false, true, 7), 7, $this->source), "html", null, true);
         echo " </h3>
         ";
         // line 8
-        echo $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["article"] ?? null), "content", [], "any", false, false, true, 8), 8, $this->source);
+        echo $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["articleDetail"] ?? null), "getSlug", [], "any", false, false, true, 8), "content", [], "any", false, false, true, 8), 8, $this->source);
         echo "
         <div>
             Date created: ";
         // line 10
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["article"] ?? null), "created_at", [], "any", false, false, true, 10), 10, $this->source), "html", null, true);
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["articleDetail"] ?? null), "getSlug", [], "any", false, false, true, 10), "created_at", [], "any", false, false, true, 10), 10, $this->source), "html", null, true);
         echo "
         </div>
         <div>
             Date updated: ";
         // line 13
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["article"] ?? null), "updated_at", [], "any", false, false, true, 13), 13, $this->source), "html", null, true);
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["articleDetail"] ?? null), "getSlug", [], "any", false, false, true, 13), "updated_at", [], "any", false, false, true, 13), 13, $this->source), "html", null, true);
         echo "
         </div>
 
@@ -93,7 +93,7 @@ class __TwigTemplate_8cb18f5bf5381efeb39bcefa47996fe30f1938e5e53dffb3be7ce28ff8b
 
         ";
         // line 18
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["article"] ?? null), "category", [], "any", false, false, true, 18), "name", [], "any", false, false, true, 18), 18, $this->source), "html", null, true);
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["articleDetail"] ?? null), "getSlug", [], "any", false, false, true, 18), "category", [], "any", false, false, true, 18), "name", [], "any", false, false, true, 18), 18, $this->source), "html", null, true);
         echo "
 
         <h3>Tags</h3>
@@ -101,7 +101,7 @@ class __TwigTemplate_8cb18f5bf5381efeb39bcefa47996fe30f1938e5e53dffb3be7ce28ff8b
         ";
         // line 22
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["article"] ?? null), "tag", [], "any", false, false, true, 22));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["articleDetail"] ?? null), "getSlug", [], "any", false, false, true, 22), "tag", [], "any", false, false, true, 22));
         foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
             // line 23
             echo "            ";
@@ -136,26 +136,26 @@ class __TwigTemplate_8cb18f5bf5381efeb39bcefa47996fe30f1938e5e53dffb3be7ce28ff8b
     {
         return new Source("<div class=\"card mt-4\">
     <div style=\"text-align: center\">
-        <img class=\"card-img-top img-fluid\" src=\"{{ article.image.thumb(200,auto) }}\" style=\"width: 440px; height: auto;\">
+        <img class=\"card-img-top img-fluid\" src=\"{{ articleDetail.getSlug.image.thumb(200,auto) }}\" style=\"width: 440px; height: auto;\">
     </div>
 
     <div class=\"card-body\">
-        <h3 class=\"card-title\">{{ article.name }} </h3>
-        {{ article.content|raw }}
+        <h3 class=\"card-title\">{{ articleDetail.getSlug.name }} </h3>
+        {{ articleDetail.getSlug.content|raw }}
         <div>
-            Date created: {{ article.created_at }}
+            Date created: {{ articleDetail.getSlug.created_at }}
         </div>
         <div>
-            Date updated: {{ article.updated_at }}
+            Date updated: {{ articleDetail.getSlug.updated_at }}
         </div>
 
         <h3>Category</h3>
 
-        {{ article.category.name }}
+        {{ articleDetail.getSlug.category.name }}
 
         <h3>Tags</h3>
 
-        {% for tag in article.tag %}
+        {% for tag in articleDetail.getSlug.tag %}
             {{ tag.name }}
         {% endfor %}
     </div>

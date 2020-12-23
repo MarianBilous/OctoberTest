@@ -65,7 +65,7 @@ class __TwigTemplate_d0dcb3e97d98279d13a46baea8a56015fc2e7ccfdb8e118b0ff696cbd7f
             ";
         // line 4
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["articles"] ?? null));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["Articles"] ?? null), "getArticle", [], "any", false, false, true, 4));
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
             // line 5
             echo "            <div class='col-lg-4 col-md-6 mb-4 p-3'>
@@ -123,7 +123,7 @@ class __TwigTemplate_d0dcb3e97d98279d13a46baea8a56015fc2e7ccfdb8e118b0ff696cbd7f
         return new Source("<div class=\"col-sm-9 content-container\">
     <div class=\"m-4\">
         <div class=\"row\">
-            {% for article in articles %}
+            {% for article in Articles.getArticle %}
             <div class='col-lg-4 col-md-6 mb-4 p-3'>
                 <div class=\"card h-100\">
                     <a href=\"/info-article/{{ article.slug }}\" style=\"text-align: center\">

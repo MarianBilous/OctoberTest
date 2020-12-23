@@ -11,9 +11,10 @@ class Tag extends ComponentBase
             'description' => 'No description provided yet...'
         ];
     }
+
     public function getTag()
     {
-        return \Acme\Blog\Models\Tag::all();
+        return \Acme\Blog\Models\Tag::orderBy('sort_order', 'ASC')->get();
     }
 
     public function defineProperties()

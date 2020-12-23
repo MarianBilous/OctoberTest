@@ -3,22 +3,13 @@ url = "/concrete-category/:slug"
 layout = "default"
 is_hidden = 0
 
-[Category]
-==
-<?php
-use Acme\Blog\Models\Article;
-use Acme\Blog\Models\Category;
-    function onStart(){
-        $this['category'] = $category = Category::where('slug', $this->param('slug'))->first();
-        $this['articles'] = Article::where('category_id', $category->id)->get();
-}
-?>
+[categoryDetail]
 ==
 <div class="container">
-<h2>{{ category.name }}</h2>
+<h2>{{ categoryDetail.getSlug.name }}</h2>
 
 <div class="row">
-    {% for article in articles %}
+    {% for article in categoryDetail.getArticles %}
     <div class='col-lg-4 col-md-6 mb-4 p-3'>
         <div class="card h-100">
             <a href="/info-article/{{ article.slug }}" style="text-align: center">

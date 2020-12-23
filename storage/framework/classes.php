@@ -101,4 +101,7 @@
   'acme\\blog\\Controllers\\contacts' => 'plugins\\acme\\blog\\controllers\\contacts.php',
   'Acme\\Blog\\Models\\Contact' => 'plugins\\acme\\blog\\models\\Contact.php',
   'Acme\\Blog\\Components\\ContactForm' => 'plugins\\acme\\blog\\components\\ContactForm.php',
+  'Acme\\Blog\\Components\\ArticleDetail' => 'plugins\\acme\\blog\\components\\ArticleDetail.php',
+  'Acme\\Blog\\Components\\TagDetail' => 'plugins\\acme\\blog\\components\\TagDetail.php',
+  'Acme\\Blog\\Components\\CategoryDetail' => 'plugins\\acme\\blog\\components\\CategoryDetail.php',
 );

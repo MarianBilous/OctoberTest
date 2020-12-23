@@ -15,7 +15,7 @@ class Articles extends ComponentBase
 
     public function getArticle()
     {
-        return Article::all();
+        return Article::where('visibility', true)->orderBy('created_at', 'desc')->get();
     }
 
     public function defineProperties()

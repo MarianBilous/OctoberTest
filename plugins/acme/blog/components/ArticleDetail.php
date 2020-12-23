@@ -1,27 +1,26 @@
 <?php namespace Acme\Blog\Components;
 
-use Acme\Blog\Models\Article;
 use Cms\Classes\ComponentBase;
+use Acme\Blog\Models\Article;
 
-class Category extends ComponentBase
+class ArticleDetail extends ComponentBase
 {
+
     public function componentDetails()
     {
         return [
-            'name'        => 'Category Component',
+            'name'        => 'ArticleDetail Component',
             'description' => 'No description provided yet...'
         ];
     }
 
-    public function getCategory()
+    function getSlug()
     {
-        return \Acme\Blog\Models\Category::orderBy('sort_order', 'ASC')->get();
+        return Article::where('slug', $this->param('slug'))->first();
     }
 
     public function defineProperties()
     {
         return [];
     }
-
-
 }

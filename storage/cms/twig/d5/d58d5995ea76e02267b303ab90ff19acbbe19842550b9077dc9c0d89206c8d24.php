@@ -62,14 +62,14 @@ class __TwigTemplate_623bebbb0fef56f67d21562c61cf746a42d7c58bc3ff0c705bd9093f55a
         echo "<div class=\"container\">
 <h2>";
         // line 2
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["category"] ?? null), "name", [], "any", false, false, true, 2), 2, $this->source), "html", null, true);
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["categoryDetail"] ?? null), "getSlug", [], "any", false, false, true, 2), "name", [], "any", false, false, true, 2), 2, $this->source), "html", null, true);
         echo "</h2>
 
 <div class=\"row\">
     ";
         // line 5
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["articles"] ?? null));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["categoryDetail"] ?? null), "getArticles", [], "any", false, false, true, 5));
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
             // line 6
             echo "    <div class='col-lg-4 col-md-6 mb-4 p-3'>
@@ -123,10 +123,10 @@ class __TwigTemplate_623bebbb0fef56f67d21562c61cf746a42d7c58bc3ff0c705bd9093f55a
     public function getSourceContext()
     {
         return new Source("<div class=\"container\">
-<h2>{{ category.name }}</h2>
+<h2>{{ categoryDetail.getSlug.name }}</h2>
 
 <div class=\"row\">
-    {% for article in articles %}
+    {% for article in categoryDetail.getArticles %}
     <div class='col-lg-4 col-md-6 mb-4 p-3'>
         <div class=\"card h-100\">
             <a href=\"/info-article/{{ article.slug }}\" style=\"text-align: center\">

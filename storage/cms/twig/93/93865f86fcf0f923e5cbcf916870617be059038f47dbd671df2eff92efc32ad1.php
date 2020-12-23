@@ -62,14 +62,14 @@ class __TwigTemplate_0c2ef011445a1f781f77ba3f1a4cc5b4d2aaf5a0459c551988f49b1fad1
         echo "<div class=\"container\">
 <h2>";
         // line 2
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["tag"] ?? null), "name", [], "any", false, false, true, 2), 2, $this->source), "html", null, true);
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["tagDetail"] ?? null), "getSlug", [], "any", false, false, true, 2), "name", [], "any", false, false, true, 2), 2, $this->source), "html", null, true);
         echo "</h2>
 
 <div class=\"row\">
     ";
         // line 5
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["tag"] ?? null), "article", [], "any", false, false, true, 5));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["tagDetail"] ?? null), "getSlug", [], "any", false, false, true, 5), "article", [], "any", false, false, true, 5));
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
             // line 6
             echo "    <div class='col-lg-4 col-md-6 mb-4 p-3'>
@@ -124,10 +124,10 @@ class __TwigTemplate_0c2ef011445a1f781f77ba3f1a4cc5b4d2aaf5a0459c551988f49b1fad1
     public function getSourceContext()
     {
         return new Source("<div class=\"container\">
-<h2>{{ tag.name }}</h2>
+<h2>{{ tagDetail.getSlug.name }}</h2>
 
 <div class=\"row\">
-    {% for article in tag.article %}
+    {% for article in tagDetail.getSlug.article %}
     <div class='col-lg-4 col-md-6 mb-4 p-3'>
         <div class=\"card h-100\">
             <a href=\"/info-article/{{ article.slug }}\" style=\"text-align: center\">
