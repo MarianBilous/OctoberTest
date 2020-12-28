@@ -1,7 +1,0 @@
-1608644308a:1:{s:16:"contact-form.htm";a:9:{s:8:"fileName";s:16:"contact-form.htm";s:7:"content";s:102:"title = "Contact"
-url = "/contact"
-is_hidden = 0
-
-[contactform]
-==
-{% component 'contactform' %}";s:5:"mtime";i:1608643679;s:6:"markup";s:29:"{% component 'contactform' %}";s:4:"code";N;s:5:"title";s:7:"Contact";s:3:"url";s:8:"/contact";s:9:"is_hidden";s:1:"0";s:11:"contactform";a:0:{}}}

@@ -1,0 +1,16 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+  category:
+    label: Category
+    modelClass: Acme\Blog\Models\Category
+    conditions: category_id in (:filtered)
+    nameFrom: name
+
+  tag:
+    label: Tag
+    modelClass: Acme\Blog\Models\Tag
+    conditions: id in (select article_id from acme_blog_article_tags where tag_id in (:filtered))
+    nameFrom: name

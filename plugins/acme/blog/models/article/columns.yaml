@@ -19,6 +19,14 @@ columns:
         relation: category
         select: name
         searchable: true
+    tag:
+        label: Tags
+        searchable: true
+        type: text
+#        type: relation
+        relation: tag
+#        nameFrom: name
+        select: name
     visibility:
         label: Display visibility
     created_at:
