@@ -15,19 +15,21 @@ fields:
         nameFrom: name
     repeater:
         type: repeater 
+        titleFrom: test_title
+        # maxItems: 1
         prompt: Add content block
-        groups: $/acme/blog/config/repeater_fields.yaml      
-        form:            
-            fields:
-                added_at:
-                    label: Date added
-                    type: datepicker
-                details:
-                    label: Details
-                    type: textarea
-                test_title:
-                    label: This field is the title when collapsed
-                    type: text
+        groups: $/acme/blog/config/repeater_fields.yaml
+        # form:            
+        #     fields:
+        #         added_at:
+        #             label: Date added
+        #             type: datepicker
+        #         details:
+        #             label: Details
+        #             type: textarea
+        #         test_title:
+        #             label: This field is the title when collapsed
+        #             type: text
     tag:
         label: Tags
         type: tagselector
