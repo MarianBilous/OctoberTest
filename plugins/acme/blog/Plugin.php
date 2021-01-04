@@ -14,7 +14,7 @@ class Plugin extends PluginBase
      * @return array
      */
     public function pluginDetails()
-    {
+    {        
         return [
             'name'        => 'Blog',
             'description' => 'No description provided yet...',

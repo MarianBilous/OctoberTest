@@ -1,0 +1,32 @@
+textarea:
+    name: Textarea
+    description: Basic text field
+    icon: icon-file-text-o
+    fields:
+        added_at:
+            label: Date added
+            type: datepicker
+        details:
+            label: Details
+            type: textarea
+        title_when_collapsed:
+            label: This field is the title when collapsed
+            type: text
+
+quote:
+    name: Quote
+    description: Quote item
+    icon: icon-quote-right
+    fields:
+        quote_position:
+            span: auto
+            label: Quote Position
+            type: radio
+            options:
+                left: Left
+                center: Center
+                right: Right
+        quote_content:
+            span: auto
+            label: Details
+            type: textarea

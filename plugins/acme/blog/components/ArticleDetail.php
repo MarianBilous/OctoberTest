@@ -5,7 +5,6 @@ use Acme\Blog\Models\Article;
 
 class ArticleDetail extends ComponentBase
 {
-
     public function componentDetails()
     {
         return [

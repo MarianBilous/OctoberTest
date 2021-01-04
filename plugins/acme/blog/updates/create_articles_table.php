@@ -14,6 +14,7 @@ class CreateArticlesTable extends Migration
             $table->string('name', 100);
             $table->string('slug')->unique();
             $table->text('content');
+            $table->text('repeater')->nullable();
             $table->integer('category_id')->unsigned()->nullable();
             $table->boolean('visibility');
             $table->timestamps();

@@ -90,6 +90,12 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("contact");
         echo "\">
                     Contact Us
+                </a>                
+                <a class=\"navbar-brand\" href=\"";
+        // line 21
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("test");
+        echo "\">
+                    Test Partial
                 </a>
             </ul>
         </div>
@@ -109,7 +115,7 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
 
     public function getDebugInfo()
     {
-        return array (  90 => 18,  84 => 15,  78 => 12,  66 => 3,  62 => 1,);
+        return array (  96 => 21,  90 => 18,  84 => 15,  78 => 12,  66 => 3,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -133,6 +139,9 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
                 </a>
                 <a class=\"navbar-brand\" href=\"{{ 'contact'|page }}\">
                     Contact Us
+                </a>                
+                <a class=\"navbar-brand\" href=\"{{ 'test'|page }}\">
+                    Test Partial
                 </a>
             </ul>
         </div>

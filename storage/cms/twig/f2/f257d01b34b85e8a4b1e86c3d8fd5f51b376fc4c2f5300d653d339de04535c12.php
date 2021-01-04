@@ -29,7 +29,7 @@ class __TwigTemplate_c52025bf83f5d9f4a9f554507476e77580965b8fc9211fe4f2de6726d40
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("styles" => 7, "partial" => 13, "page" => 20, "framework" => 30, "scripts" => 31);
+        $tags = array("styles" => 7, "partial" => 13, "page" => 20, "framework" => 29, "scripts" => 30);
         $filters = array("escape" => 5, "theme" => 6);
         $functions = array();
 
@@ -99,24 +99,23 @@ class __TwigTemplate_c52025bf83f5d9f4a9f554507476e77580965b8fc9211fe4f2de6726d40
         // line 21
         echo "                </div>
             </div>
-
         </section>
 
         <!-- Scripts -->
 <!--        <script src=\"";
-        // line 27
+        // line 26
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>-->
         <script src=\"";
-        // line 28
+        // line 27
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.js");
         echo "\"></script>
         <script src=\"";
-        // line 29
+        // line 28
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
         ";
-        // line 30
+        // line 29
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -127,11 +126,11 @@ class __TwigTemplate_c52025bf83f5d9f4a9f554507476e77580965b8fc9211fe4f2de6726d40
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 31
+        // line 30
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 32
+        // line 31
         echo "    </body>
 </html>";
     }
@@ -148,7 +147,7 @@ class __TwigTemplate_c52025bf83f5d9f4a9f554507476e77580965b8fc9211fe4f2de6726d40
 
     public function getDebugInfo()
     {
-        return array (  135 => 32,  131 => 31,  120 => 30,  116 => 29,  112 => 28,  108 => 27,  100 => 21,  98 => 20,  90 => 14,  86 => 13,  79 => 8,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
+        return array (  134 => 31,  130 => 30,  119 => 29,  115 => 28,  111 => 27,  107 => 26,  100 => 21,  98 => 20,  90 => 14,  86 => 13,  79 => 8,  76 => 7,  72 => 6,  68 => 5,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -175,7 +174,6 @@ class __TwigTemplate_c52025bf83f5d9f4a9f554507476e77580965b8fc9211fe4f2de6726d40
                     {% page %}
                 </div>
             </div>
-
         </section>
 
         <!-- Scripts -->

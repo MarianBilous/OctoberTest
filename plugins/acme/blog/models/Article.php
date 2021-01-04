@@ -57,6 +57,13 @@ class Article extends Model
     protected $appends = [];
 
     /**
+     * @var array Attribute names to encode and decode using JSON.
+     */
+    protected $jsonable = [
+        'repeater'
+    ];
+
+    /**
      * @var array Attributes to be removed from the API representation of the model (ex. toArray())
      */
     protected $hidden = [];
