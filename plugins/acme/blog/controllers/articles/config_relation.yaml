@@ -1,0 +1,12 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+tag:
+    label: Tags
+    view:
+        list: $/acme/blog/models/tag/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        list: $/acme/blog/models/tag/columns.yaml
+        form: $/acme/blog/models/tag/fields.yaml

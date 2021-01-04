@@ -23,8 +23,8 @@ columns:
         label: Tags
         searchable: true
         type: text
-#        type: relation
-        relation: tag
+        type: relation
+        # relation: tag
 #        nameFrom: name
         select: name
     visibility:
