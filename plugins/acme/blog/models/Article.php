@@ -31,7 +31,6 @@ class Article extends Model
         'name',
         'slug',
         'content',
-        'image',
         'category_id',
         'visibility',
     ];
@@ -43,7 +42,7 @@ class Article extends Model
         'name' => 'required',
         'slug' => 'required',
         'content' => 'required',
-        'image' => 'required'
+        'image' => 'required',        
     ];
 
     /**
@@ -96,8 +95,11 @@ class Article extends Model
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
+
     public $attachOne = [
-        'image' => 'System\Models\File'
+        'image' => 'System\Models\File',
     ];
-    public $attachMany = [];
+
+    public $attachMany = [
+    ];
 }

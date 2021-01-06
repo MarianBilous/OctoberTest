@@ -3,6 +3,7 @@
 use Backend;
 use System\Classes\PluginBase;
 use Acme\Blog\Controllers\Articles as ArticlesController;
+use Acme\Blog\Models\Article as ArticleModel;
 /**
  * Plugin Plugin Information File
  */
@@ -40,7 +41,12 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+        ArticleModel::extend(function($model) {
+            $model->attachMany['image_source'] = \System\Models\File::class;
+        });
+
         ArticlesController::extendFormFields(function($form, $model, $context){
+            
             $form->addTabFields([
                 'test' =>[
                     'label' => 'Test',
@@ -50,6 +56,14 @@ class Plugin extends PluginBase
                 'bio' =>[
                     'label' => 'Info',
                     'type' => 'textarea',
+                    'tab' => 'Test'
+                ],
+                'image_source' => [
+                    'label' => 'Image',
+                    'mode' => 'image',
+                    'useCaption' => 'true',
+                    'span' => 'auto',
+                    'type' => 'fileupload',
                     'tab' => 'Test'
                 ]
             ]);

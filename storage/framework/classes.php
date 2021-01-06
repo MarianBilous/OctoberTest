@@ -104,4 +104,6 @@
   'Acme\\Blog\\Components\\ArticleDetail' => 'plugins\\acme\\blog\\components\\ArticleDetail.php',
   'Acme\\Blog\\Components\\TagDetail' => 'plugins\\acme\\blog\\components\\TagDetail.php',
   'Acme\\Blog\\Components\\CategoryDetail' => 'plugins\\acme\\blog\\components\\CategoryDetail.php',
+  'test\\plugin\\Plugin' => 'plugins\\test\\plugin\\Plugin.php',
+  'Acme\\Blog\\Controllers\\Articles' => 'plugins\\acme\\blog\\controllers\\Articles.php',
 );

@@ -52,7 +52,11 @@ fields:
             sharpen: 0
             interlace: false
             extension: auto
-
+    # image_source: 
+    #     label: Image
+    #     type: fileupload
+    #     mode: image
+    
 tabs:
     fields:
         
