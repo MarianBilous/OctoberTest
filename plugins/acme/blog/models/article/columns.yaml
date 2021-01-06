@@ -23,15 +23,18 @@ columns:
         label: Tags
         searchable: true
         type: text
-#        type: relation
         relation: tag
-#        nameFrom: name
         select: name
     visibility:
         label: Display visibility
-    created_at:
-        label: Date created
-        searchable: true
-        sortable: true
-    updated_at:
-        label: Date created
+    # created_at:
+    #     label: Date created
+    #     searchable: true
+    #     sortable: true
+    # updated_at:
+    #     label: Date created
+    test:
+        label: Test
+    bio:
+        label: Info
+    

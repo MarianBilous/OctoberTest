@@ -1,0 +1,46 @@
+1609934699a:1:{s:16:"concrete-tag.htm";a:10:{s:8:"fileName";s:16:"concrete-tag.htm";s:7:"content";s:836:"title = "Concrete tag"
+url = "/concrete-tag/:slug"
+layout = "default"
+is_hidden = 0
+
+[tagDetail]
+==
+<div class="container">
+<h2>{{ tagDetail.getSlug.name }}</h2>
+
+<div class="row">
+    {% for article in tagDetail.getSlug.article %}
+    <div class='col-lg-4 col-md-6 mb-4 p-3'>
+        <div class="card h-100">
+            <a href="/info-article/{{ article.slug }}" style="text-align: center">
+                <img class="img-fluid" src="{{ article.image.thumb(200,auto) }}" style="width: auto; height:140px;">
+            </a>
+            <div class="card-body" style="alignment: inherit">
+                <a href="/info-article/{{ article.slug }}">
+                    <p class="card-text">{{ article.name }}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>";s:5:"mtime";i:1609139987;s:6:"markup";s:729:"<div class="container">
+<h2>{{ tagDetail.getSlug.name }}</h2>
+
+<div class="row">
+    {% for article in tagDetail.getSlug.article %}
+    <div class='col-lg-4 col-md-6 mb-4 p-3'>
+        <div class="card h-100">
+            <a href="/info-article/{{ article.slug }}" style="text-align: center">
+                <img class="img-fluid" src="{{ article.image.thumb(200,auto) }}" style="width: auto; height:140px;">
+            </a>
+            <div class="card-body" style="alignment: inherit">
+                <a href="/info-article/{{ article.slug }}">
+                    <p class="card-text">{{ article.name }}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>";s:4:"code";N;s:5:"title";s:12:"Concrete tag";s:3:"url";s:19:"/concrete-tag/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:9:"tagDetail";a:0:{}}}

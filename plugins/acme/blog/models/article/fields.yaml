@@ -16,9 +16,6 @@ fields:
     repeater:
         type: repeater 
         titleFrom: test_title
-        # maxItems: 1
-        # prompt: Add content block
-        # groups: $/acme/blog/config/repeater_fields.yaml
         form:            
             fields:
                 added_at:
@@ -55,3 +52,7 @@ fields:
             sharpen: 0
             interlace: false
             extension: auto
+
+tabs:
+    fields:
+        
