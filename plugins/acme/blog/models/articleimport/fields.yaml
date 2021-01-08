@@ -1,0 +1,9 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    auto_create_lists:
+        label: Automatically create lists
+        type: checkbox
+        default: true

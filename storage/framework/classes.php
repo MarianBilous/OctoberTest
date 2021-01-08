@@ -127,4 +127,6 @@
   'RainLab\\Translate\\Components\\LocalePicker' => 'plugins\\rainlab\\translate\\components\\LocalePicker.php',
   'RainLab\\Translate\\Components\\AlternateHrefLangElements' => 'plugins\\rainlab\\translate\\components\\AlternateHrefLangElements.php',
   'RainLab\\Translate\\FormWidgets\\MLRichEditor' => 'plugins\\rainlab\\translate\\formwidgets\\MLRichEditor.php',
+  'Acme\\Blog\\Models\\ArticleImport' => 'plugins\\acme\\blog\\models\\ArticleImport.php',
+  'Acme\\Blog\\Models\\ArticleExport' => 'plugins\\acme\\blog\\models\\ArticleExport.php',
 );

@@ -1,0 +1,15 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    title: Import articles
+    modelClass: Acme\Blog\Models\ArticleImport
+    list: $/acme/blog/models/article/columns.yaml
+    redirect: acme/blog/articles
+    
+export:
+    title: Export articles
+    modelClass: Acme\Blog\Models\ArticleExport
+    list: $/acme/blog/models/article/columns.yaml
+    redirect: acme/blog/articles/import

@@ -18,7 +18,9 @@ class Article extends Model
      */
     public $table = 'acme_blog_articles';
 
-    public $implement = ['RainLab\Translate\Behaviors\TranslatableModel'];    
+    public $implement = [
+        'RainLab\Translate\Behaviors\TranslatableModel'
+    ];    
 
     /**
      * @var array Guarded fields
