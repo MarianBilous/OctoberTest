@@ -29,15 +29,3 @@ update:
 # Preview page
 preview:
     title: Preview Article
-
-import:
-    title: Import articles
-#     modelClass: Acme\Blog\Models\ArticleImport
-#     list: $/acme/blog/models/articleimport/columns.yaml
-#     redirect: acme/blog/articles
-
-# export:
-#     title: Export articles
-#     modelClass: Acme\Blog\Models\ArticleExport
-#     list: $/acme/campaign/models/articleexport/columns.yaml
-#     redirect: acme/blog/articles
