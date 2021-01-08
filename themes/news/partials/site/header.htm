@@ -1,9 +1,11 @@
+[localePicker]
+forceUrl = 0
 ==
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ 'home'|page }}">
             <h4>
-                <b>Home</b>
+                <b>{{ 'Home'|_ }}</b>
             </h4>
         </a>
 
@@ -11,18 +13,22 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <a class="navbar-brand" href="{{ 'categories'|page }}">
-                    Category
+                    {{ 'Category'|_ }}
                 </a>
                 <a class="navbar-brand" href="{{ 'tags'|page }}">
-                    Tags
+                    {{ 'Tags'|_ }}
                 </a>
                 <a class="navbar-brand" href="{{ 'contact'|page }}">
-                    Contact Us
+                    {{ 'Contact Us'|_ }}
                 </a>                
                 <a class="navbar-brand" href="{{ 'test'|page }}">
-                    Test Partial
+                    {{ 'Test Partial'|_ }}
                 </a>
             </ul>
+
+            <form class="navbar-form navbar-right">
+                {% component 'localePicker' %}
+            </form>
         </div>
     </div>
 </nav>

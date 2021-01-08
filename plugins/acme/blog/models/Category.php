@@ -10,7 +10,8 @@ class Category extends Model
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sluggable;
     use \October\Rain\Database\Traits\Sortable;
-    //use \October\Rain\Database\Traits\NestedTree;
+
+    public $implement = ['RainLab\Translate\Behaviors\TranslatableModel'];
 
     /**
      * @var array Generate slugs for these attributes.
@@ -18,13 +19,6 @@ class Category extends Model
     protected $slugs = [
         'slug' => 'name'
     ];
-
-//    public function afterSave() {
-//        if ($this->position == null) {
-//            $this->position = $this->id;
-//            $this->save();
-//        }
-//    }
 
     public function beforeValidate()
     {
@@ -48,6 +42,12 @@ class Category extends Model
      * @var array Fillable fields
      */
     protected $fillable = [
+        'name',
+        'slug',
+        'visibility',
+    ];    
+
+    public $translatable = [
         'name',
         'slug',
         'visibility',

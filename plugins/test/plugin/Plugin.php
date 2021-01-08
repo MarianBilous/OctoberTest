@@ -4,6 +4,7 @@ use Backend;
 use System\Classes\PluginBase;
 use Acme\Blog\Controllers\Articles as ArticlesController;
 use Acme\Blog\Models\Article as ArticleModel;
+
 /**
  * Plugin Plugin Information File
  */
@@ -46,27 +47,28 @@ class Plugin extends PluginBase
         });
 
         ArticlesController::extendFormFields(function($form, $model, $context){
-            
-            $form->addTabFields([
-                'test' =>[
-                    'label' => 'Test',
-                    'type' => 'text',
-                    'tab' => 'Test'
-                ],
-                'bio' =>[
-                    'label' => 'Info',
-                    'type' => 'textarea',
-                    'tab' => 'Test'
-                ],
-                'image_source' => [
-                    'label' => 'Image',
-                    'mode' => 'image',
-                    'useCaption' => 'true',
-                    'span' => 'auto',
-                    'type' => 'fileupload',
-                    'tab' => 'Test'
-                ]
-            ]);
+            if ($model instanceof ArticleModel) {
+                $form->addTabFields([
+                    'test' =>[
+                        'label' => 'Test',
+                        'type' => 'text',
+                        'tab' => 'Test'
+                    ],
+                    'bio' =>[
+                        'label' => 'Info',
+                        'type' => 'textarea',
+                        'tab' => 'Test'
+                    ],
+                    'image_source' => [
+                        'label' => 'Image',
+                        'mode' => 'image',
+                        'useCaption' => 'true',
+                        'span' => 'auto',
+                        'type' => 'fileupload',
+                        'tab' => 'Test'
+                    ]
+                ]);
+            }
         });
     }
 

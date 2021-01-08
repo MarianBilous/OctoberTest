@@ -18,6 +18,14 @@ class Tag extends Model
         'slug' => 'name'
     ];
 
+    public $implement = ['RainLab\Translate\Behaviors\TranslatableModel'];
+
+    public $translatable = [
+        'name',
+        'slug',
+        'visibility'
+    ];
+
     public function beforeValidate()
     {
         if (empty($this->sort_order))

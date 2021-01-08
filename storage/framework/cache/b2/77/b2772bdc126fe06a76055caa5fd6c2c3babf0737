@@ -1,9 +1,11 @@
-1609934699a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:962:"==
+1610098434a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1166:"[localePicker]
+forceUrl = 0
+==
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ 'home'|page }}">
             <h4>
-                <b>Home</b>
+                <b>{{ 'Home'|_ }}</b>
             </h4>
         </a>
 
@@ -11,25 +13,29 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <a class="navbar-brand" href="{{ 'categories'|page }}">
-                    Category
+                    {{ 'Category'|_ }}
                 </a>
                 <a class="navbar-brand" href="{{ 'tags'|page }}">
-                    Tags
+                    {{ 'Tags'|_ }}
                 </a>
                 <a class="navbar-brand" href="{{ 'contact'|page }}">
-                    Contact Us
+                    {{ 'Contact Us'|_ }}
                 </a>                
                 <a class="navbar-brand" href="{{ 'test'|page }}">
-                    Test Partial
+                    {{ 'Test Partial'|_ }}
                 </a>
             </ul>
+
+            <form class="navbar-form navbar-right">
+                {% component 'localePicker' %}
+            </form>
         </div>
     </div>
-</nav>";s:5:"mtime";i:1609323195;s:6:"markup";s:958:"<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+</nav>";s:5:"mtime";i:1610096632;s:6:"markup";s:1132:"<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ 'home'|page }}">
             <h4>
-                <b>Home</b>
+                <b>{{ 'Home'|_ }}</b>
             </h4>
         </a>
 
@@ -37,18 +43,22 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <a class="navbar-brand" href="{{ 'categories'|page }}">
-                    Category
+                    {{ 'Category'|_ }}
                 </a>
                 <a class="navbar-brand" href="{{ 'tags'|page }}">
-                    Tags
+                    {{ 'Tags'|_ }}
                 </a>
                 <a class="navbar-brand" href="{{ 'contact'|page }}">
-                    Contact Us
+                    {{ 'Contact Us'|_ }}
                 </a>                
                 <a class="navbar-brand" href="{{ 'test'|page }}">
-                    Test Partial
+                    {{ 'Test Partial'|_ }}
                 </a>
             </ul>
+
+            <form class="navbar-form navbar-right">
+                {% component 'localePicker' %}
+            </form>
         </div>
     </div>
-</nav>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}
+</nav>";s:4:"code";N;s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}}}

@@ -1,11 +1,13 @@
-1609934699a:1:{s:16:"info-article.htm";a:10:{s:8:"fileName";s:16:"info-article.htm";s:7:"content";s:900:"title = "Info article"
+1610098434a:1:{s:16:"info-article.htm";a:11:{s:8:"fileName";s:16:"info-article.htm";s:7:"content";s:970:"title = "Info article"
 url = "/info-article/:slug"
 layout = "default"
 is_hidden = 0
 
 [articleDetail]
-==
 
+[localePicker]
+forceUrl = 0
+==
 <div class="card mt-4">
     <div style="text-align: center">
         <img class="card-img-top img-fluid" src="{{ articleDetail.getSlug.image.thumb(200,auto) }}" style="width: 440px; height: auto;">
@@ -15,23 +17,23 @@ is_hidden = 0
         <h3 class="card-title">{{ articleDetail.getSlug.name }} </h3>
         {{ articleDetail.getSlug.content|raw }}
         <div>
-            Date created: {{ articleDetail.getSlug.created_at }}
+            {{ 'Date created:'|_ }} {{ articleDetail.getSlug.created_at }}
         </div>
         <div>
-            Date updated: {{ articleDetail.getSlug.updated_at }}
+            {{ 'Date updated:'|_ }} {{ articleDetail.getSlug.updated_at }}
         </div>
 
-        <h3>Category</h3>
+        <h3>{{ 'Category'|_ }}</h3>
 
         {{ articleDetail.getSlug.category.name }}
 
-        <h3>Tags</h3>
+        <h3>{{ 'Tags'|_ }}</h3>
 
         {% for tag in articleDetail.getSlug.tag %}
             {{ tag.name }}
         {% endfor %}
     </div>
-</div>";s:5:"mtime";i:1609139987;s:6:"markup";s:787:"<div class="card mt-4">
+</div>";s:5:"mtime";i:1610097742;s:6:"markup";s:827:"<div class="card mt-4">
     <div style="text-align: center">
         <img class="card-img-top img-fluid" src="{{ articleDetail.getSlug.image.thumb(200,auto) }}" style="width: 440px; height: auto;">
     </div>
@@ -40,20 +42,20 @@ is_hidden = 0
         <h3 class="card-title">{{ articleDetail.getSlug.name }} </h3>
         {{ articleDetail.getSlug.content|raw }}
         <div>
-            Date created: {{ articleDetail.getSlug.created_at }}
+            {{ 'Date created:'|_ }} {{ articleDetail.getSlug.created_at }}
         </div>
         <div>
-            Date updated: {{ articleDetail.getSlug.updated_at }}
+            {{ 'Date updated:'|_ }} {{ articleDetail.getSlug.updated_at }}
         </div>
 
-        <h3>Category</h3>
+        <h3>{{ 'Category'|_ }}</h3>
 
         {{ articleDetail.getSlug.category.name }}
 
-        <h3>Tags</h3>
+        <h3>{{ 'Tags'|_ }}</h3>
 
         {% for tag in articleDetail.getSlug.tag %}
             {{ tag.name }}
         {% endfor %}
     </div>
-</div>";s:4:"code";N;s:5:"title";s:12:"Info article";s:3:"url";s:19:"/info-article/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:13:"articleDetail";a:0:{}}}
+</div>";s:4:"code";N;s:5:"title";s:12:"Info article";s:3:"url";s:19:"/info-article/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:13:"articleDetail";a:0:{}s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}}}

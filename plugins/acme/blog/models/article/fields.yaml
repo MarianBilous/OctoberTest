@@ -5,6 +5,7 @@
 fields:
     name:
         label: Name
+        translatable: true
     content:
         type: richeditor
         toolbarButtons: bold|italic|underline|align|formatOL|formatUL|outdent|indent

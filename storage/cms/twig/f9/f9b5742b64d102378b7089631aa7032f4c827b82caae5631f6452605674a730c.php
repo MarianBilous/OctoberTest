@@ -29,14 +29,14 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array();
-        $filters = array("page" => 3);
+        $tags = array("component" => 27);
+        $filters = array("page" => 3, "_" => 5);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                [],
-                ['page'],
+                ['component'],
+                ['page', '_'],
                 []
             );
         } catch (SecurityError $e) {
@@ -66,7 +66,10 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\">
             <h4>
-                <b>Home</b>
+                <b>";
+        // line 5
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Home"]);
+        echo "</b>
             </h4>
         </a>
 
@@ -77,27 +80,48 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
         // line 12
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories");
         echo "\">
-                    Category
+                    ";
+        // line 13
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Category"]);
+        echo "
                 </a>
                 <a class=\"navbar-brand\" href=\"";
         // line 15
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("tags");
         echo "\">
-                    Tags
+                    ";
+        // line 16
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Tags"]);
+        echo "
                 </a>
                 <a class=\"navbar-brand\" href=\"";
         // line 18
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("contact");
         echo "\">
-                    Contact Us
+                    ";
+        // line 19
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Contact Us"]);
+        echo "
                 </a>                
                 <a class=\"navbar-brand\" href=\"";
         // line 21
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("test");
         echo "\">
-                    Test Partial
+                    ";
+        // line 22
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Test Partial"]);
+        echo "
                 </a>
             </ul>
+
+            <form class=\"navbar-form navbar-right\">
+                ";
+        // line 27
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("localePicker"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 28
+        echo "            </form>
         </div>
     </div>
 </nav>";
@@ -115,7 +139,7 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
 
     public function getDebugInfo()
     {
-        return array (  96 => 21,  90 => 18,  84 => 15,  78 => 12,  66 => 3,  62 => 1,);
+        return array (  124 => 28,  120 => 27,  112 => 22,  108 => 21,  103 => 19,  99 => 18,  94 => 16,  90 => 15,  85 => 13,  81 => 12,  71 => 5,  66 => 3,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -124,7 +148,7 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
     <div class=\"container\">
         <a class=\"navbar-brand\" href=\"{{ 'home'|page }}\">
             <h4>
-                <b>Home</b>
+                <b>{{ 'Home'|_ }}</b>
             </h4>
         </a>
 
@@ -132,18 +156,22 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
             <!-- Left Side Of Navbar -->
             <ul class=\"navbar-nav mr-auto\">
                 <a class=\"navbar-brand\" href=\"{{ 'categories'|page }}\">
-                    Category
+                    {{ 'Category'|_ }}
                 </a>
                 <a class=\"navbar-brand\" href=\"{{ 'tags'|page }}\">
-                    Tags
+                    {{ 'Tags'|_ }}
                 </a>
                 <a class=\"navbar-brand\" href=\"{{ 'contact'|page }}\">
-                    Contact Us
+                    {{ 'Contact Us'|_ }}
                 </a>                
                 <a class=\"navbar-brand\" href=\"{{ 'test'|page }}\">
-                    Test Partial
+                    {{ 'Test Partial'|_ }}
                 </a>
             </ul>
+
+            <form class=\"navbar-form navbar-right\">
+                {% component 'localePicker' %}
+            </form>
         </div>
     </div>
 </nav>", "C:\\OpenServer\\domains\\OctoberTest/themes/news/partials/site/header.htm", "");

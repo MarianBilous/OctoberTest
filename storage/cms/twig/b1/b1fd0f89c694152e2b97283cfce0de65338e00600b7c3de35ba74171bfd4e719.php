@@ -30,13 +30,13 @@ class __TwigTemplate_29ec5ba226da43de8a7dd88cb7babaa9d4c2163ae447ad3822d57015cb1
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array("for" => 22);
-        $filters = array("escape" => 3, "raw" => 8);
+        $filters = array("escape" => 3, "raw" => 8, "_" => 10);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 ['for'],
-                ['escape', 'raw'],
+                ['escape', 'raw', '_'],
                 []
             );
         } catch (SecurityError $e) {
@@ -77,26 +77,36 @@ class __TwigTemplate_29ec5ba226da43de8a7dd88cb7babaa9d4c2163ae447ad3822d57015cb1
         echo $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["articleDetail"] ?? null), "getSlug", [], "any", false, false, true, 8), "content", [], "any", false, false, true, 8), 8, $this->source);
         echo "
         <div>
-            Date created: ";
+            ";
         // line 10
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Date created:"]);
+        echo " ";
         echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["articleDetail"] ?? null), "getSlug", [], "any", false, false, true, 10), "created_at", [], "any", false, false, true, 10), 10, $this->source), "html", null, true);
         echo "
         </div>
         <div>
-            Date updated: ";
+            ";
         // line 13
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Date updated:"]);
+        echo " ";
         echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["articleDetail"] ?? null), "getSlug", [], "any", false, false, true, 13), "updated_at", [], "any", false, false, true, 13), 13, $this->source), "html", null, true);
         echo "
         </div>
 
-        <h3>Category</h3>
+        <h3>";
+        // line 16
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Category"]);
+        echo "</h3>
 
         ";
         // line 18
         echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["articleDetail"] ?? null), "getSlug", [], "any", false, false, true, 18), "category", [], "any", false, false, true, 18), "name", [], "any", false, false, true, 18), 18, $this->source), "html", null, true);
         echo "
 
-        <h3>Tags</h3>
+        <h3>";
+        // line 20
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Tags"]);
+        echo "</h3>
 
         ";
         // line 22
@@ -129,7 +139,7 @@ class __TwigTemplate_29ec5ba226da43de8a7dd88cb7babaa9d4c2163ae447ad3822d57015cb1
 
     public function getDebugInfo()
     {
-        return array (  116 => 25,  107 => 23,  103 => 22,  96 => 18,  88 => 13,  82 => 10,  77 => 8,  73 => 7,  66 => 3,  62 => 1,);
+        return array (  126 => 25,  117 => 23,  113 => 22,  108 => 20,  103 => 18,  98 => 16,  90 => 13,  82 => 10,  77 => 8,  73 => 7,  66 => 3,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -143,17 +153,17 @@ class __TwigTemplate_29ec5ba226da43de8a7dd88cb7babaa9d4c2163ae447ad3822d57015cb1
         <h3 class=\"card-title\">{{ articleDetail.getSlug.name }} </h3>
         {{ articleDetail.getSlug.content|raw }}
         <div>
-            Date created: {{ articleDetail.getSlug.created_at }}
+            {{ 'Date created:'|_ }} {{ articleDetail.getSlug.created_at }}
         </div>
         <div>
-            Date updated: {{ articleDetail.getSlug.updated_at }}
+            {{ 'Date updated:'|_ }} {{ articleDetail.getSlug.updated_at }}
         </div>
 
-        <h3>Category</h3>
+        <h3>{{ 'Category'|_ }}</h3>
 
         {{ articleDetail.getSlug.category.name }}
 
-        <h3>Tags</h3>
+        <h3>{{ 'Tags'|_ }}</h3>
 
         {% for tag in articleDetail.getSlug.tag %}
             {{ tag.name }}
