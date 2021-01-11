@@ -8,7 +8,10 @@ redirect = "home"
 paramCode = "code"
 forceSecure = 0
 requirePassword = 0
+
+[fbAPI]
 ==
 <div class="col-md-6">
     {% partial account ~ '::register' %}
+    {% component 'fbAPI' %}
 </div>

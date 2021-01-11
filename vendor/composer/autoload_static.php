@@ -23,6 +23,7 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'cd649ce7b2ed09f1b036b9e7e82de46e' => __DIR__ . '/..' . '/october/rain/src/Parse/Assetic/Less/lessc.inc.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        'c65d09b6820da036953a371c8c73a9b1' => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook/polyfills.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
     );
@@ -81,7 +82,6 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'O' => 
         array (
             'October\\Rain\\' => 13,
-            'October\\Demo\\' => 13,
         ),
         'M' => 
         array (
@@ -103,6 +103,10 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'I' => 
         array (
             'Illuminate\\' => 11,
+        ),
+        'F' => 
+        array (
+            'Facebook\\' => 9,
         ),
         'E' => 
         array (
@@ -262,10 +266,6 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         array (
             0 => __DIR__ . '/..' . '/october/rain/src',
         ),
-        'October\\Demo\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/plugins/october/demo',
-        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -301,6 +301,10 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
+        ),
+        'Facebook\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook',
         ),
         'Egulias\\EmailValidator\\' => 
         array (

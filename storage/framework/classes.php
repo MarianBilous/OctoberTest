@@ -143,4 +143,6 @@
   'RainLab\\User\\Facades\\Auth' => 'plugins\\rainlab\\user\\facades\\Auth.php',
   'RainLab\\User\\Classes\\AuthManager' => 'plugins\\rainlab\\user\\classes\\AuthManager.php',
   'RainLab\\User\\Models\\Throttle' => 'plugins\\rainlab\\user\\models\\Throttle.php',
+  'Acme\\Blog\\Components\\FacebookSignIn' => 'plugins\\acme\\blog\\components\\FacebookSignIn.php',
+  'October\\Demo\\Components\\Todo' => 'plugins\\october\\demo\\components\\Todo.php',
 );

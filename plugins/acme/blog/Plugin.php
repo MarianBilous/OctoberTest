@@ -58,6 +58,7 @@ class Plugin extends PluginBase
             'Acme\Blog\Components\ArticleDetail' => 'articleDetail',
             'Acme\Blog\Components\TagDetail' => 'tagDetail',
             'Acme\Blog\Components\CategoryDetail' => 'categoryDetail',
+            'Acme\Blog\Components\FacebookSignIn' => 'fbAPI'
         ];
     }
 
