@@ -1,4 +1,4 @@
-1610105710a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1166:"[localePicker]
+1610357333a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1993:"[localePicker]
 forceUrl = 0
 ==
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
@@ -26,12 +26,31 @@ forceUrl = 0
                 </a>
             </ul>
 
+            <ul class="navbar-nav mr-auto">
+                {% if not user %}
+                    <a class="navbar-brand" href="{{ 'login'|page }}">
+                        {{ 'Login'|_ }}
+                    </a>
+                    <a class="navbar-brand" href="{{ 'register'|page }}">
+                        {{ 'Register'|_ }}
+                    </a>
+                {% endif %}
+                {% if user %}
+                    <a class="navbar-brand" href="{{ 'my-profile'|page }}">
+                        {{ 'My profile'|_ }}
+                    </a>
+                    <a data-request="onLogout" class="navbar-brand" data-request-data="redirect: '/'" style="cursor: pointer">
+                        Sign out
+                    </a>
+                {% endif %}
+            </ul>
+
             <form class="navbar-form navbar-right">
-                {% component 'localePicker' %}
+                {% component 'localePicker' %}                
             </form>
         </div>
     </div>
-</nav>";s:5:"mtime";i:1610096632;s:6:"markup";s:1132:"<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+</nav>";s:5:"mtime";i:1610356730;s:6:"markup";s:1959:"<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ 'home'|page }}">
             <h4>
@@ -56,8 +75,27 @@ forceUrl = 0
                 </a>
             </ul>
 
+            <ul class="navbar-nav mr-auto">
+                {% if not user %}
+                    <a class="navbar-brand" href="{{ 'login'|page }}">
+                        {{ 'Login'|_ }}
+                    </a>
+                    <a class="navbar-brand" href="{{ 'register'|page }}">
+                        {{ 'Register'|_ }}
+                    </a>
+                {% endif %}
+                {% if user %}
+                    <a class="navbar-brand" href="{{ 'my-profile'|page }}">
+                        {{ 'My profile'|_ }}
+                    </a>
+                    <a data-request="onLogout" class="navbar-brand" data-request-data="redirect: '/'" style="cursor: pointer">
+                        Sign out
+                    </a>
+                {% endif %}
+            </ul>
+
             <form class="navbar-form navbar-right">
-                {% component 'localePicker' %}
+                {% component 'localePicker' %}                
             </form>
         </div>
     </div>

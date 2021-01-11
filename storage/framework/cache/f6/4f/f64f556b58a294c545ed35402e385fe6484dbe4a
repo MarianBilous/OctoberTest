@@ -1,9 +1,12 @@
-1610105710a:1:{s:14:"categories.htm";a:10:{s:8:"fileName";s:14:"categories.htm";s:7:"content";s:461:"title = "Categories"
+1610357446a:1:{s:14:"categories.htm";a:11:{s:8:"fileName";s:14:"categories.htm";s:7:"content";s:492:"title = "Categories"
 url = "/categories"
 layout = "default"
 is_hidden = 0
 
 [Category]
+
+[session]
+security = "all"
 ==
 <div class="col-sm-3 navbar-container" style="margin-left: 0px">
     <div class="list-group" style="cursor: pointer">
@@ -13,7 +16,7 @@ is_hidden = 0
         </a>
         {% endfor %}
     </div>
-</div>";s:5:"mtime";i:1609139987;s:6:"markup";s:365:"<div class="col-sm-3 navbar-container" style="margin-left: 0px">
+</div>";s:5:"mtime";i:1610356820;s:6:"markup";s:365:"<div class="col-sm-3 navbar-container" style="margin-left: 0px">
     <div class="list-group" style="cursor: pointer">
         {% for category in Category.getCategory %}
         <a href="/concrete-category/{{ category.slug }}" class="list-group-item list-group-item-action">
@@ -21,4 +24,4 @@ is_hidden = 0
         </a>
         {% endfor %}
     </div>
-</div>";s:4:"code";N;s:5:"title";s:10:"Categories";s:3:"url";s:11:"/categories";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:8:"Category";a:0:{}}}
+</div>";s:4:"code";N;s:5:"title";s:10:"Categories";s:3:"url";s:11:"/categories";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:8:"Category";a:0:{}s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

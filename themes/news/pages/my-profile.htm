@@ -1,0 +1,14 @@
+title = "My profile"
+url = "/my-profile"
+layout = "default"
+is_hidden = 0
+
+[account]
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+
+[session]
+security = "all"
+==
+{% partial account ~ '::update' %}

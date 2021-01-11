@@ -29,13 +29,13 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("component" => 27);
+        $tags = array("if" => 27, "component" => 46);
         $filters = array("page" => 3, "_" => 5);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['component'],
+                ['if', 'component'],
                 ['page', '_'],
                 []
             );
@@ -114,14 +114,58 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
                 </a>
             </ul>
 
-            <form class=\"navbar-form navbar-right\">
+            <ul class=\"navbar-nav mr-auto\">
                 ";
         // line 27
+        if ( !($context["user"] ?? null)) {
+            // line 28
+            echo "                    <a class=\"navbar-brand\" href=\"";
+            echo $this->extensions['Cms\Twig\Extension']->pageFilter("login");
+            echo "\">
+                        ";
+            // line 29
+            echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Login"]);
+            echo "
+                    </a>
+                    <a class=\"navbar-brand\" href=\"";
+            // line 31
+            echo $this->extensions['Cms\Twig\Extension']->pageFilter("register");
+            echo "\">
+                        ";
+            // line 32
+            echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Register"]);
+            echo "
+                    </a>
+                ";
+        }
+        // line 35
+        echo "                ";
+        if (($context["user"] ?? null)) {
+            // line 36
+            echo "                    <a class=\"navbar-brand\" href=\"";
+            echo $this->extensions['Cms\Twig\Extension']->pageFilter("my-profile");
+            echo "\">
+                        ";
+            // line 37
+            echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["My profile"]);
+            echo "
+                    </a>
+                    <a data-request=\"onLogout\" class=\"navbar-brand\" data-request-data=\"redirect: '/'\" style=\"cursor: pointer\">
+                        Sign out
+                    </a>
+                ";
+        }
+        // line 43
+        echo "            </ul>
+
+            <form class=\"navbar-form navbar-right\">
+                ";
+        // line 46
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("localePicker"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
-        // line 28
-        echo "            </form>
+        echo "                
+            </form>
         </div>
     </div>
 </nav>";
@@ -139,7 +183,7 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
 
     public function getDebugInfo()
     {
-        return array (  124 => 28,  120 => 27,  112 => 22,  108 => 21,  103 => 19,  99 => 18,  94 => 16,  90 => 15,  85 => 13,  81 => 12,  71 => 5,  66 => 3,  62 => 1,);
+        return array (  164 => 46,  159 => 43,  150 => 37,  145 => 36,  142 => 35,  136 => 32,  132 => 31,  127 => 29,  122 => 28,  120 => 27,  112 => 22,  108 => 21,  103 => 19,  99 => 18,  94 => 16,  90 => 15,  85 => 13,  81 => 12,  71 => 5,  66 => 3,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -169,8 +213,27 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
                 </a>
             </ul>
 
+            <ul class=\"navbar-nav mr-auto\">
+                {% if not user %}
+                    <a class=\"navbar-brand\" href=\"{{ 'login'|page }}\">
+                        {{ 'Login'|_ }}
+                    </a>
+                    <a class=\"navbar-brand\" href=\"{{ 'register'|page }}\">
+                        {{ 'Register'|_ }}
+                    </a>
+                {% endif %}
+                {% if user %}
+                    <a class=\"navbar-brand\" href=\"{{ 'my-profile'|page }}\">
+                        {{ 'My profile'|_ }}
+                    </a>
+                    <a data-request=\"onLogout\" class=\"navbar-brand\" data-request-data=\"redirect: '/'\" style=\"cursor: pointer\">
+                        Sign out
+                    </a>
+                {% endif %}
+            </ul>
+
             <form class=\"navbar-form navbar-right\">
-                {% component 'localePicker' %}
+                {% component 'localePicker' %}                
             </form>
         </div>
     </div>

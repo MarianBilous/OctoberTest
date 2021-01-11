@@ -119,6 +119,11 @@ class Plugin extends PluginBase
                         'label'       => 'Contact',
                         'icon'        => 'icon-envelope',
                         'url'         => \Backend::url('acme/blog/contacts'),
+                    ],
+                    'tests' => [
+                        'label'       => 'Test',
+                        'icon'        => 'icon-magic',
+                        'url'         => \Backend::url('acme/blog/tests'),
                     ]
                 ]
             ],

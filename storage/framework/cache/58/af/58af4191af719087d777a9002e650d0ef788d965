@@ -1,4 +1,4 @@
-1610105710a:1:{s:8:"home.htm";a:11:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:979:"title = "Blog news"
+1610357044a:1:{s:8:"home.htm";a:13:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1081:"title = "Blog news"
 url = "/"
 layout = "default"
 is_hidden = 0
@@ -7,6 +7,14 @@ is_hidden = 0
 
 [localePicker]
 forceUrl = 0
+
+[account]
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+
+[session]
+security = "all"
 ==
 <div class="col-sm-9 content-container">
     <div class="m-4">
@@ -27,7 +35,7 @@ forceUrl = 0
             {% endfor %}
         </div>
     </div>
-</div>";s:5:"mtime";i:1610096524;s:6:"markup";s:862:"<div class="col-sm-9 content-container">
+</div>";s:5:"mtime";i:1610356442;s:6:"markup";s:862:"<div class="col-sm-9 content-container">
     <div class="m-4">
         <div class="row">
             {% for article in Articles.getArticle %}
@@ -46,4 +54,4 @@ forceUrl = 0
             {% endfor %}
         </div>
     </div>
-</div>";s:4:"code";N;s:5:"title";s:9:"Blog news";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:8:"Articles";a:0:{}s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}}}
+</div>";s:4:"code";N;s:5:"title";s:9:"Blog news";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:8:"Articles";a:0:{}s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}s:7:"account";a:3:{s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";s:15:"requirePassword";s:1:"0";}s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

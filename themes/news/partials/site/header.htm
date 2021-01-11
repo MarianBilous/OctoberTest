@@ -26,8 +26,27 @@ forceUrl = 0
                 </a>
             </ul>
 
+            <ul class="navbar-nav mr-auto">
+                {% if not user %}
+                    <a class="navbar-brand" href="{{ 'login'|page }}">
+                        {{ 'Login'|_ }}
+                    </a>
+                    <a class="navbar-brand" href="{{ 'register'|page }}">
+                        {{ 'Register'|_ }}
+                    </a>
+                {% endif %}
+                {% if user %}
+                    <a class="navbar-brand" href="{{ 'my-profile'|page }}">
+                        {{ 'My profile'|_ }}
+                    </a>
+                    <a data-request="onLogout" class="navbar-brand" data-request-data="redirect: '/'" style="cursor: pointer">
+                        Sign out
+                    </a>
+                {% endif %}
+            </ul>
+
             <form class="navbar-form navbar-right">
-                {% component 'localePicker' %}
+                {% component 'localePicker' %}                
             </form>
         </div>
     </div>
