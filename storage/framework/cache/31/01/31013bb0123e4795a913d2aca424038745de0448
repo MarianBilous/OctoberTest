@@ -1,4 +1,4 @@
-1610383446a:1:{s:16:"info-article.htm";a:11:{s:8:"fileName";s:16:"info-article.htm";s:7:"content";s:970:"title = "Info article"
+1610451198a:1:{s:16:"info-article.htm";a:11:{s:8:"fileName";s:16:"info-article.htm";s:7:"content";s:970:"title = "Info article"
 url = "/info-article/:slug"
 layout = "default"
 is_hidden = 0

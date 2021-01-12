@@ -58,7 +58,8 @@ class Plugin extends PluginBase
             'Acme\Blog\Components\ArticleDetail' => 'articleDetail',
             'Acme\Blog\Components\TagDetail' => 'tagDetail',
             'Acme\Blog\Components\CategoryDetail' => 'categoryDetail',
-            'Acme\Blog\Components\FacebookSignIn' => 'fbAPI'
+            'Acme\Blog\Components\FacebookSignIn' => 'fbAPI',
+            'Acme\Blog\Components\Polymorphic' => 'polymorph',
         ];
     }
 
@@ -125,6 +126,11 @@ class Plugin extends PluginBase
                         'label'       => 'Test',
                         'icon'        => 'icon-magic',
                         'url'         => \Backend::url('acme/blog/tests'),
+                    ],
+                    'photos' => [
+                        'label'       => 'Photo',
+                        'icon'        => 'icon-magic',
+                        'url'         => \Backend::url('acme/blog/photos'),
                     ]
                 ]
             ],

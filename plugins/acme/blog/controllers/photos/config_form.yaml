@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Photo
+
+# Model Form Field configuration
+form: $/acme/blog/models/photo/fields.yaml
+
+# Model Class name
+modelClass: Acme\Blog\Models\Photo
+
+# Default redirect location
+defaultRedirect: acme/blog/photos
+
+# Create page
+create:
+    title: Create Photo
+    redirect: acme/blog/photos/update/:id
+    redirectClose: acme/blog/photos
+
+# Update page
+update:
+    title: Edit Photo
+    redirect: acme/blog/photos
+    redirectClose: acme/blog/photos
+
+# Preview page
+preview:
+    title: Preview Photo

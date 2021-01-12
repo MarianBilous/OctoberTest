@@ -8,6 +8,7 @@ class FacebookSignIn extends ComponentBase
     public $ID = 391670622129379;
     public $SECRET = 'f8376b983094850c5e5cee2e596eaaa5';
     public $URL = 'http://localhost/';
+    public $user = '';
 
     public function componentDetails()
     {
@@ -22,7 +23,7 @@ class FacebookSignIn extends ComponentBase
         $fb = new Facebook([
             'app_id' => $this->ID ,
             'app_secret' => $this->SECRET ,
-            'default_graph_version' => 'v2.10' ,
+            'default_graph_version' => 'v3.0' ,
         ]);
 
         $helper = $fb->getRedirectLoginHelper();
@@ -32,4 +33,20 @@ class FacebookSignIn extends ComponentBase
         return $loginUrl;
         //dd($loginUrl);
     }
+
+    public function getToken()
+    {
+        $fb = new Facebook([
+            'app_id' => $this->ID ,
+            'app_secret' => $this->SECRET ,
+            'default_graph_version' => 'v3.0' ,
+        ]);
+
+//        $helper = $fb->getPageTabHelper();
+//        $accessToken = $helper->getAccessToken();
+//        $response = $fb->get('/me?fields=id,name', $accessToken);
+//        $this->user = $response->getGraphUser();
+    }
+
+
 }

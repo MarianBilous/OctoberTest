@@ -8,15 +8,15 @@ use Backend\Classes\Controller;
  */
 class Tests extends Controller
 {
-    public function index()
-    {
-        return \Backend::redirect('acme/blog/tests/helloworld');
-    }
-    
-    public function helloworld()
-    {
-        $this->vars['name'] = "hello";
-    }
+//    public function index()
+//    {
+//        return \Backend::redirect('acme/blog/tests/helloworld');
+//    }
+//
+//    public function helloworld()
+//    {
+//        $this->vars['name'] = "hello";
+//    }
     /**
      * @var array Behaviors that are implemented by this controller.
      */

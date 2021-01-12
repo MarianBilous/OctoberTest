@@ -145,4 +145,9 @@
   'RainLab\\User\\Models\\Throttle' => 'plugins\\rainlab\\user\\models\\Throttle.php',
   'Acme\\Blog\\Components\\FacebookSignIn' => 'plugins\\acme\\blog\\components\\FacebookSignIn.php',
   'October\\Demo\\Components\\Todo' => 'plugins\\october\\demo\\components\\Todo.php',
+  'Acme\\Blog\\Components\\Polymorphic' => 'plugins\\acme\\blog\\components\\Polymorphic.php',
+  'Acme\\Blog\\Models\\Photo' => 'plugins\\acme\\blog\\models\\Photo.php',
+  'Acme\\Blog\\Models\\Staff' => 'plugins\\acme\\blog\\models\\Staff.php',
+  'Acme\\Blog\\Models\\Product' => 'plugins\\acme\\blog\\models\\Product.php',
+  'acme\\blog\\Controllers\\photos' => 'plugins\\acme\\blog\\controllers\\photos.php',
 );

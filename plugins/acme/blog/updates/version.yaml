@@ -11,3 +11,8 @@
 1.0.3:
   - Create contacts table
   - create_contacts_table.php
+1.0.4:
+  - Polymorphic relations tests
+  - create_photos_table.php
+  - create_products_table.php
+  - create_staff_table.php

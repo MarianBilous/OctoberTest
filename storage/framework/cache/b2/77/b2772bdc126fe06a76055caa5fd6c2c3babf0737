@@ -1,4 +1,4 @@
-1610383446a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1993:"[localePicker]
+1610450972a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:2003:"[localePicker]
 forceUrl = 0
 ==
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
@@ -21,7 +21,7 @@ forceUrl = 0
                 <a class="navbar-brand" href="{{ 'contact'|page }}">
                     {{ 'Contact Us'|_ }}
                 </a>                
-                <a class="navbar-brand" href="{{ 'test'|page }}">
+                <a class="navbar-brand" href="{{ 'test-polimorph'|page }}">
                     {{ 'Test Partial'|_ }}
                 </a>
             </ul>
@@ -50,7 +50,7 @@ forceUrl = 0
             </form>
         </div>
     </div>
-</nav>";s:5:"mtime";i:1610356730;s:6:"markup";s:1959:"<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+</nav>";s:5:"mtime";i:1610443134;s:6:"markup";s:1969:"<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ 'home'|page }}">
             <h4>
@@ -70,7 +70,7 @@ forceUrl = 0
                 <a class="navbar-brand" href="{{ 'contact'|page }}">
                     {{ 'Contact Us'|_ }}
                 </a>                
-                <a class="navbar-brand" href="{{ 'test'|page }}">
+                <a class="navbar-brand" href="{{ 'test-polimorph'|page }}">
                     {{ 'Test Partial'|_ }}
                 </a>
             </ul>

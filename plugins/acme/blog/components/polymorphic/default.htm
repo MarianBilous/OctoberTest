@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="row" style="margin-left: 50px">
+
+        <form data-request="onSave"
+              class="form-group">
+
+            <label>Staff:</label>
+            <select type="text" class="form-control" name="staff">
+                <option value="" selected></option>
+                {% for item in __SELF__.getStaff() %}
+                    <option value="{{ item.id }}">{{ item.name }}</option>
+                {% endfor %}
+            </select>
+
+            <label>Product:</label>
+            <select type="text" class="form-control" name="product">
+                <option value="" selected></option>
+                {% for item in __SELF__.getProduct() %}
+                <option value="{{ item.id }}">{{ item.price }}</option>
+                {% endfor %}
+            </select>
+
+            <label>Path:</label>
+            <input type="text" class="form-control" name="path">
+
+            <button type="submit" class="btn btn-outline-dark mt-3">Save</button>
+        </form>
+    </div>
+</div>

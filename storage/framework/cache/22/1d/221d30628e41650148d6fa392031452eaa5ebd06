@@ -1,21 +1,22 @@
-1610383446a:1:{s:8:"test.htm";a:9:{s:8:"fileName";s:8:"test.htm";s:7:"content";s:318:"title = "Test"
-url = "/test"
+1610443738a:1:{s:8:"test.htm";a:10:{s:8:"fileName";s:8:"test.htm";s:7:"content";s:355:"title = "Test polimorph"
+url = "/test-polimorph"
 layout = "default"
 is_hidden = 0
 
+[polymorph polymorph2]
 ==
 <div class="col-sm-3 navbar-container" style="margin-left: 0px">
     <div class="list-group" style="cursor: pointer">
-        
+        wefwefwefwef
     </div>
 </div>
 <div class="col-sm-9 navbar-container">
-    {% content 'testContent.htm' name='Mark' %}
-</div>";s:5:"mtime";i:1609323474;s:6:"markup";s:246:"<div class="col-sm-3 navbar-container" style="margin-left: 0px">
+{% component 'polymorph2' %}
+</div>";s:5:"mtime";i:1610443098;s:6:"markup";s:239:"<div class="col-sm-3 navbar-container" style="margin-left: 0px">
     <div class="list-group" style="cursor: pointer">
-        
+        wefwefwefwef
     </div>
 </div>
 <div class="col-sm-9 navbar-container">
-    {% content 'testContent.htm' name='Mark' %}
-</div>";s:4:"code";N;s:5:"title";s:4:"Test";s:3:"url";s:5:"/test";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}
+{% component 'polymorph2' %}
+</div>";s:4:"code";N;s:5:"title";s:14:"Test polimorph";s:3:"url";s:15:"/test-polimorph";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:20:"polymorph polymorph2";a:0:{}}}

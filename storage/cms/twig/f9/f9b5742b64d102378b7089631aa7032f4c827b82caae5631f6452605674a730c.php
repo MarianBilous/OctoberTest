@@ -105,7 +105,7 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
                 </a>                
                 <a class=\"navbar-brand\" href=\"";
         // line 21
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("test");
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("test-polimorph");
         echo "\">
                     ";
         // line 22
@@ -208,7 +208,7 @@ class __TwigTemplate_63e5718a7e5bb3ae25ef6fa3a849141b0f5c66db4a1751102cacc207e24
                 <a class=\"navbar-brand\" href=\"{{ 'contact'|page }}\">
                     {{ 'Contact Us'|_ }}
                 </a>                
-                <a class=\"navbar-brand\" href=\"{{ 'test'|page }}\">
+                <a class=\"navbar-brand\" href=\"{{ 'test-polimorph'|page }}\">
                     {{ 'Test Partial'|_ }}
                 </a>
             </ul>
