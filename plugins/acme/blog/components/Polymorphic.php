@@ -16,7 +16,8 @@ class Polymorphic extends ComponentBase
         ];
     }
 
-    public function onSave() {
+    public function onSave()
+    {
         $data = post();
         $path = Input::get('path');
 

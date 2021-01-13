@@ -150,4 +150,8 @@
   'Acme\\Blog\\Models\\Staff' => 'plugins\\acme\\blog\\models\\Staff.php',
   'Acme\\Blog\\Models\\Product' => 'plugins\\acme\\blog\\models\\Product.php',
   'acme\\blog\\Controllers\\photos' => 'plugins\\acme\\blog\\controllers\\photos.php',
+  'test\\profile\\Plugin' => 'plugins\\test\\profile\\Plugin.php',
+  'RainLab\\User\\Controllers\\Users' => 'plugins\\rainlab\\user\\controllers\\Users.php',
+  'RainLab\\User\\Models\\MailBlocker' => 'plugins\\rainlab\\user\\models\\MailBlocker.php',
+  'Test\\Profile\\Models\\Profile' => 'plugins\\test\\profile\\models\\Profile.php',
 );
