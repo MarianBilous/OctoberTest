@@ -1,4 +1,7 @@
 description = "Default layout"
+
+[staticMenu]
+code = "main-menu"
 ==
 <!DOCTYPE html>
 <html>
@@ -22,6 +25,15 @@ description = "Default layout"
                     {% page %}
                 </div>
             </div>
+
+            {{dump(staticMenu)}}
+            {{dump(staticMenu.menuItems)}}
+            
+            {% for item in staticMenu.menuItems %}
+               <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+
+
         </section>
 
         <!-- Scripts -->

@@ -80,6 +80,16 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerReportWidgets()
+    {
+        return [
+            'Acme\Blog\ReportWidgets\ActivatedArticles' => [
+                'label'   => 'Activated Articles',
+                'context' => 'dashboard',
+            ],
+        ];
+    }
+
     public function registerFormWidgets()
     {
         return [
@@ -96,7 +106,7 @@ class Plugin extends PluginBase
                 'category'    => 'Blogs',
                 'icon'        => 'icon-cog',
                 'class'       => 'Acme\Blog\Models\Setting',
-                'order'       => 500
+                'order'       => 100
             ]
         ];
     }

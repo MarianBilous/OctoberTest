@@ -1,0 +1,72 @@
+items:
+    -
+        title: 'Новий пункт'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: home
+        cmsPage: null
+        replace: null
+        viewBag:
+            locale:
+                Ua:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Новий пункт'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: categories
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        Ua:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Новий пункт'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: tags
+        cmsPage: null
+        replace: null
+        viewBag:
+            locale:
+                Ua:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Новий пункт'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: concrete-tag
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        Ua:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+name: 'Main menu'

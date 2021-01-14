@@ -1,0 +1,48 @@
+
+
+<div class="report-widget">
+    <h3><?= e($this->property('title')) ?></h3> 
+
+        <div class="form-group">
+            <label>Get from id:</label>
+            <input type="text" id="getId"
+                name="article_id" 
+                value="" 
+                class="form-control"/>
+        </div>
+        <!-- <?php if (!isset($error)): ?>
+            <p>This is the default partial content.</p>
+        <?php else: ?>
+            <p class="flash-message static warning"><?= e($error) ?></p>
+        <?php endif ?> -->
+
+        <button id="button"
+                data-request="onCheckArticle"
+                type="submit"
+                class="btn btn-success">
+                Success
+        </button>
+  
+</div>
+
+
+<script>
+//     $(document).ready(function() {
+//         $('#button').click(function () {
+//             alert($('#getId').val())
+//             //ajaxFindId($('#getId').val());
+//         });
+//     });
+
+
+// function ajaxFindId(id) {
+//     $.ajax({
+//         type: 'POST',
+//         url: '',
+//         data: {id:id},
+//         success: function (){
+//             alert("передано: " + id);
+//         }
+//     })
+// }
+</script>

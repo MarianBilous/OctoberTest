@@ -1,0 +1,6 @@
+static-pages:
+    home:
+        home-home2:
+            home-home2-home3: {  }
+    product:
+        product-product2: {  }
