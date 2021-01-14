@@ -1,7 +1,10 @@
 <?php namespace Acme\Blog\Controllers;
 
+use Acme\Blog\Models\Article;
 use BackendMenu;
 use Backend\Classes\Controller;
+use Illuminate\Support\Facades\Log;
+use October\Rain\Support\Facades\Flash;
 
 /**
  * Articles Back-end Controller
@@ -43,5 +46,20 @@ class Articles extends Controller
         parent::__construct();
 
         BackendMenu::setContext('Acme.Blog', 'blog', 'articles');
+    }
+
+    public function onMakeActive()
+    {        
+        $article = new Article;
+        if ($checked = post('checked')) {            
+            foreach ($checked as $id) {            
+                //Log::info($id);
+                $article = Article::find($id);
+                $article->visibility = true;
+                //Flash::success(Article::find($id)->id); 
+                $article->save();              
+            }
+        }
+        
     }
 }

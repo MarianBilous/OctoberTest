@@ -32,11 +32,6 @@ class Polymorphic extends ComponentBase
             $product->photo()->add($photo);
 
         }
-        //$photo = $staff->photo;
-
-//        $photo = Photo::find(2);
-//        $imageable = $photo->imageable;
-
     }
 
     public function getStaff()

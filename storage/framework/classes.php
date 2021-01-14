@@ -154,4 +154,6 @@
   'RainLab\\User\\Controllers\\Users' => 'plugins\\rainlab\\user\\controllers\\Users.php',
   'RainLab\\User\\Models\\MailBlocker' => 'plugins\\rainlab\\user\\models\\MailBlocker.php',
   'Test\\Profile\\Models\\Profile' => 'plugins\\test\\profile\\models\\Profile.php',
+  'Acme\\Blog\\Components\\Quize' => 'plugins\\acme\\blog\\components\\Quize.php',
+  'system\\Controllers\\eventlogs' => 'modules\\system\\controllers\\eventlogs.php',
 );

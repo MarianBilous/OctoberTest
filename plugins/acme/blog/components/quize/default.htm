@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="row" style="margin-left: 50px">
+        <form data-request="onAnswer" 
+        data-request-success="{{ __SELF__ }}::count + 1"
+        data-request-update="{{ __SELF__ }}::'#list'"     
+              class="form-group">
+            {{ dump(__SELF__) }}
+            <div class="panel panel-defoult" id="list"> 
+                {% partial __SELF__ ~ __SELF__.concat %}      
+            </div>
+            <button type="submit" class="btn btn-outline-dark mt-3">Send</button>
+        </form>
+    </div>
+</div>

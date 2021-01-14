@@ -60,6 +60,7 @@ class Plugin extends PluginBase
             'Acme\Blog\Components\CategoryDetail' => 'categoryDetail',
             'Acme\Blog\Components\FacebookSignIn' => 'fbAPI',
             'Acme\Blog\Components\Polymorphic' => 'polymorph',
+            'Acme\Blog\Components\Quize' => 'quiz',
         ];
     }
 
