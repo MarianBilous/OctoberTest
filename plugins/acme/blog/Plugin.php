@@ -87,6 +87,20 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerSettings()
+    {
+        return [
+            'setting' => [
+                'label'       => 'My Settings',
+                'description' => 'Manage based settings.',
+                'category'    => 'Blogs',
+                'icon'        => 'icon-cog',
+                'class'       => 'Acme\Blog\Models\Setting',
+                'order'       => 500
+            ]
+        ];
+    }
+
     /**
      * Registers back-end navigation items for this plugin.
      *

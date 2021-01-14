@@ -1,0 +1,23 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    text:
+        label: Text
+        type: text
+    dropdown:
+        label: Dropdown
+        type: dropdown
+        options:
+            a: a
+            b: b
+            c: c
+    radio:
+        type: checkbox
+        default: 1
+    switch:
+        label: Switch
+        type: switch
+        on: On
+        off: Off

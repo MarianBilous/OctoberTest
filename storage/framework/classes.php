@@ -156,4 +156,6 @@
   'Test\\Profile\\Models\\Profile' => 'plugins\\test\\profile\\models\\Profile.php',
   'Acme\\Blog\\Components\\Quize' => 'plugins\\acme\\blog\\components\\Quize.php',
   'system\\Controllers\\eventlogs' => 'modules\\system\\controllers\\eventlogs.php',
+  'Acme\\Blog\\Models\\Setting' => 'plugins\\acme\\blog\\models\\Setting.php',
+  'Rainlab\\Translate\\Console\\ScanCommand' => 'plugins\\rainlab\\translate\\console\\ScanCommand.php',
 );

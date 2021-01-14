@@ -27,7 +27,7 @@ columns:
         select: name
     visibility:
         label: Display visibility
-    make visibility:
+    make_visibility:
         label: Make active
         type: partial
         clickable: false
