@@ -55,11 +55,27 @@ class Articles extends Controller
             foreach ($checked as $id) {            
                 //Log::info($id);
                 $article = Article::find($id);
-                $article->visibility = true;
-                //Flash::success(Article::find($id)->id); 
+                $article->visibility = true; 
                 $article->save();              
             }
+        }        
+    }
+
+    public function onMakeActiveOne()
+    {        
+        //Log::info(post('id'));
+        if (post('id')) {
+            $article = Article::find(post('id'));
+            $article->visibility = true;
+            $article->save();
         }
-        
+        return $this->listRefresh();       
+    }
+
+    public function listExtendColumns($list)
+    {
+        $list->addColumns([
+            'test111'
+        ]);
     }
 }

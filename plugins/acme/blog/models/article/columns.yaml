@@ -9,7 +9,7 @@ columns:
         sortable: true
     name:
         label: Name
-        searchable: true
+        searchable: true        
     slug:
         label: Slug
     content:
@@ -27,6 +27,12 @@ columns:
         select: name
     visibility:
         label: Display visibility
+    make visibility:
+        label: Make active
+        type: partial
+        clickable: false
+        sortable: false
+        path: ~/plugins/acme/blog/controllers/articles/_active_but.htm
     # created_at:
     #     label: Date created
     #     searchable: true
