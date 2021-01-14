@@ -56,14 +56,7 @@ class Setting extends Model
      */
     protected $hidden = [];
 
-    /**
-     * @var array Attributes to be cast to Argon (Carbon) instances
-     */
-    protected $dates = [
-        'created_at',
-        'updated_at'
-    ];
-
+ 
     /**
      * @var array Relations
      */
