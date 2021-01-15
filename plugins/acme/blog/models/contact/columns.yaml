@@ -13,5 +13,11 @@ columns:
         searchable: true
     message:
         lanel: Message
+    answer:
+        label: Answer
+        type: partial
+        clickable: false
+        sortable: false
+        path: ~/plugins/acme/blog/controllers/contacts/_answer_btn.htm
     created_at:
         lanel: Send

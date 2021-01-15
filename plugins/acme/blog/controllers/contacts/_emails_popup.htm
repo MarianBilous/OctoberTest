@@ -1,0 +1,36 @@
+<!-- Modal -->
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Answer</h5>
+      
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <select name="selectedEmail" id="selectedEmail" class="form-control custom-select select-no-search">
+            <option value="" selected="selected"></option>
+            <?php foreach($emails as $value): ?>
+              <option value="<?= $value ?>">
+                <?= $value ?>
+              </option>
+            <?php endforeach; ?>
+        </select>
+      </div>
+    </div>
+    <div class="modal-footer">      
+      <button data-request="onSendEmail"
+              onclick="$(this).data('request-data', JSON.stringify({ email: $('#selectedEmail').val(), userId: '<?= $userId ?>'}))"
+              class="btn btn-primary">
+              Send
+      </button>
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!--<script>-->
+<!--  $('#selectEmail').change(function(){-->
+<!--    let val = $(this).val();-->
+<!--    $('#sendEmail').data('request-data', val);-->
+<!--  })-->
+<!--</script>-->
