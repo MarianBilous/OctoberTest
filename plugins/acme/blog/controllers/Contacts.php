@@ -61,6 +61,7 @@ class Contacts extends Controller
                 $message->subject('Test message');
             });
 
-        Flash::success(post('email'));
+        Flash::success("Email has been sent");
+
     }
 }
