@@ -40,8 +40,11 @@ class MyController extends Controller
     public function onUpdate($id = null)
     {
         $data = post();
+        $mytest = \Acme\Blog\Models\MyTestModel::find($id);
+        $mytest->test_field = post('test_field');
+        $mytest->save();
 
-        trace_log($data);
+        //trace_log(post('test_field'));
 
         \Flash::success('Jobs done!');
     }
