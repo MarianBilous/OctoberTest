@@ -1,0 +1,29 @@
+title = "Search results"
+url = "/search-results"
+layout = "default"
+is_hidden = 0
+
+[searchResults]
+resultsPerPage = 4
+showProviderBadge = 1
+noResultsMessage = "Your search returned no results."
+visitPageMessage = "Visit page"
+==
+<section class="classic-blog-section section-padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-9">
+            {% partial "blog/search-results" %}
+         </div>
+         <div class="col-md-3">
+            <div class="sidebar-area">
+               {% partial "blog/search" %}
+               {% partial "blog/categories" %}
+               {% partial "blog/tags" %}
+               {% partial "blog/popular" %}
+               {% partial "blog/subscribe" %}
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

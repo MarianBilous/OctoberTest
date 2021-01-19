@@ -1,0 +1,96 @@
+description = "Footer"
+
+[viewBag]
+
+[staticMenu footerLeft]
+code = "footerleftmenu"
+
+[staticMenu footerRight]
+code = "footerrightmenu"
+==
+<div class="container">
+   <div class="row section">
+      <div class="footer-widget col-md-3 col-xs-12" data-aos="fade-up" data-aos-delay="100">
+         <h3 class="small-title">ABOUT US</h3>
+         <p>Etiam ornare condimentum massa et scelerisque. Mauris nibh ipsum, laoreet at venenatis ac, rutrum sed risus,<br>Aliquam magna nibh, mattis a urna nec. Semper venenatis magna.</p>
+         <div class="social-footer">
+            {% for fields in this.theme.social_media %}
+            <a href="{{ fields.social_media_url }}"><i class="{{ fields.social_media_icon }} icon-round" aria-hidden="true"></i></a>
+            {% endfor %}
+         </div>
+      </div>
+      {% import _self as nav %}
+      {% macro render_menu(items) %}
+      {% import _self as nav %}
+      {% for item in items %}
+      {% if item.items %}
+      <li role="presentation" class="nav-item dropdown {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }}">
+         <a href="{{ item.url }}" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
+         <ul class="dropdown-menu">
+            {{ nav.render_menu(item.items) }}
+         </ul>
+      </li>
+      {% else %}
+      <li role="presentation" class="nav-item {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }}">
+         <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+      {% endmacro %}
+      <div class="footer-widget col-md-3 col-xs-12" data-aos="fade-up" data-aos-delay="200">
+         <h3 class="small-title">{{ 'MENULEFT'|_ }}</h3>
+
+         {% if footerLeft.menuItems %}
+            <ul class="nav flex-column">
+               {{ nav.render_menu(footerLeft.menuItems) }}
+            </ul>
+         {% endif %}
+      </div>
+      <div class="footer-widget col-md-3 col-xs-12" data-aos="fade-up" data-aos-delay="200">
+         <h3 class="small-title">{{ 'MENURIGHT'|_ }}</h3>
+
+         {% if footerRight.menuItems %}
+            <ul class="nav flex-column">
+               {{ nav.render_menu(footerRight.menuItems) }}
+            </ul>
+         {% endif %}
+      </div>
+      <div class="footer-widget col-md-3 col-xs-12" data-aos="fade-up" data-aos-delay="800">
+         {% component 'mailSignup' %}
+      </div>
+   </div>
+</div>
+<div id="copyright">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6 col-sm-6">
+            <p class="copyright-text">© {{ "now"|date("Y") }} {{ this.theme.site_name }}. All right reserved. Designed by <a href="http://ketikidis.com">Ketitkidis.com</a></p>
+         </div>
+         <div class="col-md-6 col-sm-6">
+            {% import _self as nav %}
+            {% macro render_menu(items) %}
+            {% import _self as nav %}
+            {% for item in items %}
+            {% if item.items %}
+            <li role="presentation" class="nav-item dropdown {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }}">
+               <a href="{{ item.url }}" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
+               <ul class="dropdown-menu">
+                  {{ nav.render_menu(item.items) }}
+               </ul>
+            </li>
+            {% else %}
+            <li role="presentation" class="nav-item {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }}">
+               <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+            {% endmacro %}
+            {% if staticMenu2.menuItems %}
+            <ul class="nav nav-inline  justify-content-end ">
+               {{ nav.render_menu(staticMenu2.menuItems) }}
+            </ul>
+            {% endif %}
+         </div>
+      </div>
+   </div>
+</div>

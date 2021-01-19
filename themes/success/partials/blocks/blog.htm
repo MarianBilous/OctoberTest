@@ -1,0 +1,53 @@
+description = "Blog Section"
+
+[viewBag]
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/blog-category"
+postPage = "blog/blog-post"
+==
+<section id="blog" class="section" style="background-color: {{ data.section_blog_bg }};">
+   <div class="container">
+      <h1 class="section-title" data-aos="fade-up" data-aos-delay="300">{{ data.section_blog_header }}</h1>
+      <p class="section-subcontent" data-aos="fade-up" data-aos-delay="400">{{ data.section_blog_subheader }}</p>
+      <div class="row">
+         {% set posts = blogPosts.posts %}
+         {% for post in posts %}
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="300">
+               <div class="blog-item-wrapper">
+                  <div class="blog-item-img">
+                     {% if post.featured_images.count > 0 %}
+                        <a href="{{ post.url }}">
+                           <img src="{{ post.featured_images.first.getThumb(260, 168, 'crop') }}" alt="{{ image.description }}"/>
+                        </a>
+                     {% else %}
+                        <a href="{{ post.url }}">
+                           <img src="{{ 'assets/images/img/600x250.png'|theme }}" />
+                        </a>
+                     {% endif %}
+                  </div>
+                  <div class="blog-item-text">
+                     <h3 class="small-title"><a href="{{ post.url }}">{{ this.theme.site_author }}</a></h3>
+                     <p>{{ this.theme.site_name }}</p>
+                     <div class="blog-one-footer">
+                        <a href="{{ post.url }}">Modified this site {{ this.theme.modified }}</a>
+                            {% if this.theme.settings_disqus %}
+                               <a href="{{ post.url }}#disqus_thread">{{ data.blog_info }}<i class="icon-bubbles"></i></a>
+                            {% endif %}
+                     </div>
+                  </div>
+               </div>
+            </div>
+         {% else %}
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">{{ data.blog_info }}</div>
+         {% endfor %}
+      </div>
+   </div>
+</section>
+{% if this.theme.settings_disqus %}
+<script id="dsq-count-scr" src="//{{ this.theme.settings_disqus_url }}/count.js" async></script>
+{% endif %}

@@ -1,0 +1,607 @@
+tabs:
+  fields:
+
+    ####################################################
+    # Tab: Info
+    ####################################################
+    
+    info_section:
+      tab: Info
+      label: Info
+      type: section
+
+    site_name:
+      tab: Info
+      label: Website Name
+      type: text
+      default: Success
+
+    site_author:
+      tab: Info
+      label: Author
+      type: text
+      default: Charis Ketikidis
+
+    modified:
+      tab: Info
+      label: Modified
+      type: text
+
+    site_url:
+      tab: Info
+      label: URL
+      type: text
+      default: "ketikidis.com"
+
+    site_description:
+      tab: Info
+      label: Description
+      type: textarea
+      default: "Modular OctoberCMS Theme."
+
+    site_keywords:
+      tab: Info
+      label: Keywords
+      type: taglist
+      separator: comma
+      default: success,blog,ketikidis.com
+      options:
+        - success
+        - blog
+        - ketikidis.com
+        
+    site_locale:
+      tab: Info
+      label: Website Locale
+      type: text
+      default: en
+        
+    ####################################################
+    # Tab: Fonts
+    ####################################################
+    
+    fonts_section:
+      tab: Fonts
+      label: Fonts
+      type: section
+
+    fonts_googlefonts:
+      tab: Fonts
+      label: Google Fonts
+      type: switch
+      default: true
+
+    fonts_google_fontfamily:
+      tab: Fonts
+      label: Google Font Family
+      type: text
+      comment: Separate each font with vertical slash |
+      default: "Roboto+Slab:300,400,700|Raleway:300,300i,400,400i,700,700i"
+      trigger:
+        action: show
+        field: fonts_googlefonts
+        condition: checked
+
+    fonts_fontawesome:
+      tab: Fonts
+      label: FontAwesome Icon Fonts
+      type: switch
+      default: true
+      
+    ####################################################
+    # Tab: Settings
+    ####################################################
+    
+    settings_brand_section:
+      tab: Settings
+      label: Brand Settings
+      type: section
+      
+    settings_brand:
+      tab: Settings
+      label: Select brand type
+      type: balloon-selector
+      default: logo
+      options:
+        logo: Logo
+        text: Name
+    
+    settings_brand_logo:
+      tab: Settings
+      label: Brand Logo
+      type: mediafinder
+      mode: image
+      trigger:
+        action: show
+        field: settings_brand
+        condition: value[logo]
+      
+    settings_brand_text:
+      tab: Settings
+      label: Brand Name
+      type: text
+      trigger:
+        action: show
+        field: settings_brand
+        condition: value[text]
+        
+    settings_other_section:
+      tab: Settings
+      label: Other Settings
+      type: section
+        
+    settings_favicon:
+      tab: Settings
+      label: Favicon Image
+      type: mediafinder
+      mode: image
+      
+    settings_social:
+      tab: Settings
+      label: Social Links
+      type: switch
+      default: true
+      
+    settings_disqus:
+      tab: Settings
+      label: Disqus Comments
+      type: switch
+      default: false
+
+    settings_disqus_url:
+      tab: Settings
+      label: Enter your unique disqus URL
+      type: text
+      trigger:
+        action: show
+        field: settings_disqus
+        condition: checked
+        
+    settings_aboutwritter:
+      tab: Settings
+      label: Enable writter info on every post
+      type: switch
+      default: true
+        
+    settings_aboutwritter_info:
+      tab: Settings
+      label: About writter info
+      type: textarea
+      default: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis cumque, quo omnis rem eum ipsam qui. Tempore perspiciatis unde architecto quia, enim consectetur accusamus quasi omnis voluptatibus aliquid rem mollitia incidunt quibusdam eum, sit magnam, repellendus minima nihil iusto vitae ratione dicta, iste. Vitae, architecto.
+      size: large
+      trigger:
+        action: show
+        field: settings_aboutwritter
+        condition: checked
+
+    ####################################################
+    # Tab: Styles
+    ####################################################
+    
+    styles_section:
+      tab: Styles
+      label: Styles
+      type: section
+
+    styles_theme_color:
+      tab: Styles
+      label: Theme Color
+      type: balloon-selector
+      default: green
+      options:
+        green: Green
+        greensea: Greensea
+        lightblue: Lightblue
+        mblue: Mblue
+        orange: Orange
+        red: Red
+        wisteria: Wisteria
+        coffee: Coffee
+        custom: Custom
+
+    styles_primary_color:
+      tab: Styles
+      label: Primary Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#ff5722"
+      assetVar: "theme-primary-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+
+    styles_secondary_color:
+      tab: Styles
+      label: Secondary Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#2196f3"
+      assetVar: "theme-secondary-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+
+    styles_body_font:
+      tab: Styles
+      label: Body Font Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#2196f3"
+      assetVar: "theme-body-font-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+
+    styles_footer_background:
+      tab: Styles
+      label: Footer Background Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#2196f3"
+      assetVar: "theme-footer-background-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+
+    styles_footer_font:
+      tab: Styles
+      label: Footer Font Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#2196f3"
+      assetVar: "theme-footer-font-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+
+    styles_footer_link:
+      tab: Styles
+      label: Footer Link Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#2196f3"
+      assetVar: "theme-footer-link-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+        
+    styles_footer_header:
+      tab: Styles
+      label: Footer Header Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#2196f3"
+      assetVar: "theme-footer-header-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+      
+    styles_widget_title:
+      tab: Styles
+      label: Widget Title Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#2196f3"
+      assetVar: "theme-widget-title-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+      
+    styles_section_title:
+      tab: Styles
+      label: Section Title Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#2196f3"
+      assetVar: "theme-section-title-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+        
+    styles_page-header:
+      tab: Styles
+      label: Page Header Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#2196f3"
+      assetVar: "theme-page-header-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+
+    styles_top-header:
+      tab: Styles
+      label: Top Header Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#ff5722"
+      assetVar: "theme-top-header-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+        
+    styles_breadcrumb-section:
+      tab: Styles
+      label: Breadcrumb Section Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#ff5722"
+      assetVar: "theme-breadcrumb-section-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+        
+    styles_navigation_background:
+      tab: Styles
+      label: Navigation Background Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#ff5722"
+      assetVar: "theme-navigation-background-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+
+    styles_navigation_text:
+      tab: Styles
+      label: Navigation Text Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#ffffff"
+      assetVar: "theme-navigation-text-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+
+    styles_blogpost-background:
+      tab: Styles
+      label: Blog Post Background Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#ffffff"
+      assetVar: "theme-blogpost-background-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+        
+    styles_blogpage-background:
+      tab: Styles
+      label: Blog Page Background Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#ffffff"
+      assetVar: "theme-blogpage-background-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+        
+    styles_body-background:
+      tab: Styles
+      label: Body Background Color
+      type: colorpicker
+      availableColors: ["#f44336","#9c27b0","#2196f3","#cddc39","#ffc107","#607d8b","#808080","#383838","#000000","#ffffff"]
+      default: "#ff5722"
+      assetVar: "theme-body-background-color"
+      trigger:
+        action: show
+        field: styles_theme_color
+        condition: value[custom]
+
+    ####################################################
+    # Tab: Addons
+    ####################################################
+    
+    addons_section:
+      tab: Addons
+      label: Addons
+      type: section
+
+    animate_css:
+      tab: Addons
+      label: Animate CSS
+      type: switch
+      default: true
+
+    aos_js:
+      tab: Addons
+      label: AOS JS
+      type: switch
+      default: true
+
+    normalize_css:
+      tab: Addons
+      label: Normalize CSS
+      type: switch
+      default: true
+      
+    smoothscroll_js:
+      tab: Addons
+      label: Smooth Scroll
+      type: switch
+      default: true
+      
+    stickymenu_js:
+      tab: Addons
+      label: Sticky Menu
+      type: switch
+      default: true
+
+    scrolltop_js:
+      tab: Addons
+      label: Scroll To Top
+      type: switch
+      default: true
+
+    parallax_js:
+      tab: Addons
+      label: Parallax Effect
+      type: switch
+      default: true
+      
+    framework_js:
+      tab: Addons
+      label: OctoberCMS Front-end Javascript Framework
+      type: switch
+      default: true
+
+    ####################################################
+    # Tab: Top Bar
+    ####################################################
+    
+    topbar_section:
+      tab: Top Bar
+      label: Top Bar Settings
+      type: section
+
+    topbar_enable:
+      tab: Top Bar
+      label: Enable Top Bar
+      type: switch
+      default: true
+      span: left
+
+    topbar_callus:
+      tab: Top Bar
+      label: Call Us Number
+      type: text
+      span: left
+      trigger:
+        action: show
+        field: topbar_enable
+        condition: checked
+
+    topbar_mailus:
+      tab: Top Bar
+      label: Mail Us
+      type: text
+      span: left
+      trigger:
+        action: show
+        field: topbar_enable
+        condition: checked
+        
+    topbar_account:
+      tab: Top Bar
+      label: Account Login/Register
+      type: switch
+      default: true
+      trigger:
+        action: show
+        field: topbar_enable
+        condition: checked
+        
+    topbar_language:
+      tab: Top Bar
+      label: Language Selector
+      comment: <p>Before you enable Language selector:</p><ul><li>Install <strong>Translate Plugin.</strong></li><li>Create at least <strong>one more language.</strong> If you have only one language installed, <br>Page builder will not work!</li><li>Go to Layouts (Default & Static) -> Components -> Translate -> Locale Picker <br><strong>(just click it, do not throw it to layout)</strong> and then save.</li><li>Now you have language selector on all pages!</li></ul>
+      commentHtml: true
+      type: switch
+      default: false
+      trigger:
+        action: show
+        field: topbar_enable
+        condition: checked
+
+    ####################################################
+    # Tab: Social
+    ####################################################
+    
+    social_section:
+      tab: Social
+      label: Social media
+      type: section
+        
+    social_media:
+      tab: Social
+      type: repeater
+      prompt: Add new social media
+      maxItems: 6
+      form:
+        fields:
+          social_media_icon:
+            label: Icon class name e.g fa fa-facebook
+            placeholder: fa fa-facebook
+            span: auto
+          social_media_url:
+            label: Social media url (Must be a full url with http:// or https://)
+            placeholder: https://facebook.com/mypage
+            span: auto
+            
+    ####################################################
+    # Tab: Gallery
+    ####################################################
+    
+    gallery_section:
+      tab: Gallery
+      label: Gallery
+      type: section
+    
+    gallery_images:
+      tab: Gallery
+      prompt: Add Gallery Image
+      type: repeater
+      form:
+        fields:
+          gallery_image:
+            label: Gallery Image
+            type: mediafinder
+            mode: image
+            imageWidth: 350
+            imageHeight: 200
+            span: left
+          gallery_title:
+            label: Gallery Image Title
+            type: text
+            span: right
+
+    ####################################################
+    # Tab: Advanced
+    ####################################################
+
+    advanced_analytics_section:
+      tab: Advanced
+      label: Analytics
+      type: section
+      
+    google_analytics:
+      tab: Advanced
+      label: Google analytics code
+      type: codeeditor
+      size: huge
+      language: html
+    
+    advanced_code_section:
+      tab: Advanced
+      label: Custom Code
+      type: section
+
+    custom_css:
+      tab: Advanced
+      label: Custom CSS
+      type: codeeditor
+      size: huge
+      language: css
+
+    custom_js:
+      tab: Advanced
+      label: Custom JS
+      type: codeeditor
+      size: huge
+      language: javascript
+      

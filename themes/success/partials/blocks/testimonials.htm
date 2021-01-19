@@ -1,0 +1,31 @@
+description = "Testimonials Section"
+
+[viewBag]
+==
+<section id="testimonial" class="section" style="background-color: {{ data.section_testimonials_bg }};">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12" data-aos="fade-up" data-aos-delay="300">
+            <div id="testimonial-item" class="owl-carousel">
+               {% for fields in data.section_testimonials %}
+               <div class="item">
+                  <div class="testimonial-inner">
+                     <div class="testimonial-images">
+                        {% if fields.section_testimonials_image %}
+                        <img class="img-circle" src="{{ fields.section_testimonials_image|media }}" alt="">
+                        {% endif %}
+                     </div>
+                     <div class="testimonial-content">
+                        <p>{{ fields.section_testimonials_desc }}</p>
+                     </div>
+                     <div class="testimonial-footer">
+                        <i class="fa fa-quote-left"></i>{{ fields.section_testimonials_name }} <a href="{{ fields.section_testimonials_link }}">{{ fields.section_testimonials_linklabel }} </a>
+                     </div>
+                  </div>
+               </div>
+               {% endfor %}
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

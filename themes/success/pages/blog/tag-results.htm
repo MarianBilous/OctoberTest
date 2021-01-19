@@ -1,0 +1,30 @@
+title = "Tag Results"
+url = "/tag/:slug?/:page?"
+layout = "default"
+is_hidden = 0
+
+[searchPosts]
+slug = "{{ :slug }}"
+pageNumber = "{{ :page }}"
+postsPerPage = 4
+postPage = "blog/blog-post"
+sortOrder = "published_at desc"
+==
+<section class="classic-blog-section section-padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-9">
+            {% partial "blog/tag-results" %}
+         </div>
+         <div class="col-md-3">
+            <div class="sidebar-area">
+               {% partial "blog/search" %}
+               {% partial "blog/categories" %}
+               {% partial "blog/tags" %}
+               {% partial "blog/popular" %}
+               {% partial "blog/subscribe" %}
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

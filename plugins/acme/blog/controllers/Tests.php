@@ -8,37 +8,40 @@ use Backend\Classes\Controller;
  */
 class Tests extends Controller
 {
-//    public function index()
-//    {
-//        return \Backend::redirect('acme/blog/tests/helloworld');
-//    }
-//
-//    public function helloworld()
-//    {
-//        $this->vars['name'] = "hello";
-//    }
-    /**
-     * @var array Behaviors that are implemented by this controller.
-     */
-    public $implement = [
-        'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController'
-    ];
-
-    /**
-     * @var string Configuration file for the `FormController` behavior.
-     */
-    public $formConfig = 'config_form.yaml';
-
-    /**
-     * @var string Configuration file for the `ListController` behavior.
-     */
-    public $listConfig = 'config_list.yaml';
-
     public function __construct()
     {
         parent::__construct();
 
         BackendMenu::setContext('Acme.Blog', 'blog', 'tests');
+    }
+
+    public function index()
+    {
+        $config = $this->makeConfig('$/acme/blog/models/article/columns.yaml');
+        $config->model = new \Acme\Blog\Models\Article;
+        $config->recordUrl = 'acme/blog/tests/update/:id';
+        $widget = $this->makeWidget('\Backend\Widgets\Lists', $config);
+        $widget->bindToController();
+        $this->vars['widget'] = $widget;
+
+        //return \Backend::redirect('acme/blog/tests/helloworld');
+    }
+
+    public function update($id = null)
+    {
+        $config = $this->makeConfig('$/acme/blog/models/article/fields.yaml');
+        $config->model = \Acme\Blog\Models\Article::find($id);
+        $widget = $this->makeWidget('Backend\Widgets\Form', $config);
+        $this->vars['widget'] = $widget;
+    }
+
+    public function onUpdate($id = null)
+    {
+
+    }
+
+    public function helloworld()
+    {
+        //$this->vars['name'] = "hello";
     }
 }

@@ -1,0 +1,21 @@
+description = "Services 2 Section"
+
+[viewBag]
+==
+<section class="section service2-intro" style="background-color: {{ data.section_services2_bg }};">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <h1 class="section-title" data-aos="fade-up" data-aos-delay="300">{{ data.section_services2_header }}</h1>
+            <p class="section-subcontent mb-30" data-aos="fade-up" data-aos-delay="400">{{ data.section_services2_subheader }}</p>
+         </div>
+         {% for fields in data.section_services2 %}
+         <div class="col-md-4 service2-single-service" data-aos="fade-up" data-aos-delay="300">
+            <i class="{{ fields.section_services2_icon }}"></i>
+            <h2>{{ fields.section_services2_title }}</h2>
+            <p>{{ fields.section_services2_desc }}</p>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</section>

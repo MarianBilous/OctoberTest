@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: My Controller
+
+# Model Form Field configuration
+form: $/acme/blog/models/mycontroller/fields.yaml
+
+# Model Class name
+modelClass: Acme\Blog\Models\MyController
+
+# Default redirect location
+defaultRedirect: acme/blog/mycontroller
+
+# Create page
+create:
+    title: Create My Controller
+    redirect: acme/blog/mycontroller/update/:id
+    redirectClose: acme/blog/mycontroller
+
+# Update page
+update:
+    title: Edit My Controller
+    redirect: acme/blog/mycontroller
+    redirectClose: acme/blog/mycontroller
+
+# Preview page
+preview:
+    title: Preview My Controller

@@ -1,0 +1,23 @@
+description = "Clients Section"
+
+[viewBag]
+==
+<section id="clients" class="section" style="background-color: {{ data.section_clients_bg }};">
+   <div class="container">
+      <h1 class="section-title" data-aos="fade-up" data-aos-delay="300">{{ data.section_clients_header }}</h1>
+      <p class="section-subcontent" data-aos="fade-up" data-aos-delay="400">{{ data.section_clients_subheader }}</p>
+      <div class="client-wrapper">
+         <div class="row" id="clients-scroller" data-aos="fade-up" data-aos-delay="300">
+            {% for fields in data.section_clients %}
+            <div class="client-item-wrapper">
+               {% if fields.section_clients_image %}
+               <img src="{{ fields.section_clients_image|media }}" alt="{{ fields.section_clients_title }}">
+               {% else %}
+               <img src="{{ 'assets/images/img/180x122.png'|theme }}" alt="">
+               {% endif %}
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</section>

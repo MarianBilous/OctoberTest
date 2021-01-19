@@ -1,0 +1,63 @@
+description = "Static Layout"
+
+[session]
+security = "all"
+
+[staticPage]
+useContent = 0
+default = 0
+
+[contactForm]
+loadJS = 1
+
+[searchInput]
+useAutoComplete = 1
+autoCompleteResultCount = 5
+showProviderBadge = 1
+searchPage = "search-results.htm"
+
+[mailSignup]
+
+[localePicker]
+forceUrl = 1
+==
+<!DOCTYPE html>
+<html lang="{{ this.theme.site_locale }}">
+    <head>
+        {% partial "site/meta" %}
+        {% partial "site/css" %}
+    </head><!--/#head-->
+    <body class="page-{{ this.page.title }} layout-{{ this.page.layout }}">
+
+        <header id="header-wrap">
+            {% partial "site/top" %}
+            {% partial "site/nav" %}
+        </header><!--/#header-->
+    
+        <!-- Analytics -->
+        {{ this.theme.google_analytics|raw }}
+
+        {% page %}
+    
+        <!-- Repeater -->
+        {repeater name="sections" groups="~/themes/success/meta/static/blocks.yaml" tab="Blocks"}
+            {variable name="_dummy" type="text"}{/variable}
+        {/repeater}
+    
+        <!-- Render blocks -->
+        {% for section in sections %}
+            {% partial 'blocks/' ~ section._group data=section %}
+        {% endfor %}
+
+        <footer id="footer">
+        	{% partial "site/footer" %}
+        </footer><!--/#footer-->
+    
+        <!-- Scroll to top -->
+        {% partial "site/scrolltop" %}
+    
+        <!-- Scripts -->
+        {% partial "site/scripts" %}
+
+</body><!--/#body-->
+</html>

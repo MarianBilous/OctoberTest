@@ -1,0 +1,17 @@
+name: "BR CMS Success"
+description: "Modular Octobercms theme"
+author: Charis Ketikidis
+homepage: "https://www.ketikidis.com"
+code: octobercms-success
+form: config/fields.yaml
+require:
+    - Rainlab.User
+    - Rainlab.Blog
+    - Rainlab.Pages
+    - Rainlab.Mailchimp
+    - PolloZen.MostVisited
+    - OFFLINE.SiteSearch
+    - Rahman.BlogTags
+    - Martin.Ssbuttons
+    - GrofGraf.ContactMe
+useSCSS: false

@@ -1,0 +1,1175 @@
+about:
+  name: About
+  description: About
+  icon: icon-info
+  fields:
+    section_about_section:
+      label: About
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_about_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_about_image:
+      label: About Image
+      type: mediafinder
+      mode: image
+      span: left
+    section_about_big:
+      label: About Big Item
+      type: repeater
+      prompt: Add About Item
+      span: left
+      form:
+        fields:
+          section_about_big_line:
+            label: About Big
+            type: section
+          section_about_big_title:
+            label: Item Title
+            type: text
+            span: full
+          section_about_big_desc:
+            label: Item Description
+            type: richeditor
+            size: large
+            span: full
+    section_about_small:
+      label: About Small Item
+      type: repeater
+      prompt: Add About Item
+      span: right
+      form:
+        fields:
+          section_about_small_line:
+            label: About Small
+            type: section
+          section_about_small_title:
+            label: Item Title
+            type: text
+            span: full
+          section_about_small_desc:
+            label: Item Description
+            type: textarea
+            size: small
+            span: full
+            
+banner:
+  name: Banner
+  description: Banner
+  icon: icon-bookmark-o
+  fields:
+    section_banner_section:
+      label: Banner
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_banner_header:
+      label: Banner Header
+      type: text
+      span: left
+    section_banner_subheader:
+      label: Banner Subheader
+      type: text
+      span: right
+    section_banner_image:
+      label: Banner Image
+      type: mediafinder
+      mode: image
+      span: left
+    section_banner_buttonicon:
+      label: Banner Button Icon
+      type: text
+      span: left
+    section_banner_buttonlabel:
+      label: Banner Button Label
+      type: text
+      span: right
+    section_banner_buttonlink:
+      label: Banner Button Link
+      type: text
+      span: full
+
+blog:
+  name: Blog
+  description: Blog
+  icon: icon-file-text-o
+  fields:
+    section_blog_section:
+      label: Blog
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_blog_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ED66DF","#ED6681","#6FE06C","#66EDD4","#F01E14","#3C45FA","#70E06C","#F7B66A","#B366ED"]
+      default: "#ffffff"
+      span: left
+    section_blog_header:
+      label: Blog Header
+      type: text
+      span: left
+    section_blog_subheader:
+      label: Blog Subheader
+      type: text
+      span: right
+    blog_info:
+      label: Blog Info
+      type: text
+      span: auto
+      
+breadcrumbs:
+  name: Breadcrumbs
+  description: Breadcrumbs
+  icon: icon-bookmark
+  fields:
+    section_breadcrumbs_section:
+      label: Breadcrumbs
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_breadcrumbs:
+      label: Turn On Breadcrumbs
+      type: switch
+      span: left
+      default: false
+
+carousel:
+  name: Carousel
+  description: Carousel
+  icon: icon-camera
+  fields:
+    section_carousel_section:
+      label: Carousel
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_carousel:
+      type: repeater
+      prompt: Add Carousel Slide
+      form:
+        fields:
+          section_carousel_line:
+            label: Carousel Slide
+            type: section
+          section_carousel_image:
+            label: Slide Image
+            type: mediafinder
+            mode: image
+            span: left
+          section_carousel_title:
+            label: Slide Title
+            type: text
+            span: left
+          section_carousel_subtitle:
+            label: Slide Subtitle
+            type: text
+            span: right
+          section_carousel_buttonlabel:
+            label: Slide Button Label
+            type: text
+            span: left
+          section_carousel_buttonicon:
+            label: Slide Button Icon
+            type: text
+            span: right
+          section_carousel_buttonlink:
+            label: Slide Button Link
+            type: text
+            span: full
+            
+clients:
+  name: Clients
+  description: Clients
+  icon: icon-users
+  fields:
+    section_clients_section:
+      label: Clients
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_clients_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_clients_header:
+      label: Clients Header
+      type: text
+      span: left
+    section_clients_subheader:
+      label: Clients Subheader
+      type: text
+      span: right
+    section_clients:
+      type: repeater
+      prompt: Add Client
+      form:
+        fields:
+          section_clients_line:
+            label: Client
+            type: section
+          section_clients_image:
+            label: Client Image
+            type: mediafinder
+            mode: image
+            span: left
+          section_clients_title:
+            label: Client Title
+            type: text
+            span: right
+            
+contactus:
+  name: Contact Us
+  description: Contact Us
+  icon: icon-envelope-o
+  fields:
+    section_contactus_section:
+      label: Contact Us
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_contactus_header:
+      label: Contact Us Header
+      type: text
+      span: left
+    section_contactus_subheader:
+      label: Contact Us Subheader
+      type: text
+      span: right
+    section_contactus_loacationtitle:
+      label: Contact Us Location Title
+      type: text
+      span: left
+    section_contactus_address:
+      label: Contact Us Address
+      type: text
+      span: right
+    section_contactus_phone:
+      label: Contact Us Phone
+      type: number
+      span: left
+    section_contactus_email:
+      label: Contact Us Email
+      type: text
+      span: right
+    section_contactus_hourstitle:
+      label: Contact Us Hours Title
+      type: text
+      span: left
+    section_contactus_hours:
+      label: Contact Us Hours
+      type: textarea
+      size: small
+      span: right
+    section_contactus_socialtitle:
+      label: Contact Us Social Title
+      type: text
+      span: left
+    section_contactus_facebook:
+      label: Contact Us Facebook
+      type: text
+      span: right
+    section_contactus_twitter:
+      label: Contact Us Twitter
+      type: text
+      span: left
+    section_contactus_linkedin:
+      label: Contact Us LinkedIn
+      type: text
+      span: right
+    section_contactus_googleplus:
+      label: Contact Us Google Plus
+      type: text
+      span: left
+    section_contactus_map:
+      label: Turn On Map
+      type: switch
+      span: left
+      default: false
+    section_contactus_mapaddress:
+      label: Contact Us Map Address
+      type: text
+      span: left
+      trigger:
+        action: show
+        field: section_contactus_map
+        condition: checked
+    section_contactus_maplanguage:
+      label: Contact Us Map Language
+      type: dropdown
+      span: left
+      options:
+        en: English
+        el: Greek
+        fr: France
+        de: Germany
+        es: Spain
+        ru: Russia
+      trigger:
+        action: show
+        field: section_contactus_map
+        condition: checked
+    section_contactus_mapregion:
+      label: Contact Us Map Region
+      type: text
+      span: left
+      options:
+        EN: English
+        GR: Greece
+        FR: France
+        DE: Germany
+        ES: Spain
+        RU: Russia
+      trigger:
+        action: show
+        field: section_contactus_map
+        condition: checked
+    section_contactus_mapkey:
+      label: Contact Us Google Map Key
+      type: text
+      span: left
+      trigger:
+        action: show
+        field: section_contactus_map
+        condition: checked
+
+contactus2:
+  name: Contact Us 2
+  description: Contact Us 2
+  icon: icon-envelope-o
+  fields:
+    section_contactus2_section:
+      label: Contact Us 2
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_contactus2_header:
+      label: Contact Us Header
+      type: text
+      span: left
+    section_contactus2_subheader:
+      label: Contact Us Subheader
+      type: text
+      span: right
+    section_contactus2_title:
+      label: Contact Us Location Title
+      type: text
+      span: left
+    section_contactus2_address:
+      label: Contact Us Address
+      type: text
+      span: right
+    section_contactus2_phone:
+      label: Contact Us Phone
+      type: number
+      span: left
+    section_contactus2_fax:
+      label: Contact Us Fax
+      type: number
+      span: right
+    section_contactus2_email:
+      label: Contact Us Email
+      type: text
+      span: left
+    section_contactus2_map:
+      label: Turn On Map
+      type: switch
+      span: left
+      default: false
+    section_contactus2_mapaddress:
+      label: Contact Us Map Address
+      type: text
+      span: left
+      trigger:
+        action: show
+        field: section_contactus2_map
+        condition: checked
+    section_contactus2_maplanguage:
+      label: Contact Us Map Language
+      type: dropdown
+      span: left
+      options:
+        en: English
+        el: Greek
+      trigger:
+        action: show
+        field: section_contactus2_map
+        condition: checked
+    section_contactus2_mapregion:
+      label: Contact Us Map Region
+      type: dropdown
+      span: left
+      options:
+        EN: English
+        GR: Greece
+      trigger:
+        action: show
+        field: section_contactus2_map
+        condition: checked
+    section_contactus2_mapkey:
+      label: Contact Us Google Map Key
+      type: text
+      span: left
+      trigger:
+        action: show
+        field: section_contactus2_map
+        condition: checked
+
+facts:
+  name: Facts
+  description: Facts
+  icon: icon-star
+  fields:
+    section_facts_section:
+      label: Facts
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_facts_header:
+      label: Facts Header
+      type: text
+      span: left
+    section_facts_subheader:
+      label: Facts Subheader
+      type: text
+      span: right
+    section_facts_image:
+      label: Facts Image
+      type: mediafinder
+      mode: image
+      span: left
+    section_facts:
+      type: repeater
+      prompt: Add fact
+      form:
+        fields:
+          section_facts_line:
+            label: Fact
+            type: section
+          section_facts_title:
+            label: Fact Title
+            type: text
+            span: left
+          section_facts_icon:
+            label: Fact Icon
+            type: text
+            span: right
+          section_facts_number:
+            label: Fact Number
+            type: number
+            span: full
+        
+pageheader:
+  name: Pageheader
+  description: Pageheader
+  icon: icon-flag
+  fields:
+    section_pageheader_section:
+      label: Pageheader
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_pageheader:
+      label: Turn On Pageheader
+      type: switch
+      span: left
+      default: false
+        
+portfolio:
+  name: Portfolio
+  description: Portfolio
+  icon: icon-picture-o
+  fields:
+    section_portfolio_section:
+      label: Portfolio
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_portfolio_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_portfolio_column:
+      label: Portfolio Columns
+      type: balloon-selector
+      span: right
+      options:
+        2column: 2 Column
+        3column: 3 Column
+        4column: 4 Column
+    section_portfolio_header:
+      label: Portfolio Header
+      type: text
+      span: left
+    section_portfolio_subheader:
+      label: Portfolio Subheader
+      type: text
+      span: right
+    section_portfolio:
+      type: repeater
+      prompt: Add Portfolio Image
+      form:
+        fields:
+          section_portfolio_line:
+            label: Portfolio Item
+            type: section
+          section_portfolio_thumbimage:
+            label: Portfolio Thumb Image
+            type: mediafinder
+            mode: image
+            span: left
+          section_portfolio_image:
+            label: Portfolio Image
+            type: mediafinder
+            mode: image
+            span: right
+          section_portfolio_title:
+            label: Portfolio Title
+            type: text
+            span: left
+          section_portfolio_subtitle:
+            label: Portfolio Subtitle
+            type: text
+            span: right
+          section_portfolio_category:
+            label: Portfolio Category
+            type: text
+            span: left
+          section_portfolio_link:
+            label: Portfolio Link
+            type: text
+            span: right
+        
+portfoliosingle:
+  name: Portfolio Single
+  description: Portfolio Single
+  icon: icon-picture-o
+  fields:
+    section_portfoliosingle_section:
+      label: Portfolio Single
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_portfoliosingleimage:
+      type: repeater
+      prompt: Add Portfolio Image
+      span: left
+      form:
+        fields:
+          section_portfoliosingle_image:
+            label: Portfolio Image
+            type: mediafinder
+            mode: image
+            span: left
+    section_portfoliosingle_title:
+      label: Portfolio Title
+      type: text
+      span: right
+    section_portfoliosingle_desc:
+      label: Portfolio Description
+      type: textarea
+      size: small
+      span: right
+    section_portfoliosingle_detailstitle:
+      label: Portfolio Details Title
+      type: text
+      span: full
+    section_portfoliosingledetails:
+      type: repeater
+      prompt: Add Portfolio Detail Item
+      span: full
+      form:
+        fields:
+          section_portfoliosingle_line:
+            label: Detail Item
+            type: section
+          section_portfoliosingle_detailslabel:
+            label: Detail Title
+            type: text
+            span: left
+          section_portfoliosingle_detailsname:
+            label: Detail Description
+            type: text
+            span: right
+    section_portfoliosingle_buttonlabel:
+      label: Portfolio Button Label
+      type: text
+      span: left
+    section_portfoliosingle_buttonlink:
+      label: Portfolio Button Link
+      type: text
+      span: right
+        
+pricing:
+  name: Pricing
+  description: Pricing
+  icon: icon-database
+  fields:
+    section_pricing_section:
+      label: Pricing
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_pricing_header:
+      label: Pricing Header
+      type: text
+      span: left
+    section_pricing_subheader:
+      label: Pricing Subheader
+      type: text
+      span: right
+    section_pricing_image:
+      label: Pricing Image
+      type: mediafinder
+      mode: image
+      span: left
+    section_pricing:
+      type: repeater
+      prompt: Add Table
+      form:
+        fields:
+          section_pricing_line:
+            label: Price Item
+            type: section
+          section_pricing_title:
+            label: Pricing Title
+            type: text
+            span: left
+          section_pricing_price:
+            label: Pricing Price
+            type: number
+            span: right
+          section_pricing_feature1:
+            label: Pricing Feature 1
+            type: text
+            span: auto
+          section_pricing_feature2:
+            label: Pricing Feature 2
+            type: text
+            span: auto
+          section_pricing_feature3:
+            label: Pricing Feature 3
+            type: text
+            span: auto
+          section_pricing_feature4:
+            label: Pricing Feature 4
+            type: text
+            span: auto
+          section_pricing_buttonlabel:
+            label: Pricing Button Label
+            type: text
+            span: auto
+          section_pricing_buttonlink:
+            label: Pricing Button Link
+            type: text
+            span: auto
+            
+pricing2:
+  name: Pricing 2
+  description: Pricing 2
+  icon: icon-database
+  fields:
+    section_pricing2_section:
+      label: Pricing 2
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_pricing2_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_pricing2_header:
+      label: Pricing Header
+      type: text
+      span: left
+    section_pricing2_subheader:
+      label: Pricing Subheader
+      type: text
+      span: right
+    section_pricing2:
+      type: repeater
+      prompt: Add Table
+      form:
+        fields:
+          section_pricing2_line:
+            label: Price Item
+            type: section
+          section_pricing2_title:
+            label: Pricing Title
+            type: text
+            span: left
+          section_pricing2_subtitle:
+            label: Pricing Subitle
+            type: text
+            span: right
+          section_pricing2_price:
+            label: Pricing Price
+            type: number
+            span: full
+          section_pricing2_feature1:
+            label: Pricing Feature 1
+            type: text
+            span: left
+          section_pricing2_feature2:
+            label: Pricing Feature 2
+            type: text
+            span: right
+          section_pricing2_feature3:
+            label: Pricing Feature 3
+            type: text
+            span: left
+          section_pricing2_feature4:
+            label: Pricing Feature 4
+            type: text
+            span: right
+          section_pricing2_buttonicon:
+            label: Pricing Button Icon
+            type: text
+            span: left
+          section_pricing2_buttonlabel:
+            label: Pricing Button Label
+            type: text
+            span: right
+          section_pricing2_buttonlink:
+            label: Table Button Link
+            type: text
+            span: full
+        
+services1:
+  name: Services 1
+  description: Services 1
+  icon: icon-sliders
+  fields:
+    section_services1_section:
+      label: Services 1
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_services1_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_services1_header:
+      label: Services Header
+      type: text
+      span: left
+    section_services1_subheader:
+      label: Services Subheader
+      type: text
+      span: right
+    section_services1:
+      type: repeater
+      prompt: Add Service
+      form:
+        fields:
+          section_services1_line:
+            label: Service
+            type: section
+          section_services1_title:
+            label: Service Title
+            type: text
+            span: left
+          section_services1_icon:
+            label: Service Icon
+            type: text
+            span: right
+          section_services1_desc:
+            label: Service Description
+            type: textarea
+            size: small
+            span: full
+            
+services2:
+  name: Services 2
+  description: Services 2
+  icon: icon-sliders
+  fields:
+    section_services2_section:
+      label: Services 2
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_services2_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_services2_header:
+      label: Services Header
+      type: text
+      span: left
+    section_services2_subheader:
+      label: Services Subheader
+      type: text
+      span: right
+    section_services2:
+      type: repeater
+      prompt: Add Service
+      form:
+        fields:
+          section_services2_line:
+            label: Service
+            type: section
+          section_services2_icon:
+            label: Service Icon
+            type: text
+            span: left
+          section_services2_title:
+            label: Service Title
+            type: text
+            span: right
+          section_services2_desc:
+            label: Service Description
+            type: textarea
+            size: small
+            span: full
+            
+services3:
+  name: Services 3
+  description: Services 3
+  icon: icon-sliders
+  fields:
+    section_services3_section:
+      label: Services 3
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_services3_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_services3_header:
+      label: Services Header
+      type: text
+      span: left
+    section_services3_subheader:
+      label: Services Subheader
+      type: text
+      span: right
+    section_services3:
+      type: repeater
+      prompt: Add Service
+      form:
+        fields:
+          section_services3_line:
+            label: Service
+            type: section
+          section_services3_title:
+            label: Service Title
+            type: text
+            span: left
+          section_services3_icon:
+            label: Service Icon
+            type: text
+            span: right
+          section_services3_desc:
+            label: Service Description
+            type: textarea
+            size: small
+            span: full
+        
+skills:
+  name: Skills
+  description: Skills
+  icon: icon-line-chart
+  fields:
+    section_skills_section:
+      label: Skills
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_skills_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_skills_style:
+      label: Skills Style
+      type: balloon-selector
+      default: color
+      span: right
+      options:
+        color: Default Color
+        skill-striped: Striped
+        skill-striped skill-animated: Animated
+        grey-progress-bar: Gray
+    section_skills_header:
+      label: Skills Header
+      type: text
+      span: left
+    section_skills_subheader:
+      label: Skills Subheader
+      type: text
+      span: right
+    section_skills:
+      type: repeater
+      prompt: Add Skill
+      form:
+        fields:
+          section_skills_line:
+            label: Skill
+            type: section
+          section_skills_title:
+            label: Skill Title
+            type: text
+            span: left
+          section_skills_progress:
+            label: Skill Progress
+            type: number
+            span: right
+        
+tabs:
+  name: Tabs
+  description: Tabs
+  icon: icon-clone
+  fields:
+    section_tabs_section:
+      label: Tabs
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_tabs_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_tabs_header:
+      label: Tabs Header
+      type: text
+      span: left
+    section_tabs_subheader:
+      label: Tabs Subheader
+      type: text
+      span: right
+    section_tabs_image:
+      label: Tabs Image
+      type: mediafinder
+      mode: image
+      span: left
+    section_tabs_title:
+      label: Tabs Title
+      type: text
+      span: left
+    section_tabs_desc:
+      label: Tabs Description
+      type: text
+      span: right
+    section_tabs_item:
+      type: repeater
+      prompt: Add Tab
+      form:
+        fields:
+          section_tabs_item_line:
+            label: Tab
+            type: section
+          section_tabs_item_title:
+            label: Tab Title
+            type: text
+            span: full
+          section_tabs_item_desc:
+            label: Tab Description
+            type: richeditor
+            size: huge
+            span: full
+        
+tabsskills:
+  name: Tabs-Skills
+  description: Tabs-Skills
+  icon: icon-bar-chart
+  fields:
+    section_tabsskills_section:
+      label: Tabs-Skills
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_tabsskills_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_tabsskills_header:
+      label: Tabs-Skills Header
+      type: text
+      span: left
+    section_tabsskills_subheader:
+      label: Tabs-Skills Subheader
+      type: text
+      span: right
+    section_tabsskills_tabs:
+      type: repeater
+      prompt: Add Tab
+      span: left
+      form:
+        fields:
+          section_tabsskills_tabs_line:
+            label: Tab
+            type: section
+          section_tabsskills_tabs_title:
+            label: Tab Title
+            type: text
+            span: left
+          section_tabsskills_tabs_icon:
+            label: Tab Icon
+            type: text
+            span: right
+          section_tabsskills_tabs_subtitle:
+            label: Tab Subtitle
+            type: text
+            span: full
+          section_tabsskills_tabs_desc:
+            label: Tab Description
+            type: richeditor
+            size: large
+            span: full
+    section_tabsskills_skills:
+      type: repeater
+      prompt: Add Skill
+      span: right
+      form:
+        fields:
+          section_tabsskills_skills_line:
+            label: Skill
+            type: section
+          section_tabsskills_skills_title:
+            label: Skill Title
+            type: text
+            span: left
+          section_tabsskills_skills_progress:
+            label: Skill Progress
+            type: number
+            span: right
+        
+team:
+  name: Team
+  description: Team
+  icon: icon-users
+  fields:
+    section_team_section:
+      label: Team
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_team_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_team_header:
+      label: Team Header
+      type: text
+      span: left
+    section_team_subheader:
+      label: Team Subheader
+      type: text
+      span: right
+    section_team:
+      type: repeater
+      prompt: Add Team Member
+      form:
+        fields:
+          section_team_line:
+            label: Team Member
+            type: section
+          section_team_image:
+            label: Team Image
+            type: mediafinder
+            mode: image
+            span: left
+          section_team_name:
+            label: Team Name
+            type: text
+            span: right
+          section_team_title:
+            label: Team Title
+            type: text
+            span: right
+          section_team_desc:
+            label: Team Description
+            type: textarea
+            size: small
+            span: right
+          section_team_facebook:
+            label: Team Facebook
+            type: text
+            span: right
+          section_team_twitter:
+            label: Team Twitter
+            type: text
+            span: right
+          section_team_googleplus:
+            label: Team Google Plus
+            type: text
+            span: right
+          section_team_linkedin:
+            label: Team LinkedIn
+            type: text
+            span: right
+
+testimonials:
+  name: Testimonials
+  description: Testimonials
+  icon: icon-commenting-o
+  fields:
+    section_testimonials_section:
+      label: Testimonials
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_testimonials_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_testimonials:
+      type: repeater
+      prompt: Add Testimonial
+      form:
+        fields:
+          section_testionials_line:
+            label: Testimonial
+            type: section
+          section_testimonials_image:
+            label: Testimonial Icon
+            type: mediafinder
+            mode: image
+            span: left
+          section_testimonials_name:
+            label: Testimonial Name
+            type: text
+            span: full
+          section_testimonials_desc:
+            label: Testimonial Description
+            type: textarea
+            size: small
+            span: full
+          section_testimonials_linklabel:
+            label: Testimonial Site Name
+            type: text
+            span: left
+          section_testimonials_link:
+            label: Testimonial Site Link
+            type: text
+            span: right
+
+text:
+  name: Text
+  description: Text
+  icon: icon-newspaper-o
+  fields:
+    section_text_section:
+      label: Text
+      type: section
+      cssClass: 'p-a m-y control-scrollpanel'
+    section_text_bg:
+      label: Section Background Color
+      type: colorpicker
+      availableColors: ["#ffffff","#f1f1f1","#f2f2f2","#f3f3f3","#f4f4f4","#f5f5f5","#f6f6f6","#f8f8f8","#f9f9f9"]
+      default: "#ffffff"
+      span: left
+    section_text_header:
+      label: Text Header
+      type: text
+      span: left
+    section_text_textarea:
+      label: Textarea
+      type: richeditor
+      span: full

@@ -1,0 +1,33 @@
+description = "Pricing 2 Section"
+
+[viewBag]
+==
+<section class="section pricing2-section" style="background-color: {{ data.section_pricing2_bg }};">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+            <h1 class="section-title" data-aos="fade-up" data-aos-delay="300">{{ data.section_pricing2_header }}</h1>
+            <p class="section-subcontent mb-30" data-aos="fade-up" data-aos-delay="400">{{ data.section_pricing2_subheader }}</p>
+         </div>
+         {% for fields in data.section_pricing2 %}
+         <div class="col-md-4 pricing-table2" data-aos="fade-up" data-aos-delay="500">
+            <div class="single-pricing-2">
+               <span class="plan-name text-center">{{ fields.section_pricing2_title }}
+               <small>{{ fields.section_pricing2_subtitle }}</small>
+               </span>
+               <p class="plan-price"><sup class="currency">$</sup><strong>{{ fields.section_pricing2_price }}</strong></p>
+               <ul class="list-unstyled">
+                  <li>{{ fields.section_pricing2_feature1 }}</li>
+                  <li>{{ fields.section_pricing2_feature2 }}</li>
+                  <li>{{ fields.section_pricing2_feature3 }}</li>
+                  <li>{{ fields.section_pricing2_feature4 }}</li>
+               </ul>
+               <div class="pricing2-button">
+                  <a href="{{ fields.section_pricing2_buttonlink }}" class="btn btn-common"><i class="{{ fields.section_pricing2_buttonicon }}"></i> {{ fields.section_pricing2_buttonlabel }}</a>
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</section>

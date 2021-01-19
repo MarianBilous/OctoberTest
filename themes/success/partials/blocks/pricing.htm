@@ -1,0 +1,39 @@
+description = "Pricing Section"
+
+[viewBag]
+==
+{% if data.section_pricing_image %}
+<section id="pricing" class="section parallax" {% if this.theme.parallax_js %}data-stellar-background-ratio="0.5"{% endif %} style="background: url({{ data.section_pricing_image|media }}) 50% 0px / cover no-repeat {% if this.theme.parallax_js %}fixed{% endif %};">
+{% else %}
+<section id="pricing" class="section" {% if this.theme.parallax_js %}data-stellar-background-ratio="0.5"{% endif %} style="background: url({{ 'assets/images/img/1920x1000.png'|theme }}) 50% 0px / cover no-repeat {% if this.theme.parallax_js %}fixed{% endif %};">
+   {% endif %}
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <h1 class="section-title" data-aos="fade-up" data-aos-delay="300">{{ data.section_pricing_header }}</h1>
+            <p class="section-subcontent" data-aos="fade-up" data-aos-delay="400">{{ data.section_pricing_subheader }}</p>
+         </div>
+         {% for fields in data.section_pricing %}
+         <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="pricing-table pricing-table-x">
+               <div class="table-header">
+                  <h3>{{ fields.section_pricing_title }}</h3>
+               </div>
+               <div class="plan">
+                  <h3 class="price">${{ fields.section_pricing_price }}</h3>
+               </div>
+               <div class="plan-info">
+                  <p><i class="fa fa-check"></i>{{ fields.section_pricing_feature1 }}</p>
+                  <p><i class="fa fa-check"></i>{{ fields.section_pricing_feature2 }}</p>
+                  <p><i class="fa fa-check"></i>{{ fields.section_pricing_feature3 }}</p>
+                  <p><i class="fa fa-check"></i>{{ fields.section_pricing_feature4 }}</p>
+                  <div class="button-area">
+                     <a href="{{ fields.section_pricing_buttonlink }}" class="btn btn-common">{{ fields.section_pricing_buttonlabel }}</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</section>

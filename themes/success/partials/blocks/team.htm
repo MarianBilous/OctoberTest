@@ -1,0 +1,54 @@
+description = "Team Section"
+
+[viewBag]
+==
+<section id="team" class="section" style="background-color: {{ data.section_team_bg }};">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <h1 class="section-title" data-aos="fade-up" data-aos-delay="300">{{ data.section_team_header }}</h1>
+            <p class="section-subcontent" data-aos="fade-up" data-aos-delay="400">{{ data.section_team_subheader }}</p>
+         </div>
+         {% for fields in data.section_team %}
+         <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-item">
+               <figure class="team-profile">
+                  {% if fields.section_team_image %}
+                  <img src="{{ fields.section_team_image|media }}" alt="">
+                  {% else %}
+                  <img src="{{ 'assets/images/img/497x600.png'|theme }}" alt="">
+                  {% endif %}
+                  <figcaption class="our-team">
+                     <div class="details">
+                        <p class="content-white">{{ fields.section_team_desc }}</p>
+                        {% if fields.section_team_desc %}
+                        <div class="orange-line"></div>
+                        {% endif %}
+                        <div class="social">
+                           {% if fields.section_team_facebook %}
+                           <a class="facebook" href="{{ fields.section_team_facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                           {% endif %}
+                           {% if fields.section_team_twitter %}
+                           <a class="twitter" href="{{ fields.section_team_twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                           {% endif %}
+                           {% if fields.section_team_googleplus %}
+                           <a class="google-plus" href="{{ fields.section_team_googleplus }}" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                           {% endif %}
+                           {% if fields.section_team_linkedin %}
+                           <a class="facebook" href="{{ fields.section_team_linkedin }}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                           {% endif %}
+                        </div>
+                     </div>
+                  </figcaption>
+               </figure>
+               <div class="info">
+                  <h2>{{ fields.section_team_name }}</h2>
+                  <div class="orange-line"></div>
+                  <p>{{ fields.section_team_title }}</p>
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</section>

@@ -1,0 +1,37 @@
+description = "About Section"
+
+[viewBag]
+==
+<section class="split section" style="background-color: {{ data.section_about_bg }};">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-4 col-sm-12 col-xs-12" data-aos="fade-left" data-aos-delay="300">
+            <div class="images">
+               {% if data.section_about_image %}
+               <img src="{{ data.section_about_image|media }}" alt="{{ data.section_about_title1 }}">
+               {% else %}
+               <img src="{{ 'assets/images/img/430x300.png'|theme }}" alt="">
+               {% endif %}
+            </div>
+         </div>
+         <div class="col-md-8 col-sm-12 col-xs-12" data-aos="fade-right" data-aos-delay="300">
+            <div class="content-inner">
+               {% for fields in data.section_about_big %}
+               <h2 class="title">{{ fields.section_about_big_title }}</h2>
+               {{ fields.section_about_big_desc|raw }}
+               {% endfor %}
+               <div class="details-list">
+                  <div class="row">
+                     {% for fields in data.section_about_small %}
+                     <div class="col-md-4 col-sm-12 col-xs-12">
+                        <h3>{{ fields.section_about_small_title }}</h3>
+                        <p>{{ fields.section_about_small_desc }}</p>
+                     </div>
+                     {% endfor %}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

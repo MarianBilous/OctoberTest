@@ -42,34 +42,34 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-        ArticleModel::extend(function($model) {
-            $model->attachMany['image_source'] = \System\Models\File::class;
-        });
-
-        ArticlesController::extendFormFields(function($form, $model, $context){
-            if ($model instanceof ArticleModel) {
-                $form->addTabFields([
-                    'test' =>[
-                        'label' => 'Test',
-                        'type' => 'text',
-                        'tab' => 'Test'
-                    ],
-                    'bio' =>[
-                        'label' => 'Info',
-                        'type' => 'textarea',
-                        'tab' => 'Test'
-                    ],
-                    'image_source' => [
-                        'label' => 'Image',
-                        'mode' => 'image',
-                        'useCaption' => 'true',
-                        'span' => 'auto',
-                        'type' => 'fileupload',
-                        'tab' => 'Test'
-                    ]
-                ]);
-            }
-        });
+//        ArticleModel::extend(function($model) {
+//            $model->attachMany['image_source'] = \System\Models\File::class;
+//        });
+//
+//        ArticlesController::extendFormFields(function($form, $model, $context){
+//            if ($model instanceof ArticleModel) {
+//                $form->addTabFields([
+//                    'test' =>[
+//                        'label' => 'Test',
+//                        'type' => 'text',
+//                        'tab' => 'Test'
+//                    ],
+//                    'bio' =>[
+//                        'label' => 'Info',
+//                        'type' => 'textarea',
+//                        'tab' => 'Test'
+//                    ],
+//                    'image_source' => [
+//                        'label' => 'Image',
+//                        'mode' => 'image',
+//                        'useCaption' => 'true',
+//                        'span' => 'auto',
+//                        'type' => 'fileupload',
+//                        'tab' => 'Test'
+//                    ]
+//                ]);
+//            }
+//        });
     }
 
     /**

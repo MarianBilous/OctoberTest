@@ -1,0 +1,647 @@
+//colors
+$color_atlantis_approx: #9C3;
+$color_olive_drab_approx: #769e26;
+$color_atlantis_90_approx: rgba(153, 204, 51, 0.9);
+$color_storm_dust_approx: #666;
+$color_atlantis_20_approx: rgba(153, 204, 51, 0.2);
+$color_atlantis_70_approx: rgba(153, 204, 51, 0.7);
+$black_10: rgba(0, 0, 0, 0.1);
+$color_sushi_approx: #7aa427;
+$color_gallery_approx: #eee;
+
+a {
+	color: $color_atlantis_approx;
+	&:hover {
+		color: $color_olive_drab_approx;
+	}
+}
+#main-menu {
+	> li {
+		> a:hover {
+			color: $color_atlantis_approx;
+		}
+		&.active > a {
+			color: $color_atlantis_approx;
+		}
+		&.open > a {
+			color: $color_atlantis_approx;
+		}
+	}
+	> {
+		.active > a {
+			&:hover {
+				color: $color_atlantis_approx;
+			}
+			&:focus {
+				color: $color_atlantis_approx;
+			}
+		}
+		.open > a:hover {
+			color: $color_atlantis_approx;
+		}
+	}
+	.dropdown .dropdown-menu {
+		> li {
+			> a {
+				&:hover {
+					color: $color_atlantis_approx;
+				}
+				&:active {
+					color: $color_atlantis_approx;
+				}
+			}
+			&.active > a {
+				color: $color_atlantis_approx;
+			}
+		}
+		a .active {
+			color: $color_atlantis_approx;
+		}
+	}
+	ul .dropdown .dropdown-menu {
+		.dropdown-item.active {
+			color: $color_atlantis_approx;
+			background-color: $color_gallery_approx;
+			&:focus {
+				color: $color_atlantis_approx;
+				background-color: $color_gallery_approx;
+			}
+			&:hover {
+				color: $color_atlantis_approx;
+				background-color: $color_gallery_approx;
+			}
+		}
+		a:hover {
+			color: $color_atlantis_approx;
+		}
+	}
+	.nav-item.active a {
+		color: $color_atlantis_approx;
+	}
+	.nav-link:hover {
+		color: $color_atlantis_approx;
+	}
+}
+.open {
+	> a {
+		color: $color_atlantis_approx!important;
+	}
+	> .dropdown-toggle.btn-danger {
+		background-color: $color_atlantis_approx;
+		border-color: $color_atlantis_approx;
+	}
+}
+.section-title::before {
+	border-color: $color_atlantis_approx;
+}
+.small-title::before {
+	border-color: $color_atlantis_approx;
+}
+.page-header-section {
+	background: $color_atlantis_approx;
+}
+#other-services {
+	.other-service-item {
+		.icon .icon-medium {
+			background: $color_atlantis_approx;
+		}
+		&:hover .icon-medium {
+			background: $color_storm_dust_approx;
+		}
+		.service-content h3 {
+			color: $color_atlantis_approx;
+		}
+	}
+	.nav-tabs li a {
+		&:focus {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+		}
+		&:hover i {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+		}
+		&.active i {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+		}
+	}
+}
+#clients {
+	#clients-scroller .owl-pagination .owl-page {
+		span {
+			border-color: $color_atlantis_approx;
+		}
+		&.active span {
+			background: $color_atlantis_approx;
+		}
+	}
+	.client-item-wrapper:hover {
+		border-color: $color_atlantis_approx;
+	}
+}
+#testimonial {
+	.testimonial-inner {
+		&:before {
+			background: $color_atlantis_20_approx;
+		}
+		&:hover {
+			border-color: $color_atlantis_approx;
+		}
+	}
+	.testimonial-footer {
+		color: $color_atlantis_approx;
+		a {
+			color: $color_atlantis_approx;
+		}
+	}
+	#testimonial-carousel .carousel-control {
+		color: $color_atlantis_approx;
+	}
+	.item blockquote small {
+		color: $color_atlantis_approx;
+	}
+	.owl-pagination .owl-page {
+		span {
+			border: 1px solid $color_atlantis_approx;
+		}
+		&.active span {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+		}
+	}
+}
+#blog {
+	.blog-item-text {
+		h3 {
+			color: $color_atlantis_approx;
+			a:hover {
+				color: $color_atlantis_approx;
+			}
+		}
+		.blog-one-footer {
+			i {
+				color: $color_atlantis_approx;
+			}
+			a:hover {
+				color: $color_atlantis_approx;
+			}
+		}
+		.blog-item-info a:hover {
+			color: $color_atlantis_approx;
+		}
+	}
+	.blog-item-img .blog-category {
+		background: $color_atlantis_approx;
+	}
+}
+#why-choose {
+	.icon i {
+		color: $color_atlantis_approx;
+	}
+	.tab-container h2 {
+		color: $color_atlantis_approx;
+	}
+	.tab-menu .list-group > a.active {
+		background: $color_atlantis_approx;
+	}
+}
+#pricing-block-2 {
+	background: $color_atlantis_approx;
+}
+#blog-page {
+	.sidebar {
+		.search-box {
+			.form-control:focus {
+				border-color: $color_atlantis_approx;
+			}
+			button:focus {
+				border-color: $color_atlantis_approx;
+			}
+			input:focus {
+				border-color: $color_atlantis_approx;
+			}
+			textarea:focus {
+				border-color: $color_atlantis_approx;
+			}
+		}
+		.plain-search-btn {
+			color: $color_atlantis_approx;
+		}
+	}
+	.widget-title::before {
+		border-color: $color_atlantis_approx;
+	}
+	.post-content .reading::after {
+		border-color: $color_atlantis_approx;
+	}
+}
+.preset-bg {
+	background: $color_atlantis_approx;
+}
+.dark-bg {
+	background: $black_10;
+}
+.btn-danger {
+	background-color: $color_atlantis_approx;
+	border-color: $color_atlantis_approx;
+	&:hover {
+		background-color: $color_atlantis_approx;
+		border-color: $color_atlantis_approx;
+	}
+	&:active {
+		background-color: $color_atlantis_approx;
+		border-color: $color_atlantis_approx;
+	}
+	&.active {
+		background-color: $color_atlantis_approx;
+		border-color: $color_atlantis_approx;
+	}
+}
+.slicknav_btn {
+	border-color: $color_atlantis_approx;
+	&:hover {
+		background: $color_atlantis_approx;
+	}
+}
+#default-tab {
+	.nav-tabs > li {
+		> a.active {
+			color: $color_atlantis_approx;
+		}
+		a.active {
+			&:focus {
+				color: $color_atlantis_approx;
+			}
+			&:hover {
+				color: $color_atlantis_approx;
+			}
+		}
+	}
+	ul.nav-tabs > li a.active::before {
+		background-color: $color_atlantis_approx;
+	}
+}
+.btn-outline {
+	border-color: $color_atlantis_approx;
+	color: $color_atlantis_approx;
+	&:hover {
+		background: $color_atlantis_approx;
+	}
+}
+.progress-bar {
+	background: $color_atlantis_approx;
+}
+#single-testimonial-item {
+	.testimonial-footer a {
+		color: $color_atlantis_approx;
+	}
+	.owl-pagination .owl-page {
+		span {
+			border: 1px solid $color_atlantis_approx;
+		}
+		&.active span {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+		}
+	}
+}
+i {
+	&.icon-default {
+		color: $color_atlantis_approx;
+	}
+	&.icon-round {
+		background-color: $color_atlantis_approx;
+	}
+	&.icon-round-border {
+		border: 3px solid $color_atlantis_approx;
+		color: $color_atlantis_approx;
+	}
+	&.icon-box {
+		background-color: $color_atlantis_approx;
+	}
+	&.icon-box-border {
+		border: 3px solid $color_atlantis_approx;
+		color: $color_atlantis_approx;
+	}
+}
+.btn-common {
+	background: $color_atlantis_approx none repeat scroll 0 0;
+	&.active {
+		background: $color_sushi_approx none repeat scroll 0 0;
+	}
+}
+.btn-common::before {
+	background: $color_sushi_approx none repeat scroll 0 0;
+}
+#carousel-area {
+	.carousel-item .carousel-caption {
+		color: $color_atlantis_approx;
+	}
+	.carousel-indicators li {
+		&:hover {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+		}
+		&.active {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+		}
+	}
+}
+.top_search_icon {
+	color: $color_atlantis_approx;
+}
+.orange-line {
+	background: $color_atlantis_approx none repeat scroll 0 0;
+}
+#service-block-main .service-item:hover {
+	i {
+		color: $color_atlantis_approx;
+		border-color: $color_atlantis_approx;
+	}
+	h2 {
+		color: $color_atlantis_approx;
+	}
+	.icon-wrapper::before {
+		background: $color_atlantis_approx;
+	}
+	.icon-wrapper::after {
+		background: $color_atlantis_approx;
+	}
+}
+#portfolio .portfolio-items figure figcaption:hover {
+	background: $color_atlantis_90_approx;
+}
+#progress .icon-effect {
+	color: $color_atlantis_approx;
+}
+.scroll-top:hover {
+	background: $color_atlantis_approx;
+	border-color: $color_atlantis_approx;
+}
+.skill-wrapper .progress {
+	.progress-bar {
+		background-color: $color_atlantis_approx;
+	}
+	.percent {
+		color: $color_atlantis_approx;
+	}
+}
+#notice .notice-content {
+	border-color: $color_atlantis_approx;
+}
+#service-block-1 .service-item:hover {
+	.icon {
+		border-color: $color_atlantis_approx;
+		i {
+			background: $color_atlantis_approx;
+		}
+	}
+	.service-content h2 {
+		color: $color_atlantis_approx;
+	}
+}
+#service-block-2 .service-inner:hover {
+	i {
+		color: $color_atlantis_approx;
+	}
+	h3 {
+		color: $color_atlantis_approx;
+	}
+}
+#team-block-2 .team-member:hover {
+	border-color: $color_atlantis_approx;
+}
+.pricing-table-1 .table-header {
+	background: $color_atlantis_approx;
+}
+.pricing-table-x .plan {
+	.price {
+		color: $color_atlantis_approx;
+	}
+	.period {
+		color: $color_atlantis_70_approx;
+	}
+}
+.panel-default .panel-heading a {
+	background: $color_atlantis_approx;
+}
+.light li a {
+	color: $color_atlantis_approx;
+}
+.flat li a i {
+	background: $color_atlantis_approx;
+	border-color: $color_atlantis_approx;
+}
+#tabs .tabs-style-2 .nav-tabs {
+	border-color: $color_atlantis_approx;
+	li {
+		&.active a {
+			border-color: $color_atlantis_approx;
+			background-color: $color_atlantis_approx;
+			&:hover {
+				border-color: $color_atlantis_approx;
+				background-color: $color_atlantis_approx;
+			}
+			&:focus {
+				border-color: $color_atlantis_approx;
+				background-color: $color_atlantis_approx;
+			}
+		}
+		a:hover {
+			border-color: $color_atlantis_approx;
+			background-color: $color_atlantis_approx;
+		}
+	}
+}
+#contact .contact-info-wrapper .contact-item-wrapper i {
+	background: $color_atlantis_approx;
+}
+.page-header .page-header-inner:before {
+	background-color: $color_atlantis_approx;
+	opacity: 0.2;
+}
+.slicknav_nav a:hover {
+	color: $color_atlantis_approx;
+}
+.slicknav_open .active {
+	color: $color_atlantis_approx;
+}
+.slicknav_menu .slicknav_icon-bar {
+	background: $color_atlantis_approx;
+}
+.tparrows.preview2:hover:after {
+	color: $color_atlantis_approx;
+}
+#round-tab ul {
+	&.nav-tabs {
+		border-bottom: 1px solid $color_atlantis_approx;
+	}
+	li a.active {
+		border-left: 1px solid $color_atlantis_approx;
+		border-right: 1px solid $color_atlantis_approx;
+		border-top: 1px solid $color_atlantis_approx;
+		color: $color_atlantis_approx;
+	}
+}
+#vertical-tab ul.nav-tabs li a.active {
+	border-bottom: 3px solid $color_atlantis_approx;
+	> .fa {
+		color: $color_atlantis_approx;
+	}
+}
+#tab-with-icon .nav-tabs li a {
+	&:focus {
+		background: $color_atlantis_approx none repeat scroll 0 0;
+	}
+	&:hover i {
+		background: $color_atlantis_approx none repeat scroll 0 0;
+	}
+	&.active i {
+		background: $color_atlantis_approx none repeat scroll 0 0;
+	}
+}
+#color-client-scroller .client-item-wrapper {
+	background: $color_atlantis_approx none repeat scroll 0 0;
+}
+.blog-post-footer ul li a {
+	border: 1px solid $color_atlantis_approx;
+	color: $color_atlantis_approx;
+	&:hover {
+		background: $color_atlantis_approx none repeat scroll 0 0;
+		border: 1px solid $color_atlantis_approx;
+	}
+}
+.blog-post-content blockquote.blockquote {
+	border-left: 5px solid $color_atlantis_approx;
+}
+.blog-pagination nav ul.pagination li.page-item {
+	a {
+		&:hover {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+			border: 1px solid $color_atlantis_approx;
+		}
+		&:focus {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+			border: 1px solid $color_atlantis_approx;
+		}
+	}
+	&.active a {
+		background: $color_atlantis_approx none repeat scroll 0 0;
+		border: 1px solid $color_atlantis_approx;
+	}
+}
+.form-control:focus {
+	border-color: $color_atlantis_approx;
+}
+h2.widget-title {
+	color: $color_atlantis_approx;
+}
+.widget.tag-cloud a {
+	background: $color_atlantis_approx;
+}
+.sidebar-area .search-bar button i.fa {
+	color: $color_atlantis_approx;
+}
+.contact-title-text h2 {
+	color: $color_atlantis_approx;
+}
+.roof-menu ul li.active a {
+	color: $color_atlantis_approx;
+}
+.roof-social-icons a i.fa:hover {
+	background: $color_atlantis_approx;
+}
+.service2-single-service .fa {
+	background: $color_atlantis_approx none repeat scroll 0 0;
+}
+.back-to-top i {
+	background-color: $color_atlantis_approx;
+}
+.service-item .icon-wrapper i {
+	color: $color_atlantis_approx;
+}
+.split .details-list h3 {
+	color: $color_atlantis_approx;
+}
+.sup-desc-wrap .sup-link {
+	.left-link {
+		background: $color_atlantis_approx none repeat scroll 0 0;
+		border: 1px solid $color_atlantis_approx;
+	}
+	.right-link {
+		background: $color_atlantis_approx none repeat scroll 0 0;
+		border: 1px solid $color_atlantis_approx;
+	}
+	a:hover {
+		color: $color_atlantis_approx;
+	}
+}
+.featured-box .featured-icon i {
+	color: $color_atlantis_approx;
+}
+#team .team-item {
+	.social {
+		.facebook {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+			border: 1px solid $color_atlantis_approx;
+		}
+		.twitter {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+			border: 1px solid $color_atlantis_approx;
+		}
+		.google-plus {
+			background: $color_atlantis_approx none repeat scroll 0 0;
+			border: 1px solid $color_atlantis_approx;
+		}
+		a:hover {
+			color: $color_atlantis_approx;
+		}
+	}
+	figure figcaption .orange-line {
+		background: $color_atlantis_approx none repeat scroll 0 0;
+	}
+}
+#cool-facts .facts-item i {
+	color: $color_atlantis_approx;
+}
+.portfolio-meta ul li span {
+	color: $color_atlantis_approx;
+}
+.top_search_con input:focus {
+	border: 1px solid $color_atlantis_approx;
+}
+
+
+
+//MENU
+.navbar-light .navbar-toggler {
+    border-color: #9C3;
+}
+.navbar-light .navbar-toggler:hover {
+    background: #9C3;
+}
+
+.navbar-light .navbar-toggler i {
+	color: #9C3;
+}
+
+
+//POST
+.blog-post-gallery h4 {
+	color: #9C3;
+}
+
+
+//CATEGORIES
+.badge:before {
+	border-color: transparent transparent transparent #9C3;
+}
+.badge {
+    background-color: #9C3;
+}
+
+
+//FOOTER
+footer .footer-widget .nav li a::before {
+    color: #9c3;
+}
+
+//ACCOUNT
+.picker-lang.active a {
+    color: #9c3;
+}

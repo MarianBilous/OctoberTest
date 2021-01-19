@@ -50,47 +50,47 @@ class Plugin extends PluginBase
         //     $model->hasOne['profile'] = ['Test\Profile\Models\Profile'];
         // });
 
-        UsersController::extendListColumns(function($list, $model) {
-            if (!$model instanceof UserModel) 
-            return;
-
-            $list->addColumns([
-                'headline' => [
-                    'label' => 'Headline',
-                ],
-                'about_me' => [
-                    'label' => 'About me',
-                ],
-                'music' => [
-                    'label' => 'Music',
-                ],
-            ]);
-
-        });
-
-        UsersController::extendFormFields(function($form, $model, $context) {
-            if (!$model instanceof UserModel) 
-                return;
-
-            $form->addTabFields([
-
-                'headline' => [
-                    'label' => 'Headline',
-                    'tab' => 'Profile',
-                ],
-                'about_me' => [
-                    'label' => 'About me',
-                    'tab' => 'Profile',
-                    'type' => 'textarea',
-                ],
-                'music' => [
-                    'label' => 'Music',
-                    'tab' => 'Profile',
-                    'type' => 'textarea',
-                ],
-            ]);
-            
-        });
+//        UsersController::extendListColumns(function($list, $model) {
+//            if (!$model instanceof UserModel)
+//            return;
+//
+//            $list->addColumns([
+//                'headline' => [
+//                    'label' => 'Headline',
+//                ],
+//                'about_me' => [
+//                    'label' => 'About me',
+//                ],
+//                'music' => [
+//                    'label' => 'Music',
+//                ],
+//            ]);
+//
+//        });
+//
+//        UsersController::extendFormFields(function($form, $model, $context) {
+//            if (!$model instanceof UserModel)
+//                return;
+//
+//            $form->addTabFields([
+//
+//                'headline' => [
+//                    'label' => 'Headline',
+//                    'tab' => 'Profile',
+//                ],
+//                'about_me' => [
+//                    'label' => 'About me',
+//                    'tab' => 'Profile',
+//                    'type' => 'textarea',
+//                ],
+//                'music' => [
+//                    'label' => 'Music',
+//                    'tab' => 'Profile',
+//                    'type' => 'textarea',
+//                ],
+//            ]);
+//
+//        });
     }
 
     /**

@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    pivot[test_field]:
+        label: Test pivot
+        span: auto
+        defaultFrom: test_field
+    article:
+        label: Article
+        type: relation
+        nameFrom: name

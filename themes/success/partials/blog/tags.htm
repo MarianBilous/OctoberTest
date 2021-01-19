@@ -1,0 +1,19 @@
+description = "Tags"
+
+[viewBag]
+
+[tags]
+results = 12
+sortOrder = "created_at desc"
+==
+<aside class="widget tag-cloud" data-aos="fade-up" data-aos-delay="300">
+   <h2 class="widget-title">Tag clouds</h2>
+   <div class="clearfix">
+      {% set tags = tags.tags %}
+      <ul>
+         {% for tag in tags %}
+         <li><a href="{{ '/tag' }}/{{ tag.slug }}">{{ tag.name }}({{ tag.posts|length }})</a></li>
+         {% endfor %}
+      </ul>
+   </div>
+</aside>

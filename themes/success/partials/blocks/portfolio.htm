@@ -1,0 +1,70 @@
+description = "Portfolio Section"
+
+[viewBag]
+==
+<section id="portfolios" class="section" style="background-color: {{ data.section_portfolio_bg }};">
+   <div class="container">
+      <h1 class="section-title" data-aos="fade-up" data-aos-delay="300">{{ data.section_portfolio_header }}</h1>
+      <p class="section-subcontent" data-aos="fade-up" data-aos-delay="400">{{ data.section_portfolio_subheader }}</p>
+      <div class="portfolio-wrap">
+         <div class="col-md-12">
+            <div class="controls text-center" data-aos="fade-up" data-aos-delay="500">
+               <a class="filter active btn btn-common" data-group="all">All</a>
+               {% set existingIds = [] %}
+               {% for fields in data.section_portfolio %}
+               {% if fields.section_portfolio_category not in existingIds %}
+               <a class="filter btn btn-common" data-group="{{ fields.section_portfolio_category|slug }}">{{ fields.section_portfolio_category }}</a>
+               {% set existingIds = existingIds|merge([fields.section_portfolio_category]) %}
+               {% endif %}
+               {% endfor %}
+            </div>
+         </div>
+         <div id="portfolio" class="row">
+            {% for fields in data.section_portfolio %}
+            <div class="
+               {% if data.section_portfolio_column == '2column' %}
+               col-md-6 col-lg-6 col-sm-6 col-xs-12
+               {% endif %}
+               {% if data.section_portfolio_column == '3column' %}
+               col-sm-6 col-md-4 col-lg-4 col-xl-4
+               {% endif %}
+               {% if data.section_portfolio_column == '4column' %}
+               col-md-3 col-lg-3 col-sm-3 col-xs-12
+               {% endif %}
+               picture-item" data-groups='["{{ fields.section_portfolio_category|slug }}"]'>
+               <div class="portfolio-item">
+                  <div class="portfolio-img">
+                     {% if fields.section_portfolio_thumbimage %}
+                     <img src="{{ fields.section_portfolio_thumbimage|media }}" alt="{{ fields.section_portfolio_title }}">
+                     {% else %}
+                     <img src="{{ 'assets/images/img/450x300.png'|theme }}" alt="">
+                     {% endif %}
+                  </div>
+                  <div class="portfoli-content">
+                     <div class="sup-desc-wrap">
+                        <div class="sup-desc-inner">
+                           <div class="sup-link">
+                              {% if fields.section_portfolio_image %}
+                              <a class="left-link" href="{{ fields.section_portfolio_image|media }}"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+                              {% else %}
+                              <a class="left-link" href="{{ 'assets/images/img/800x600.png'|theme }}"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+                              {% endif %}
+                              <a class="right-link" href="{{ fields.section_portfolio_link }}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                           </div>
+                           <div class="sup-meta-wrap">
+                              <a class="sup-title" href="#">
+                                 <h4>{{ fields.section_portfolio_title }}</h4>
+                              </a>
+                              <p class="sup-description">{{ fields.section_portfolio_subtitle }}</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="{{ 'assets/vendor/shuffle/app.js'|theme }}"></script>
+</section>

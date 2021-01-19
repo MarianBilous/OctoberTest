@@ -100,7 +100,9 @@ class Article extends Model
         'tag' => [
             'Acme\Blog\Models\Tag',
             'table' => 'acme_blog_article_tags',
-            'order' => 'name'
+            'order' => 'name',
+            'pivot' => ['test_field'],
+            'pivotModel' => 'Acme\Blog\Models\ArticleTagPivot'
         ]
     ];
     public $morphTo = [];
@@ -112,5 +114,6 @@ class Article extends Model
     ];
 
     public $attachMany = [
+
     ];
 }

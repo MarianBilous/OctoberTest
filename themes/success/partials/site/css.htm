@@ -1,0 +1,71 @@
+description = "Css"
+
+[viewBag]
+==
+<!-- Vendor CSS -->
+<link href="{{ [
+   'assets/vendor/bootstrap/css/bootstrap.min.css',
+   'assets/vendor/owl-carousel/css/owl.carousel.css',
+   'assets/vendor/owl-carousel/css/owl.theme.css'
+   ]|theme }}" rel="stylesheet">
+   
+<!-- Fonts -->
+{% if this.theme.fonts_googlefonts %}
+<link href="https://fonts.googleapis.com/css?family={{ this.theme.fonts_google_fontfamily }}" rel="stylesheet">
+{% endif %}
+{% if this.theme.fonts_fontawesome %}
+<link href="{{ 'assets/vendor/font-awesome/css/font-awesome.min.css'|theme }}" rel="stylesheet">
+{% endif %}
+
+<!-- Addon CSS -->
+{% if this.theme.animate_css %}
+<link href="{{ 'assets/vendor/animate/animate.css'|theme }}" rel="stylesheet">
+{% endif %}
+{% if this.theme.aos_js %}
+<link href="{{ 'assets/vendor/aos/css/aos.css'|theme }}" rel="stylesheet">
+{% endif %}
+{% if this.theme.normalize_css %}
+<link href="{{ 'assets/vendor/normalize/normalize.css'|theme }}" rel="stylesheet">
+{% endif %}
+
+<!-- Main SCSS -->
+<link href="{{ ['assets/scss/style.scss']|theme }}" rel="stylesheet">
+
+<!-- Color SCSS -->
+{% if this.theme.styles_theme_color == 'green' %}
+<link href="{{ ['assets/scss/theme/color/_green.scss']|theme }}" rel="stylesheet">
+{% endif %}
+{% if this.theme.styles_theme_color == 'greensea' %}
+<link href="{{ ['assets/scss/theme/color/_greensea.scss']|theme }}" rel="stylesheet">
+{% endif %}
+{% if this.theme.styles_theme_color == 'lightblue' %}
+<link href="{{ ['assets/scss/theme/color/_lightblue.scss']|theme }}" rel="stylesheet">
+{% endif %}
+{% if this.theme.styles_theme_color == 'mblue' %}
+<link href="{{ ['assets/scss/theme/color/_mblue.scss']|theme }}" rel="stylesheet">
+{% endif %}
+{% if this.theme.styles_theme_color == 'orange' %}
+<link href="{{ ['assets/scss/theme/color/_orange.scss']|theme }}" rel="stylesheet">
+{% endif %}
+{% if this.theme.styles_theme_color == 'red' %}
+<link href="{{ ['assets/scss/theme/color/_red.scss']|theme }}" rel="stylesheet">
+{% endif %}
+{% if this.theme.styles_theme_color == 'wisteria' %}
+<link href="{{ ['assets/scss/theme/color/_wisteria.scss']|theme }}" rel="stylesheet">
+{% endif %}
+{% if this.theme.styles_theme_color == 'coffee' %}
+<link href="{{ ['assets/scss/theme/color/_coffee.scss']|theme }}" rel="stylesheet">
+{% endif %}
+{% if this.theme.styles_theme_color == 'custom' %}
+<link href="{{ ['assets/scss/theme/color/_custom.scss']|theme }}" rel="stylesheet">
+{% endif %}
+
+<!-- Core CSS -->
+{% styles %}
+
+<!-- Custom CSS -->
+{% if this.theme.custom_css %}
+<style>
+   {{ this.theme.custom_css }}
+</style>
+{% endif %}

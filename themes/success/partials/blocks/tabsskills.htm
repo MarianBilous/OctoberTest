@@ -1,0 +1,50 @@
+description = "Tabs-Skills Section"
+
+[viewBag]
+==
+<section id="other-services" class="section" style="background-color: {{ data.section_tabsskills_bg }};">
+   <div class="container">
+   <h1 class="section-title" data-aos="fade-up" data-aos-delay="300">{{ data.section_tabsskills_header }}</h1>
+   <p class="section-subcontent" data-aos="fade-up" data-aos-delay="400">{{ data.section_tabsskills_subheader }}</p>
+   <div class="row">
+      <div class="col-sm-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
+         <ul class="nav nav-tabs" id="myTab" role="tablist">
+            {% for fields in data.section_tabsskills_tabs %}
+            <li class="nav-item">
+               <a {% if loop.index0 == 0 %} class="nav-link active" {% else %} class="nav-link" {% endif %} data-toggle="tab" href="#tab-{{ loop.index0 }}" role="tab" aria-controls="{{ fields.section_tabsskills_tabs_title|slug }}"><i class="{{ fields.section_tabsskills_tabs_icon }}"></i></a>
+            </li>
+            {% endfor %}
+         </ul>
+         <div class="tab-content">
+            {% for fields in data.section_tabsskills_tabs %}
+            {% if loop.first %}
+            <div class="tab-pane active" id="tab-{{ loop.index0 }}" role="tabpanel">
+               {% else %}
+               <div class="tab-pane" id="tab-{{ loop.index0 }}" role="tabpanel">
+                  {% endif %}
+                  <div class="service-content" data-aos="fade-up" data-aos-delay="300">
+                     <h3>{{ fields.section_tabsskills_tabs_title }}</h3>
+                     <p class="lead">{{ fields.section_tabsskills_tabs_subtitle }}</p>
+                     {{ fields.section_tabsskills_tabs_desc|raw }}
+                  </div>
+               </div>
+               {% endfor %}
+            </div>
+         </div>
+         <div class="col-sm-6 com-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-shortcode">
+               {% for fields in data.section_tabsskills_skills %}
+               <div class="skill">
+                  <p>{{ fields.section_tabsskills_skills_title }}</p>
+                  <div class="progress">
+                     <div class="progress-bar" role="progressbar" data-percentage="{{ fields.section_tabsskills_skills_progress }}">
+                        <span class="sr-only">{{ fields.section_tabsskills_skills_progress }}% Complete</span>
+                     </div>
+                  </div>
+               </div>
+               {% endfor %}
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

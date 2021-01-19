@@ -1,0 +1,73 @@
+description = "Search results"
+
+[viewBag]
+
+[searchResults]
+resultsPerPage = 4
+showProviderBadge = 1
+noResultsMessage = "Your search returned no results."
+visitPageMessage = "Visit page"
+==
+{% set results = searchResults.results %}
+{% for result in results %}
+{# Display all results #}
+<div class="row ss-result">
+   {% if result.thumb %}
+   <div class="col-md-3 ss-result__aside">
+      <a href="{{ result.url }}">
+      <img class="ss-result__image img-fluid mb-20" src="{{ result.thumb.getThumb(400, 300, 'crop') }}" alt=""/>
+      </a>
+   </div>
+   <div class="col-md-9 ss-result__content">
+      <h4 class="ss-result__title">
+         <a href="{{ result.url }}">{{ result.title | raw }}</a>
+         {% if __SELF__.showProviderBadge %}
+         <span class="ss-result__badge">
+         {{ result.provider }}
+         </span>
+         {% endif %}
+         {# Some results contain meta information.     #}
+         {# You can access it using result.meta.       #}
+         {# To find out from which plugin the result   #}
+         {# was returned you can use result.identifier #}
+         {# Some results contain the original model.   #}
+         {# You can access it using result.model       #}
+      </h4>
+      <p class="ss-result__text">
+         {{ result.excerpt | raw }}
+      </p>
+      <p class="ss-result__url">
+         <a href="{{ result.url | app }}" class="pull-right btn btn-common btn-xs text-uppercase ss-result__link"> Read more</a>
+      </p>
+   </div>
+   {% else %}
+   <div class="col-md-12 ss-result__content">
+      <h4 class="ss-result__title">
+         <a href="{{ result.url }}">{{ result.title | raw }}</a>
+         {% if __SELF__.showProviderBadge %}
+         <span class="ss-result__badge">
+         {{ result.provider }}
+         </span>
+         {% endif %}
+         {# Some results contain meta information.     #}
+         {# You can access it using result.meta.       #}
+         {# To find out from which plugin the result   #}
+         {# was returned you can use result.identifier #}
+         {# Some results contain the original model.   #}
+         {# You can access it using result.model       #}
+      </h4>
+      <p class="ss-result__text">
+         {{ result.excerpt | raw }}
+      </p>
+      <p class="ss-result__url">
+         <a href="{{ result.url | app }}" class="pull-right btn btn-common btn-xs text-uppercase ss-result__link"> Read more</a>
+      </p>
+   </div>
+   {% endif %}
+</div>
+<hr/>
+{% else %}
+{# No results found #}
+{% partial searchResults ~ '::no-results.htm' %}
+{% endfor %}
+{% partial searchResults ~ '::pagination.htm' results = results %}

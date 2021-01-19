@@ -1,0 +1,74 @@
+description = "Page Header"
+
+[viewBag]
+==
+{% if blogPost.post %}
+<!-- Page Header -->
+<div class="page-header-section">
+   <div class="container">
+      <div class="row">
+         <div class="page-header-area">
+            <div class="page-header-content">
+               <h2>{{ title ?: post.title }}</h2>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% elseif this.page.url == '/blog/:page?' %}
+<!-- Page Header -->
+<div class="page-header-section">
+   <div class="container">
+      <div class="row">
+         <div class="page-header-area">
+            <div class="page-header-content">
+               <h2>{{ title ?: this.page.title }}</h2>
+               {% if this.page.meta_title %}
+               <h4>{{ tagline ?: this.page.meta_title }}</h4>
+               {% endif %}
+               {% if this.page.meta_description %}
+               <p>{{ tagline ?: this.page.meta_description }}</p>
+               {% endif %}
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% elseif blogCategories.categories %}
+<!-- Page Header -->
+<div class="page-header-section">
+   <div class="container">
+      <div class="row">
+         <div class="page-header-area">
+            <div class="page-header-content">
+               {% if category.name %}
+               <h2>{{ title ?: category.name }}</h2>
+               {% endif %}
+               {% if category.description %}
+               <p>{{ tagline ?: category.description }}</p>
+               {% endif %}
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% else %}
+<!-- Page Header -->
+<div class="page-header-section">
+   <div class="container">
+      <div class="row">
+         <div class="page-header-area">
+            <div class="page-header-content">
+               <h2>{{ title ?: this.page.title }}</h2>
+               {% if this.page.meta_title %}
+               <h4>{{ tagline ?: this.page.meta_title }}</h4>
+               {% endif %}
+               {% if this.page.meta_description %}
+               <p>{{ tagline ?: this.page.meta_description }}</p>
+               {% endif %}
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endif %}

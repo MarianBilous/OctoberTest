@@ -1,0 +1,25 @@
+description = "Banner Section"
+
+[viewBag]
+==
+{% if data.section_banner_image %}
+<section id="banner" class="cta-section section" {% if this.theme.parallax_js %}data-stellar-background-ratio="0.5"{% endif %} style="background: url({{ data.section_banner_image|media }}) 50% 0px / cover no-repeat {% if this.theme.parallax_js %}fixed{% endif %};">
+{% else %}
+<section id="banner" class="cta-section section" {% if this.theme.parallax_js %}data-stellar-background-ratio="0.5"{% endif %} style="background: url({{ 'assets/images/img/1920x1000.png'|theme }}) 50% 0px / cover no-repeat {% if this.theme.parallax_js %}fixed{% endif %};">
+{% endif %}
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12" data-aos="fade-up" data-aos-delay="300">
+            <div class="cta-area">
+               <div class="cta-content text-center">
+                  <h2>{{ data.section_banner_header }}</h2>
+                  <p>{{ data.section_banner_subheader }}</p>
+                  {% if data.section_banner_buttonlink %}
+                  <a href="{{ data.section_banner_buttonlink }}" class="btn btn-common">  <i class="{{ data.section_banner_buttonicon }}"></i> {{ data.section_banner_buttonlabel }}</a>
+                  {% endif %}
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

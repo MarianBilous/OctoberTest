@@ -1,0 +1,51 @@
+description = "Portfolio 1 Section"
+
+[viewBag]
+==
+<section class="single-portfolio-area section-padding">
+   <div class="container">
+      <div class="single-portfolio-image mb-50" data-aos="fade-up" data-aos-delay="300">
+         <div id="portfolio-image-slider" class="owl-carousel">
+            {% for fields in data.section_portfolio1image %}
+            <div class="item">
+               {% if fields.section_portfolio1_image %}
+               <img src="{{ fields.section_portfolio1_image|media }}" class="img-responsive" alt="">
+               {% else %}
+               <img src="{{ 'assets/images/img/1300x900.png'|theme }}" class="img-responsive" alt="">
+               {% endif %}
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+      <div class="single-portfolio-details-area clearfix">
+         <div class="row">
+            <div class="col-md-8 mr-auto portfolio-single-content" data-aos="fade-up" data-aos-delay="500">
+               <h3 class="small-title mb-30">{{ data.section_portfolio1_title }}</h3>
+               <p>{{ data.section_portfolio1_desc }}</p>
+               <div class="share-project mt-30">
+                  <h3 class="small-title mb-30">Share</h3>
+                  <a href="#"><i class="fa fa-facebook icon-box icon-xs"></i></a>
+                  <a href="#"><i class="fa fa-twitter icon-box icon-xs"></i></a>
+                  <a href="#"><i class="fa fa-google-plus icon-box icon-xs"></i></a>
+                  <a href="#"><i class="fa fa-linkedin icon-box icon-xs"></i></a>
+                  <a href="#"><i class="fa fa-pinterest icon-box icon-xs"></i></a>
+                  <a href="#"><i class="fa fa-dribbble icon-box icon-xs"></i></a>
+                  <a href="#"><i class="fa fa-behance icon-box icon-xs"></i></a>
+                  <a href="#"><i class="fa fa-instagram icon-box icon-xs"></i></a>
+               </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+               <h3 class="small-title mb-30">{{ data.section_portfolio1_detailstitle }}</h3>
+               <div class="portfolio-meta">
+                  <ul>
+                     {% for fields in data.section_portfolio1details %}
+                     <li><span>{{ fields.section_portfolio1_detailslabel }}</span>{{ fields.section_portfolio1_detailsname }}</li>
+                     {% endfor %}
+                  </ul>
+               </div>
+               <a class="btn btn-common btn-md btn-block mt-30" href="{{ data.section_portfolio1_buttonlink }}"><i class="fa fa-link"></i> {{ data.section_portfolio1_buttonlabel }}</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

@@ -1,0 +1,144 @@
+description = "Contact Us 2 Section"
+
+[viewBag]
+
+[contactForm]
+loadJS = 1
+==
+<section class="contact2-section section">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8" data-aos="fade-left" data-aos-delay="300">
+            <h1 class="section-title">{{ data.section_contactus2_header }}</h1>
+            <p class="section-subcontent mb-30">{{ data.section_contactus2_subheader }}</p>
+            <div class="confirm-contact-container"></div>
+            <form class="shake" id="contactForm"
+            data-request="{{ contactForm }}::onMailSend"
+            data-request-update="'{{ contactForm }}::confirm': '.confirm-contact-container'"
+            {% if contactForm.enableFileUpload %}
+            data-request-files
+            {% endif %}
+            >
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="name" class="sr-only">{{label.name}}</label>
+                     <input type="text" placeholder="{{label.name}}" id="name" class="form-control contact-control" name="name" required data-error="Please enter your name">
+                     <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="form-group">
+                     <label for="email" class="sr-only">{{label.email}}</label>
+                     <input type="email" placeholder="{{label.email}}" id="email" class="form-control contact-control" name="email" required data-error="Please enter your Email">
+                     <div class="help-block with-errors"></div>
+                  </div>
+                  {% if contactForm.enableFileUpload %}
+                  <div class="form-group">
+                     <label for="attachment">{{label.attachment}}</label>
+                     <input type="file" name="attachment" class="form-control">
+                     <div class="help-block with-errors"></div>
+                  </div>
+                  {% endif %}
+                  {% if contactForm.enableCaptcha %}
+                  <div class="form-group">
+                     <label for="g-recaptcha" class="sr-only">{{label.captcha}}</label>
+                     <div class="g-recaptcha" data-sitekey="{{ contactForm.captchaSiteKey }}"></div>
+                     <div class="help-block with-errors"></div>
+                  </div>
+                  {% endif %}
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="message" class="sr-only">{{label.message}}</label>
+                     <textarea placeholder="{{label.message}}" rows="12" id="message" class="form-control" name="message_content" required data-error="Write your message"></textarea>
+                     <div class="help-block with-errors"></div>
+                  </div>
+               </div>
+            </div>
+            {% if contactForm.mailgunSubscribeExist %}
+            <div class="form-group">
+               <div class="checkbox">
+                  <label><input type="checkbox" name="maillist_subscribe" checked>{{label.maillist}}</label>
+                  <input type="hidden" name="confirm_subscribe" value="true">
+               </div>
+            </div>
+            {% endif %}
+            <button class="btn btn-common btn-lg btn-block" type="submit" id="form-submit"><i class="fa fa-envelope"></i> {{label.button_text}}</button>
+            <div id="msgSubmit" class="h3 text-center hidden"></div>
+            <div class="clearfix"></div>
+            </form>
+         </div>
+         <div class="col-md-4 clearfix" data-aos="fade-right" data-aos-delay="400">
+            {% if data.section_contactus2_map %}
+            <div id="map_canvas" style="width: 100%; height: 280px;"></div>
+            {% endif %}
+            <div class="contact-info2 mt-30">
+               <h2 class="small-title">{{ data.section_contactus2_title }}</h2>
+               <ul class="contact-info2">
+                  <li>
+                     <p><strong><i class="fa fa-map-marker"></i> Address:</strong> {{ data.section_contactus2_address }}</p>
+                  </li>
+                  <li>
+                     <p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="mailto:{{ data.section_contactus2_email }}">{{ data.section_contactus2_email }}</a></p>
+                  </li>
+                  <li>
+                     <p><strong><i class="fa fa-phone"></i> Phone:</strong> {{ data.section_contactus2_phone }}</p>
+                  </li>
+                  <li>
+                     <p><strong><i class="fa fa-print"></i> Fax:</strong> {{ data.section_contactus2_fax }}</p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% if data.section_contactus2_map %}
+<!--onload="initialize()"-->
+<script type="text/javascript">
+   var geocoder;
+   var map;
+   var address ="{{ data.section_contactus2_mapaddress }}";
+   function initialize() {
+     geocoder = new google.maps.Geocoder();
+     var latlng = new google.maps.LatLng(-34.397, 150.644);
+     var myOptions = {
+       zoom: 16,
+       center: latlng,
+     mapTypeControl: true,
+     mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+     navigationControl: true,
+       mapTypeId: google.maps.MapTypeId.ROADMAP
+     };
+     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+     if (geocoder) {
+       geocoder.geocode( { 'address': address}, function(results, status) {
+         if (status == google.maps.GeocoderStatus.OK) {
+           if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+           map.setCenter(results[0].geometry.location);
+   
+             var infowindow = new google.maps.InfoWindow(
+                 { content: '<b>'+address+'</b>',
+                   size: new google.maps.Size(150,50)
+                 });
+     
+             var marker = new google.maps.Marker({
+                 position: results[0].geometry.location,
+                 map: map, 
+                 title:address
+             }); 
+             google.maps.event.addListener(marker, 'click', function() {
+                 infowindow.open(map,marker);
+             });
+   
+           } else {
+             alert("No results found");
+           }
+         } else {
+           alert("Geocode was not successful for the following reason: " + status);
+         }
+       });
+     }
+   }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ data.section_contactus2_mapkey }}&libraries=places&sensor=false&language={{ data.section_contactus2_maplanguage }}&region={{ data.section_contactus2_mapregion }}&callback=initialize"></script>
+{% endif %}

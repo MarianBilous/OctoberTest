@@ -1,0 +1,35 @@
+title = "Blog Post"
+url = "/blog/post/:slug"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeUrl[gr] = "/blog-post"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/blog-category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/blog-category"
+==
+<section class="classic-blog-section section-padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-9">
+            {% partial "blog/post" %}
+         </div>
+         <div class="col-md-3">
+            <div class="sidebar-area">
+               {% partial "blog/search" %}
+               {% partial "blog/categories" %}
+               {% partial "blog/tags" %}
+               {% partial "blog/popular" %}
+               {% partial "blog/subscribe" %}
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

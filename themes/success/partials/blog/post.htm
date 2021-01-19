@@ -1,0 +1,183 @@
+description = "Post"
+
+[viewBag]
+
+[registerVisit]
+
+[relatedPosts]
+slug = "{{ :slug }}"
+results = 4
+
+[ssbuttons]
+fa = "no"
+twitter = 1
+facebook = 1
+google+ = 1
+stumbleupon = 0
+linkedin = 1
+order_twitter = 1
+order_facebook = 2
+order_google+ = 3
+order_stumbleupon = 4
+order_linkedin = 5
+==
+{% set post = blogPost.post %}
+<article class="blog-post-wrapper" data-aos="fade-up" data-aos-delay="300">
+   <header class="author-info">
+      <div class="tag-posted-in">
+         <ul class="list-unstyled">
+            {% for category in post.categories %}
+            <li><i class="fa fa-tag"></i> <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}</li>
+            {% endfor %}
+         </ul>
+      </div>
+      <div class="author-posted">
+         <div class="media">
+            <div class="media-left">
+               {% if post.user.avatar %}
+               <a href="#"><img class="img-circle" src="{{ post.user.avatar.getThumb(48, 48, 'crop') }}" alt="{{ post.user.avatar.file_name }}"></a>
+               {% else %}
+               <a href="#"><img class="img-circle" src="{{ 'assets/images/img/48x48.png'|theme }}" alt=""></a>
+               {% endif %}
+            </div>
+            <div class="media-body">
+               <span class="author-name"><a href="#"><b>{{ post.user.first_name}}</b></a></span><br>
+               <span class="published-time"><i class="fa fa-calendar"></i>{{ post.published_at|date('M d, Y') }}</span>
+            </div>
+         </div>
+      </div>
+   </header>
+   <section class="featured-wrapper">
+      {% if post.featured_images.count > 0 %}
+      <a href="{{ post.url }}">
+      <img src="{{ post.featured_images.first.getThumb(600, 250, 'crop') }}" alt="{{ image.description }}"/>
+      </a>       
+      {% else %}
+      <a href="{{ post.url }}">
+      <img src="{{ 'assets/images/img/600x250.png'|theme }}" />
+      </a>
+      {% endif %}
+   </section>
+   <section class="blog-post-content">
+      <div>
+         <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      </div>
+      <div class="blog-post clearfix">
+         <div class="content">{{ post.content_html|raw }}</div>
+      </div>
+   </section>
+   <footer class="blog-post-footer clearfix">
+      <ul class="post-meta pull-left">
+         {% if this.theme.settings_social %}
+         {% for button in ssbuttons.property('buttons_order') %}
+         {% if(ssbuttons.property(button)) %}
+         <li><a href="{{ ssbuttons.property('buttons_parameters')[button]['href'] }}" title="{{ ssbuttons.property('buttons_parameters')[button]['title'] }}" target="_blank"><i class="{{ ssbuttons.property('buttons_parameters')[button]['icon'] }}"></i>&nbsp;&nbsp;{{ ssbuttons.property('buttons_parameters')[button]['label'] }}</a>
+         </li>
+         {% endif %}
+         {% endfor %}
+         {% if ssbuttons.property('js') %}
+         <script src="/plugins/martin/ssbuttons/assets/js/ssbuttons.js"></script>
+         {% endif %}
+         {% endif %}
+      </ul>
+   </footer>
+   {% if post.featured_images.count > 1 %}
+   <hr>
+   <section class="blog-post-gallery">
+      <h4>Photo Gallery</h4>
+      <div id="post-image-carousel" class="owl-carousel">
+         {% for image in post.featured_images %}
+         <div class="item">
+            <a href="{{ image.getThumb(600, 250, 'crop') }}">
+            <img class="img-responsive img-thumbnail" src="{{ image.getThumb(200, 150, 'crop') }}" alt="{{ image.description }}"/>
+            </a>
+         </div>
+         {% endfor %}
+      </div>
+   </section>
+   {% endif %}
+</article>
+<!--<div class="portfolio-controls clearfix mb-30">
+   <nav>
+   <ul>
+   <li class="pull-left" data-aos="fade-left" data-aos-delay="300">
+   <a class="btn btn-outline btn-md" href="#" aria-label="Previous">
+   <i class="fa fa-angle-left"></i>
+   </a>
+   </li>
+   <li class="pull-right" data-aos="fade-right" data-aos-delay="300">
+   <a class="btn btn-outline btn-md" href="#" aria-label="Next">
+   <i class="fa fa-angle-right"></i>
+   </a>
+   </li>
+   </ul>
+   </nav>
+   </div>-->
+{% if this.theme.settings_aboutwritter %}
+<section class="about-author-section mt-10">
+   <div class="media" data-aos="fade-up" data-aos-delay="300">
+      <div class="media-left">
+         {% if post.user.avatar %}
+         <a href="#"><img class="img-circle" src="{{ post.user.avatar.getThumb(128, 128, 'crop') }}" alt="{{ post.user.avatar.file_name }}"></a>
+         {% else %}
+         <a href="#"><img class="img-circle" src="{{ 'assets/images/img/75x75.png'|theme }}" alt=""></a>
+         {% endif %}
+      </div>
+      <div class="media-body">
+         <h4>About Writter</h4>
+         <p>{{ this.theme.settings_aboutwritter_info }}</p>
+      </div>
+   </div>
+   <div class="author-footer text-sm-center">
+      {% for fields in this.theme.social_media %}
+      <a href="{{ fields.social_media_url }}" data-aos="fade-up" data-aos-delay="400"><i class="{{ fields.social_media_icon }}  icon-box icon-sm" aria-hidden="true"></i></a>
+      {% endfor %}
+   </div>
+</section>
+{% endif %}
+<div class="similar-post mt-30 clearfix">
+   <h3 class="small-title mb-40" data-aos="fade-up" data-aos-delay="300">Similar Post</h3>
+   <div class="row">
+      {% set posts = relatedPosts.posts %}
+      {% for post in posts %}
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+         {% if post.featured_images.count > 0 %}
+         <a href="{{post.url}}">
+         <img src="{{ post.featured_images.first.getThumb(200, 150, 'crop') }}" alt="{{ image.description }}" class="img-responsive" />
+         </a>
+         {% else %}
+         <a href="{{post.url }}">
+         <img src="{{ 'assets/images/img/600x250.png'|theme }}" />
+         </a>
+         {% endif %}
+         <a href="{{post.url}}">
+            <h2>{{ post.title }}</h2>
+         </a>
+      </div>
+      {% endfor %}
+   </div>
+</div>
+{% if this.theme.settings_disqus %}
+<div class="comments-area clearfix mt-50" data-aos="fade-up" data-aos-delay="400">
+   <h3 class="small-title"><i class="fa fa-comment"></i> Comments</h3>
+   <div id="disqus_thread"></div>
+</div>
+<script>
+   /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+   /*
+   var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+   };
+   */
+   (function() { // DON'T EDIT BELOW THIS LINE
+   var d = document, s = d.createElement('script');
+   s.src = 'https://{{ this.theme.settings_disqus_url }}/embed.js';
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+   })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}

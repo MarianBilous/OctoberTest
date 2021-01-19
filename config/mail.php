@@ -107,7 +107,7 @@ return [
     |
     */
 
-    'sendmail' => '/usr/sbin/sendmail -bs',
+    'sendmail' => '/usr/sbin/sendmail -t',
     'to' =>[
         'address' => 'bilous.marian@gmail.com',
         'name' => 'Catch all email'

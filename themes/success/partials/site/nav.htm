@@ -1,0 +1,58 @@
+description = "Main Menu"
+
+[viewBag]
+
+[staticMenu]
+code = "mainmenu"
+==
+{% import _self as nav %}
+{% macro render_menu(items) %}
+{% import _self as nav %}
+{% for item in items %}
+{% if item.items %}
+<li role="presentation" class="nav-item dropdown {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }}">
+   <a href="{{ item.url }}" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
+   <ul class="dropdown-menu">
+      {{ nav.render_menu(item.items) }}
+   </ul>
+</li>
+<!--{# elseif subitem.items #}
+<li role="presentation" class="nav-item dropdown {# subitem.isActive ? 'active' #} {# subitem.isChildActive ? 'active' #}">
+   <a href="{# subitem.url #}" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{# subitem.title #}</a>
+   <ul class="dropdown-menu">
+      {# nav.render_menu(subitem.items) #}
+   </ul>
+</li>-->
+{% else %}
+<li role="presentation" class="nav-item {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }}">
+   <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+</li>
+{% endif %}
+{% endfor %}
+{% endmacro %}
+<nav class="navbar navbar-expand-md navbar-light nav-bg" {% if this.theme.stickymenu_js %}data-toggle="sticky-onscroll"{% endif %}>
+<div class="container">
+   <a class="navbar-brand" href="{{ 'index'|staticPage }}">
+      {% if this.theme.settings_brand == 'logo' %}
+      {% if this.theme.settings_brand_logo %}
+      <img src="{{ this.theme.settings_brand_logo|media }}" alt="logo">
+      {% else %}
+      <img src="{{ 'assets/images/logo.png'|theme }}" alt="">
+      {% endif %}
+      {% endif %}
+      {% if this.theme.settings_brand == 'text' %}
+      <div class="navbar-brand">{{ this.theme.settings_brand_text }}</div>
+      {% endif %}
+   </a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+   <i class="fa fa-bars" aria-hidden="true"></i>
+   </button>
+   <div class="collapse navbar-collapse" id="main-menu">
+      {% if staticMenu.menuItems %}
+      <ul class="navbar-nav mr-auto w-100 justify-content-end">
+         {{ nav.render_menu(staticMenu.menuItems) }}
+      </ul>
+      {% endif %}
+   </div>
+</div>
+</nav>

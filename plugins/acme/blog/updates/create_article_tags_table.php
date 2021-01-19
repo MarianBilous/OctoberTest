@@ -12,8 +12,8 @@ class CreateArticleTagsTable extends Migration
             $table->engine = 'InnoDB';
             $table->integer('article_id')->unsigned();
             $table->integer('tag_id')->unsigned();
+            $table->string('test_field');
             $table->primary(['article_id','tag_id']);
-
         });
     }
 

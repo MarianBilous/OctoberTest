@@ -1,0 +1,54 @@
+description = "Default Layout"
+
+[session]
+security = "all"
+
+[contactForm]
+loadJS = 1
+
+[searchInput]
+useAutoComplete = 1
+autoCompleteResultCount = 5
+showProviderBadge = 1
+searchPage = "search-results.htm"
+
+[mailSignup]
+
+[localePicker]
+forceUrl = 1
+==
+<!DOCTYPE html>
+<html lang="{{ this.theme.site_locale }}">
+    <head>
+        {% partial "site/meta" %}
+        {% partial "site/css" %}
+    </head><!--/#head-->
+    <body class="page-{{ this.page.id }} layout-{{ this.page.layout }}">
+
+        <header id="header-wrap">
+            {% partial "site/top" %}
+            {% partial "site/nav" %}
+        </header><!--/#header-->
+    
+        <!-- Analytics -->
+        {{ this.theme.google_analytics|raw }}
+    
+        <!--Page header-->
+        {% partial "site/page-header" %}
+        
+        {% page %}
+    
+        <!--Blog partials-->
+
+        <footer id="footer">
+        	{% partial "site/footer" %}
+        </footer><!--/#footer-->
+    
+        <!-- Scroll to top -->
+        {% partial "site/scrolltop" %}
+    
+        <!-- Scripts -->
+        {% partial "site/scripts" %}
+
+</body><!--/#body-->
+</html>

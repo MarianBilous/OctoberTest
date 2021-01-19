@@ -32,6 +32,7 @@ fields:
         label: Tags
         type: partial
         path: $/acme/blog/controllers/articles/_field_tags.htm
+#        path: field_tags
     visibility:
         label: Display content
         type: switch
@@ -58,6 +59,6 @@ fields:
     #     type: fileupload
     #     mode: image
     
-tabs:
-    fields:
+#tabs:
+#    fields:
         

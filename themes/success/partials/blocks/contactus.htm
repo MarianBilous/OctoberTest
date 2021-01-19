@@ -1,0 +1,144 @@
+description = "Contact Us Section"
+
+[viewBag]
+
+[contactForm]
+loadJS = 1
+==
+{% if data.section_contactus_map %}
+<div id="map_canvas" style="width: 100%; height: 400px;"></div>
+{% endif %}
+<section class="contact-form-section section-padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12 mb-50 text-center contact-title-text" data-aos="fade-up" data-aos-delay="300">
+            <h2>{{ data.section_contactus_header }}</h2>
+            <p>{{ data.section_contactus_subheader }}</p>
+         </div>
+         <div class="col-md-4 contact-info-section">
+            <div class="contact-widget office-location" data-aos="fade-left" data-aos-delay="300">
+               <h2>{{ data.section_contactus_locationtitle }}</h2>
+               <address>
+                  <i class="fa fa-map-marker icon-box icon-xs"></i>{{ data.section_contactus_address }}<br>
+                  <i class="fa fa-phone icon-box icon-xs"></i>{{ data.section_contactus_phone }}<br>
+                  <a href="mailto:{{ data.section_contactus_email }}"><i class="fa fa-envelope icon-box icon-xs"></i> {{ data.section_contactus_email }}</a>
+               </address>
+            </div>
+            <div class="contact-widget office-location" data-aos="fade-left" data-aos-delay="400">
+               <h2>{{ data.section_contactus_hourstitle }}</h2>
+               <address>
+                  <p><i class="fa fa-clock-o icon-box icon-xs"></i>{{ data.section_contactus_hours }}</p>
+               </address>
+            </div>
+            <div class="contact-widget social-contact" data-aos="fade-left" data-aos-delay="500">
+               <h2>{{ data.section_contactus_socialtitle }}</h2>
+               <a href="{{ data.section_contactus_facebook }}"><i class="fa fa-facebook icon-round icon-xs"></i></a>
+               <a href="{{ data.section_contactus_twitter }}"><i class="fa fa-twitter icon-round icon-xs"></i></a>
+               <a href="{{ data.section_contactus_linkedin }}"><i class="fa fa-linkedin icon-round icon-xs"></i></a>
+               <a href="{{ data.section_contactus_googleplus }}"><i class="fa fa-google-plus icon-round icon-xs"></i></a>
+            </div>
+         </div>
+         <div class="col-md-7 col-md-offset-1 contact-form contact-info-section">
+            <div class="confirm-contact-container"></div>
+            <form class="shake" id="contactForm"
+            data-request="{{ contactForm }}::onMailSend"
+            data-request-update="'{{ contactForm }}::confirm': '.confirm-contact-container'"
+            {% if contactForm.enableFileUpload %}
+            data-request-files
+            {% endif %}
+            >
+            <div class="form-group" data-aos="fade-right" data-aos-delay="300">
+               <label for="name" class="sr-only">{{label.name}}</label>
+               <input type="text" placeholder="{{label.name}}" id="name" class="form-control contact-control" name="name" required data-error="Please enter your name">
+               <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group" data-aos="fade-right" data-aos-delay="400">
+               <label for="email" class="sr-only">{{label.email}}</label>
+               <input type="email" placeholder="{{label.email}}" id="email" class="form-control contact-control" name="email" required data-error="Please enter your Email">
+               <div class="help-block with-errors"></div>
+            </div>
+            {% if contactForm.enableFileUpload %}
+            <div class="form-group" data-aos="fade-right" data-aos-delay="500">
+               <label for="attachment">{{label.attachment}}</label>
+               <input type="file" name="attachment" class="form-control">
+               <div class="help-block with-errors"></div>
+            </div>
+            {% endif %}
+            <div class="form-group" data-aos="fade-right" data-aos-delay="500">
+               <label for="message" class="sr-only">{{label.message}}</label>
+               <textarea placeholder="{{label.message}}" rows="7" id="message" class="form-control" name="message_content" required data-error="Write your message"></textarea>
+               <div class="help-block with-errors"></div>
+            </div>
+            {% if contactForm.enableCaptcha %}
+            <div class="form-group" data-aos="fade-right" data-aos-delay="600">
+               <label for="g-recaptcha" class="sr-only">{{label.captcha}}</label>
+               <div class="g-recaptcha" data-sitekey="{{ contactForm.captchaSiteKey }}"></div>
+               <div class="help-block with-errors"></div>
+            </div>
+            {% endif %}
+            {% if contactForm.mailgunSubscribeExist %}
+            <div class="form-group">
+               <div class="checkbox">
+                  <label><input type="checkbox" name="maillist_subscribe" checked>{{label.maillist}}</label>
+                  <input type="hidden" name="confirm_subscribe" value="true">
+               </div>
+            </div>
+            {% endif %}
+            <button class="btn btn-common btn-lg" data-aos="fade-up" data-aos-delay="300" type="submit" id="form-submit"><i class="fa fa-envelope"></i> {{label.button_text}}</button>
+            <div id="msgSubmit" class="h3 text-center hidden"></div>
+            <div class="clearfix"></div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>
+{% if data.section_contactus_map %}
+<!--onload="initialize()"-->
+<script type="text/javascript">
+   var geocoder;
+   var map;
+   var address ="{{ data.section_contactus_mapaddress }}";
+   function initialize() {
+     geocoder = new google.maps.Geocoder();
+     var latlng = new google.maps.LatLng(-34.397, 150.644);
+     var myOptions = {
+       zoom: 16,
+       center: latlng,
+     mapTypeControl: true,
+     mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+     navigationControl: true,
+       mapTypeId: google.maps.MapTypeId.ROADMAP
+     };
+     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+     if (geocoder) {
+       geocoder.geocode( { 'address': address}, function(results, status) {
+         if (status == google.maps.GeocoderStatus.OK) {
+           if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+           map.setCenter(results[0].geometry.location);
+   
+             var infowindow = new google.maps.InfoWindow(
+                 { content: '<b>'+address+'</b>',
+                   size: new google.maps.Size(150,50)
+                 });
+     
+             var marker = new google.maps.Marker({
+                 position: results[0].geometry.location,
+                 map: map, 
+                 title:address
+             }); 
+             google.maps.event.addListener(marker, 'click', function() {
+                 infowindow.open(map,marker);
+             });
+   
+           } else {
+             alert("No results found");
+           }
+         } else {
+           alert("Geocode was not successful for the following reason: " + status);
+         }
+       });
+     }
+   }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ data.section_contactus_mapkey }}&libraries=places&sensor=false&language={{ data.section_contactus_maplanguage }}&region={{ data.section_contactus_mapregion }}&callback=initialize"></script>
+{% endif %}

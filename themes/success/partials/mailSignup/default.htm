@@ -1,0 +1,14 @@
+<h3 class="small-title">SUBSCRIBE US</h3>
+<div class="contact-us">
+   <p>Subscribe to our news letter to get regular update and blog posts.</p>
+   <div id="{{ mailSignup.id }}container">
+      <form
+         data-request="{{ mailSignup }}::onSignup"
+         data-request-update="'{{ mailSignup }}::result': '#{{ mailSignup.id }}container'" class="form-group">
+         <div class="form-group">
+            <input name="email" type="text" class="form-control" id="exampleInputEmail2" placeholder="Enter your email">
+         </div>
+         <button type="submit" class="btn btn-common">Submit</button>
+      </form>
+   </div>
+</div>

@@ -1,0 +1,14 @@
+description = "Text Section"
+
+[viewBag]
+==
+<section id="service-block-main" class="section" style="background-color: {{ data.section_text_bg }};">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <h1 class="section-title" data-aos="fade-up" data-aos-delay="300">{{ data.section_text_header }}</h1>
+            <p class="section-subcontent" data-aos="fade-up" data-aos-delay="400">{{ data.section_text_textarea|raw }}</p>
+         </div>
+      </div>
+   </div>
+</section>

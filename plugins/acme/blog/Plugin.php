@@ -54,7 +54,7 @@ class Plugin extends PluginBase
             'Acme\Blog\Components\category' => 'Category',
             'Acme\Blog\Components\tag' => 'Tag',
             'Acme\Blog\Components\articles' => 'Articles',
-            'Acme\Blog\Components\ContactForm' => 'contactform',
+            //'Acme\Blog\Components\ContactForm' => 'contactform',
             'Acme\Blog\Components\ArticleDetail' => 'articleDetail',
             'Acme\Blog\Components\TagDetail' => 'tagDetail',
             'Acme\Blog\Components\CategoryDetail' => 'categoryDetail',
@@ -147,10 +147,10 @@ class Plugin extends PluginBase
                         'icon'        => 'icon-envelope',
                         'url'         => \Backend::url('acme/blog/contacts'),
                     ],
-                    'tests' => [
-                        'label'       => 'Test',
+                    'mycontroller' => [
+                        'label'       => 'My controller',
                         'icon'        => 'icon-magic',
-                        'url'         => \Backend::url('acme/blog/tests'),
+                        'url'         => \Backend::url('acme/blog/mycontroller'),
                     ],
                     'photos' => [
                         'label'       => 'Photo',

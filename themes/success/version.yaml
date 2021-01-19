@@ -1,0 +1,12 @@
+1.0.0: Initial release
+1.0.1: Fix error count() Parameter must be an array or an object that implements Countable
+1.0.2: Translate Plugin support, Language selector option, Improved meta tags, Minor fixes
+1.0.3: Fixed wrong path on blocks.yaml, Minor fixes with fields
+1.0.4: Typo fix on theme folder name
+1.0.5: Fix layout folder name
+1.0.6: Fix on partial about.htm
+1.1.0: This is a major update that changes a lot of files. If you use theme on a production site is possible to lose some fields data.
+1.1.1: Fixed wrong path on blocks.yaml
+1.1.2: Fixed bug with subscribe widget
+1.1.3: Fixed partial banner image issue
+1.1.4: Updated prefixes to scss for maximum browser support

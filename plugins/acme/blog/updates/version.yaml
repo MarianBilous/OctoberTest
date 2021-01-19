@@ -16,3 +16,6 @@
   - create_photos_table.php
   - create_products_table.php
   - create_staff_table.php
+1.0.5:
+  - Create my test models table
+  - create_my_test_models_table.php

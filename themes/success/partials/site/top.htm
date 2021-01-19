@@ -1,0 +1,60 @@
+description = "Top section"
+
+[viewBag]
+==
+{% if this.theme.topbar_enable %}
+<div class="top-header-section">
+   <div class="container">
+      <div class="top-header-area">
+         <div class="top-header-content">
+            <div class="row d-flex justify-content-end">
+               {% if this.theme.topbar_callus %}
+               <div class="call-us pl-3 mr-auto">
+                  <p><i class="fa fa-phone"></i>   {{ this.theme.topbar_callus }}</p>
+               </div>
+               {% endif %}
+               {% if this.theme.topbar_mailus %}
+               <div class="call-us pl-3 mr-auto">
+                  <p><i class="fa fa-envelope"></i>   <a href="mailto:{{ this.theme.topbar_mailus }}">{{ this.theme.topbar_mailus }}</a></p>
+               </div>
+               {% endif %}
+               {% if this.theme.topbar_account %}
+               <div class="user-account">
+                  <ul class="nav nav-inline justify-content-end">
+                     {% if user %}
+                     <li role="presentation" class="nav-item">
+                        <a href="#" class="nav-link" data-request="onLogout"><i class="fa fa-sign-out"></i> Logout</a>
+                     </li>
+                     <li role="presentation" class="nav-item">
+                        <a href="{{ 'users'|staticPage }}" class="nav-link"><i class="fa fa-user"></i> My Account</a>
+                     </li>
+                     {% else %}   
+                     <li role="presentation" class="nav-item">
+                        <a href="{{ 'user/account'|page }}" class="nav-link"><i class="fa fa-user"></i> Account</a>
+                     </li>
+                     {% endif %}
+                  </ul>
+               </div>
+               {% endif %}
+               {% if this.theme.topbar_language %}
+               <div class="language pr-3">
+                  <i class="fa fa-globe"></i>
+                  {% for code, locale in localePicker.locales %}
+                  <div class="picker-lang
+                     {% if localePicker.activeLocale == code %}
+                     active
+                     {% endif %}">
+                     <a href="#" data-request="onSwitchLocale"
+                        data-request-data="locale: '{{ code }}'">
+                     {{ code|upper }}
+                     </a>
+                  </div>
+                  {% endfor %}
+               </div>
+               {% endif %}
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endif %}

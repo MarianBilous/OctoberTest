@@ -1,0 +1,15 @@
+description = "Categories"
+
+[viewBag]
+==
+<aside class="widget search-bar" data-aos="fade-up" data-aos-delay="300">
+   <h2 class="widget-title">Categories</h2>
+   {% if blogCategories.categories %}
+   <ul class="category-list">
+      {% partial blogCategories ~ "::items"
+      categories = blogCategories.categories
+      currentCategorySlug = blogCategories.currentCategorySlug
+      %}
+   </ul>
+   {% endif %}
+</aside>

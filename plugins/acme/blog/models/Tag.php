@@ -101,7 +101,9 @@ class Tag extends Model
         'article' => [
             'Acme\Blog\Models\Article',
             'table' => 'acme_blog_article_tags',
-            'order' => 'name'
+            'order' => 'name',
+            'pivot' => ['test_field'],
+            'pivotModel' => 'Acme\Blog\Models\ArticleTagPivot'
         ]
     ];
     public $morphTo = [];
