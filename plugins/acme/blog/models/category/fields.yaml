@@ -9,3 +9,17 @@ fields:
         label: Display content
         type: checkbox
         default: true
+
+    is_delayed:
+        label: Info
+        comment: Info category.
+        type: checkbox
+
+    info:
+        label: Info
+        type: text
+        cssClass: field-indent
+        trigger:
+            action: show
+            field: is_delayed
+            condition: checked

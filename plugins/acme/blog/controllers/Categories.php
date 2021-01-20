@@ -1,5 +1,7 @@
 <?php namespace Acme\Blog\Controllers;
 
+use Acme\Blog\Models\Article;
+use Acme\Blog\Models\Category;
 use BackendMenu;
 use Backend\Classes\Controller;
 
@@ -37,5 +39,32 @@ class Categories extends Controller
         parent::__construct();
 
         BackendMenu::setContext('Acme.Blog', 'blog', 'categories');
+    }
+
+    public function onLoadPopup()
+    {
+        return $this->makePartial('$/acme/blog/controllers/categories/_add_child_popup.htm', ['id' => post('id')]);
+    }
+
+    public function onAddChild()
+    {
+        if (post('id')) {
+            $parent = Category::find(post('id'));
+            $parent->children()->create(['name' => post('name')]);
+            $parent->save();
+        }
+
+        return $this->listRefresh();
+    }
+
+    public function onDeleteChild()
+    {
+        if (post('id')) {
+            $parent = Category::find(post('id'));
+            $parent->delete();
+            $parent->save();
+        }
+
+        return $this->listRefresh();
     }
 }

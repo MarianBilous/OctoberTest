@@ -1,0 +1,18 @@
+<a
+    data-control="popup"
+    data-handler="onLoadPopup"
+    data-extra-data="id: <?= $record->id ?>"
+    href="javascript:;"
+    class="btn btn-default mt-3">
+    Add
+</a>
+
+<a  style="margin-left: 20px"
+    data-request="onDeleteChild"
+    data-request-data="id: '<?= $record->id ?>'"
+    data-request-confirm="Delete this item?"
+    class="oc-icon-remove"
+    data-toggle="tooltip"
+    title="Remove">
+
+</a>

@@ -15,6 +15,11 @@ class CreateCategoriesTable extends Migration
             $table->string('slug')->unique();
             $table->integer('sort_order')->nullable();
             $table->boolean('visibility');
+            $table->integer('nest_depth')->nullable();
+            $table->integer('nest_right')->nullable();
+            $table->integer('nest_left')->nullable();
+            $table->integer('parent_id')->unsigned()->nullable();
+            $table->foreign('parent_id')->references('id')->on('acme_blog_categories')->onDelete('set null');
             $table->timestamps();
         });
     }

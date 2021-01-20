@@ -7,13 +7,30 @@ columns:
         label: ID
         searchable: true
         sortable: true
+
     name:
         label: Name
         searchable: true
+
     slug:
         label: Slug
+
+    #звязок з trait NestedTree
+    parent:
+        label: Parent
+        relation: parent
+        select: name
+
     sort_order:
         label: Position
         sortable: true
+
     visibility:
         label: Display visibility
+
+    add_child:
+        label: Add / Delete
+        type: partial
+        clickable: false
+        sortable: false
+        path: ~/plugins/acme/blog/controllers/categories/_add_but.htm

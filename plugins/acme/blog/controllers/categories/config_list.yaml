@@ -26,6 +26,10 @@ showPageNumbers: true
 # Displays the list column set up button
 showSetup: true
 
+showTree: true
+
+treeExpanded: true
+
 # Displays the sorting link on each column
 showSorting: true
 

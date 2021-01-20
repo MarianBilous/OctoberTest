@@ -10,6 +10,7 @@ class Category extends Model
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sluggable;
     use \October\Rain\Database\Traits\Sortable;
+    use \October\Rain\Database\Traits\NestedTree;
 
     public $implement = ['RainLab\Translate\Behaviors\TranslatableModel'];
 
@@ -96,7 +97,7 @@ class Category extends Model
 
     public $hasMany = [
         'article' => 'Acme\Blog\Models\Article',
-        'customer' => 'Acme\Blog\Models\Customer'
+        'customer' => 'Acme\Blog\Models\Customer',
     ];
 
     public $belongsTo = [];

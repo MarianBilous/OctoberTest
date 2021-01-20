@@ -25,3 +25,6 @@
   - create_order_items_table.php
   - create_customers_table.php
   - seed_customers_table.php
+1.0.7:
+  - Update categoty table
+  - create_categories_table_2.php

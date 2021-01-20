@@ -1,0 +1,27 @@
+<?= Form::open() ?>
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="popup">&times;</button>
+</div>
+<div class="modal-body">
+    <div class="form-group is-required">
+        <label>Name</label>
+        <input class="form-control" type="text" name="name">
+    </div>
+</div>
+<div class="modal-footer">
+    <button
+            type="submit"
+            data-request="onAddChild"
+            data-request-data='id: <?= $id ?>'
+            data-popup-load-indicator
+            class="btn btn-primary oc-icon-send">
+        Add
+    </button>
+    <button
+            type="button"
+            class="btn btn-default"
+            data-dismiss="popup">
+        <?= e(trans('backend::lang.relation.close')) ?>
+    </button>
+</div>
+<?= Form::close() ?>
