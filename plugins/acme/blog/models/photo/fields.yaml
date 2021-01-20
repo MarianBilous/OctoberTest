@@ -8,3 +8,12 @@ fields:
         disabled: true
     path:
         label: Path
+
+#    country:
+#        label: Country
+#        type: text
+#
+#    state:
+#        label: State
+#        type: text
+#        dependsOn: country

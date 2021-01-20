@@ -77,5 +77,29 @@ class Photo extends Model
     public $attachOne = [];
     public $attachMany = [];
 
+    public function getCountryOptions()
+    {
+        return 'Australia';
+    }
 
+    public function getState()
+    {
+        if ($this->country == 'Australia') {
+            return 'Capital Territory';
+        }
+        else {
+            return 'British Columbia';
+        }
+    }
+
+    public function filterFields($fields, $context = null)
+    {
+        //dd($fields);
+        if ($this->imageable_id == 1) {
+            $fields->path->disabled = true;
+        }
+        elseif ($this->imageable_id == 3) {
+            $fields->path->disabled = true;
+        }
+    }
 }
