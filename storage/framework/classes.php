@@ -237,4 +237,5 @@
   'Acme\\Blog\\Models\\Customer' => 'plugins\\acme\\blog\\models\\Customer.php',
   'Acme\\Blog\\Models\\Order' => 'plugins\\acme\\blog\\models\\Order.php',
   'Acme\\Blog\\Models\\Item' => 'plugins\\acme\\blog\\models\\Item.php',
+  'Acme\\Blog\\Controllers\\Photos' => 'plugins\\acme\\blog\\controllers\\Photos.php',
 );

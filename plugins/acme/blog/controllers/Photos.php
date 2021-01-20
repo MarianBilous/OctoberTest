@@ -30,6 +30,11 @@ class Photos extends Controller
     {
         parent::__construct();
 
+
         BackendMenu::setContext('Acme.Blog', 'blog', 'photos');
+
+
     }
+
+
 }

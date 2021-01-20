@@ -1,5 +1,7 @@
 <?php namespace Acme\Blog;
 
+use Acme\Blog\Controllers\Photos;
+use Acme\Blog\Models\Photo;
 use Backend;
 use System\Classes\PluginBase;
 
@@ -40,7 +42,28 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+        Photos::extendFormFields(function($form, $model, $context)
+        {
+            if (!$model instanceof Photo) {
+                return;
+            }
 
+            $form->addFields([
+                'imageable_id' => [
+                    'label'   => 'Imageable id',
+                    'type' => 'number',
+                    'span' => 'left',
+                    'comment' => 'This is a custom field I have added.',
+                ],
+                'imageable_type' => [
+                    'label'   => 'Imageable type',
+                    'type' => 'text',
+                    'span' => 'right',
+                    'comment' => 'This is a custom field I have added.',
+                ],
+            ]);
+
+        });
     }
 
     /**

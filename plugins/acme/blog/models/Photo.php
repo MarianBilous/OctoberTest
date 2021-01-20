@@ -76,4 +76,6 @@ class Photo extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+
 }
