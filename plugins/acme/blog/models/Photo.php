@@ -26,6 +26,8 @@ class Photo extends Model
         'path',
         'imageable_id',
         'imageable_type',
+        'country',
+        'state'
     ];
 
     /**
@@ -79,16 +81,20 @@ class Photo extends Model
 
     public function getCountryOptions()
     {
-        return 'Australia';
+        return ['au' => 'Australia', 'ca' => 'Canada'];
     }
 
-    public function getState()
+    public function getStateOptions()
     {
-        if ($this->country == 'Australia') {
-            return 'Capital Territory';
+        //dd($this->country);
+        if ($this->country == null)
+            return ['act' => 'Capital Territory', 'qld' => 'Queensland'];
+        //dd($this->country);
+        elseif ($this->country == 'au') {
+            return ['act' => 'Capital Territory', 'qld' => 'Queensland'];
         }
-        else {
-            return 'British Columbia';
+        elseif ($this->country == 'ca') {
+            return ['bc' => 'British Columbia', 'on' => 'Ontario'];
         }
     }
 

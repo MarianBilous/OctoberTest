@@ -9,11 +9,11 @@ fields:
     path:
         label: Path
 
-#    country:
-#        label: Country
-#        type: text
-#
-#    state:
-#        label: State
-#        type: text
-#        dependsOn: country
+    country:
+        label: Country
+        type: dropdown
+
+    state:
+        label: State
+        type: dropdown
+        dependsOn: country

@@ -28,3 +28,6 @@
 1.0.7:
   - Update categoty table
   - create_categories_table_2.php
+1.0.8:
+  - Update photo table
+  - create_photos_table_2.php
