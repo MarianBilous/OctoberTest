@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Customer
+
+# Model Form Field configuration
+form: $/acme/blog/models/customer/fields.yaml
+
+# Model Class name
+modelClass: Acme\Blog\Models\Customer
+
+# Default redirect location
+defaultRedirect: acme/blog/customers
+
+# Create page
+create:
+    title: Create Customer
+    redirect: acme/blog/customers/update/:id
+    redirectClose: acme/blog/customers
+
+# Update page
+update:
+    title: Edit Customer
+    redirect: acme/blog/customers
+    redirectClose: acme/blog/customers
+
+# Preview page
+preview:
+    title: Preview Customer

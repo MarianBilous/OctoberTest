@@ -95,7 +95,8 @@ class Category extends Model
     public $hasOne = [];
 
     public $hasMany = [
-        'article' => 'Acme\Blog\Models\Article'
+        'article' => 'Acme\Blog\Models\Article',
+        'customer' => 'Acme\Blog\Models\Customer'
     ];
 
     public $belongsTo = [];

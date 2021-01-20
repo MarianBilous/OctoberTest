@@ -1,0 +1,8 @@
+items:
+    label: Items
+    view:
+        list: $/acme/blog/models/item/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        form: $/acme/blog/models/item/fields.yaml
+        list: $/acme/blog/models/item/columns.yaml

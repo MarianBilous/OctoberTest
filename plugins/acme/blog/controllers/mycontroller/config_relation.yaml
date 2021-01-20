@@ -1,0 +1,8 @@
+orders:
+    label: Orders
+    view:
+        list: $/acme/blog/models/order/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        form: $/acme/blog/models/order/fields.yaml
+        list: $/acme/blog/models/order/columns.yaml

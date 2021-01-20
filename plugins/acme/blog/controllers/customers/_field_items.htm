@@ -1,0 +1,15 @@
+<!-- <div class="text-danger">Sorry, this is as far as behaviors can go...</div> -->
+
+<div id="itemList">
+    <?= $this->makePartial('$/acme/blog/controllers/customers/_item_list.htm', ['items' => $model->items]) ?>
+</div>
+<p>
+    <a
+        href="javascript:;"
+        class="btn btn-secondary oc-icon-plus"
+        data-control="popup"
+        data-handler="onLoadCreateItemForm"
+        data-size="large">
+        Add item
+    </a>
+</p>

@@ -8,10 +8,12 @@ class CreateProductsTable extends Migration
 {
     public function up()
     {
-        Schema::create('acme_blog_products', function (Blueprint $table) {
+        Schema::create('acme_blog_products', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('price');
+            $table->string('name');
+            $table->decimal('price', 8);
+            $table->text('description');
             $table->timestamps();
         });
     }

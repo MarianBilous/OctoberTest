@@ -19,3 +19,9 @@
 1.0.5:
   - Create my test models table
   - create_my_test_models_table.php
+1.0.6:
+  - Create DB Tables
+  - create_orders_table.php
+  - create_order_items_table.php
+  - create_customers_table.php
+  - seed_customers_table.php

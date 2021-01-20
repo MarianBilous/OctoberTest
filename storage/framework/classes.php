@@ -234,4 +234,7 @@
   'Acme\\Blog\\Models\\ArticleTagPivot' => 'plugins\\acme\\blog\\models\\ArticleTagPivot.php',
   'Acme\\Blog\\Models\\MyTestModel' => 'plugins\\acme\\blog\\models\\MyTestModel.php',
   'acme\\blog\\Controllers\\mycontroller' => 'plugins\\acme\\blog\\controllers\\mycontroller.php',
+  'Acme\\Blog\\Models\\Customer' => 'plugins\\acme\\blog\\models\\Customer.php',
+  'Acme\\Blog\\Models\\Order' => 'plugins\\acme\\blog\\models\\Order.php',
+  'Acme\\Blog\\Models\\Item' => 'plugins\\acme\\blog\\models\\Item.php',
 );
