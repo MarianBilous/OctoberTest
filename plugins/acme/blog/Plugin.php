@@ -116,7 +116,11 @@ class Plugin extends PluginBase
     public function registerFormWidgets()
     {
         return [
-            'Acme\Blog\FormWidgets\TagSelector' => 'tagselector'
+            'Acme\Blog\FormWidgets\TagSelector' => 'tagselector',
+            'Acme\Blog\FormWidgets\UniqueValue' => [
+                'label' => 'Unique Value',
+                'code' => 'uniquevalue'
+            ]
         ];
     }
 
