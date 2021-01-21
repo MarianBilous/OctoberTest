@@ -20,7 +20,15 @@ class ContactForm extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'units' => [
+                'title'       => 'Units',
+                'type'        => 'dropdown',
+                'default'     => 'imperial',
+                'placeholder' => 'Select units',
+                'options'     => ['metric'=>'Metric', 'imperial'=>'Imperial']
+            ]
+        ];
     }
     public function onSend()
     {

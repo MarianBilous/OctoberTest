@@ -38,6 +38,13 @@ fields:
         type: switch
         on: On
         off: Off
+        span: left
+    is_featured:
+        label: Is featured
+        type: switch
+        on: On
+        off: Off
+        span: right
     image:
         label: Image
         type: fileupload

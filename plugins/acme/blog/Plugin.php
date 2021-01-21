@@ -32,7 +32,7 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-
+        $this->registerConsoleCommand('acme.my', 'Acme\Blog\Console\MyCommand');
     }
 
     /**
@@ -77,7 +77,7 @@ class Plugin extends PluginBase
             'Acme\Blog\Components\category' => 'Category',
             'Acme\Blog\Components\tag' => 'Tag',
             'Acme\Blog\Components\articles' => 'Articles',
-            //'Acme\Blog\Components\ContactForm' => 'contactform',
+            'Acme\Blog\Components\ContactForm' => 'contactform',
             'Acme\Blog\Components\ArticleDetail' => 'articleDetail',
             'Acme\Blog\Components\TagDetail' => 'tagDetail',
             'Acme\Blog\Components\CategoryDetail' => 'categoryDetail',

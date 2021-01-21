@@ -15,11 +15,21 @@ class Articles extends ComponentBase
 
     public function getArticle()
     {
-        return Article::where('visibility', true)->orderBy('created_at', 'desc')->get();
+        if ($this->property('featured')) {
+            return Article::where('is_featured', true)->get();
+        } else {
+            return Article::where('visibility', true)->orderBy('created_at', 'desc')->get();
+        }
     }
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'featured' => [
+                'title'             => 'Is featured',
+                'default'           => false,
+                'type'              => 'checkbox',
+            ]
+        ];
     }
 }

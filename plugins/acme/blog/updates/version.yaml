@@ -31,3 +31,6 @@
 1.0.8:
   - Update photo table
   - create_photos_table_2.php
+1.0.9:
+  - Update article table
+  - create_articles_table_2.php

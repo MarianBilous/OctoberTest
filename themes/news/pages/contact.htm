@@ -4,8 +4,10 @@ layout = "default"
 is_hidden = 0
 
 [contactform]
+units = "imperial"
 
 [session]
 security = "all"
 ==
 {% component 'contactform' %}
+<li class="{{ contactform.units == 'metric' ? 'active' }}">About</li>
