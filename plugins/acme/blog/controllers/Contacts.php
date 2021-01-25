@@ -38,30 +38,30 @@ class Contacts extends Controller
 
     public function onLoadPopup()
     {
-        $emails = [
-            'test@email.1',
-            'test@email.2',
-            'test@email.3'
-        ];
-        Flash::success(post('userId'));
-        return $this->makePartial('emails_popup', ['emails' => $emails, 'userId' => post('userId')]);
+		$emails = [
+		    'test@email.1',
+		    'test@email.2',
+		    'test@email.3'
+		];
+		Flash::success(post('userId'));
+		return $this->makePartial('emails_popup', ['emails' => $emails, 'userId' => post('userId')]);
     }
 
     public function onSendEmail()
     {
-        $fromMaile = post('email');
-        $user = Contact::find(post('userId'));
+		$fromMaile = post('email');
+		$user = Contact::find(post('userId'));
 
-        Mail::send('acme.blog::message',
-            ['fromMaile' => $fromMaile,
-                'userEmail' => $user->email,
-                'name' => $user->name ], function($message) use ($fromMaile, $user){
-                $message->from($fromMaile);
-                $message->to($user->email);
-                $message->subject('Test message');
-            });
+		Mail::send('acme.blog::message',
+		    ['fromMaile' => $fromMaile,
+		        'userEmail' => $user->email,
+		        'name' => $user->name ], function($message) use ($fromMaile, $user){
+		        $message->from($fromMaile);
+		        $message->to($user->email);
+		        $message->subject('Test message');
+		    });
 
-        Flash::success("Email has been sent");
+		Flash::success("Email has been sent");
 
     }
 }

@@ -6,6 +6,7 @@ use Backend\Classes\Controller;
 use Illuminate\Support\Facades\Log;
 use October\Rain\Support\Facades\Flash;
 
+use Illuminate\Support\Facades\Event;
 /**
  * Articles Back-end Controller
  */
@@ -30,7 +31,7 @@ class Articles extends Controller
      * @var string Configuration file for the `FormController` behavior.
      */
     public $formConfig = 'config_form.yaml';
-    
+
     /**
      * @var string Configuration file for the `RelationController` behavior.
      */
@@ -49,27 +50,27 @@ class Articles extends Controller
     }
 
     public function onMakeActive()
-    {        
+    {
         $article = new Article;
-        if ($checked = post('checked')) {            
-            foreach ($checked as $id) {            
+        if ($checked = post('checked')) {
+            foreach ($checked as $id) {
                 //Log::info($id);
                 $article = Article::find($id);
-                $article->visibility = true; 
-                $article->save();              
+                $article->visibility = true;
+                $article->save();
             }
-        }        
+        }
     }
 
     public function onMakeActiveOne()
-    {        
+    {
         //Log::info(post('id'));
         if (post('id')) {
             $article = Article::find(post('id'));
             $article->visibility = true;
             $article->save();
         }
-        return $this->listRefresh();       
+        return $this->listRefresh();
     }
 
     public function listExtendColumns($list)
@@ -78,4 +79,6 @@ class Articles extends Controller
             'test111'
         ]);
     }
+
+
 }

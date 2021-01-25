@@ -19,8 +19,9 @@ class Article extends Model
     public $table = 'acme_blog_articles';
 
     public $implement = [
-        'RainLab\Translate\Behaviors\TranslatableModel'
-    ];    
+        'RainLab\Translate\Behaviors\TranslatableModel',
+        '@Renatio.SeoManager.Behaviors.SeoModel'
+    ];
 
     /**
      * @var array Guarded fields
@@ -53,7 +54,7 @@ class Article extends Model
         'name' => 'required',
         'slug' => 'required',
         'content' => 'required',
-        'image' => 'required',        
+        'image' => 'required',
     ];
 
     /**

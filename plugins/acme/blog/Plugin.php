@@ -5,6 +5,8 @@ use Acme\Blog\Models\Photo;
 use Backend;
 use System\Classes\PluginBase;
 
+use Illuminate\Support\Facades\Event;
+
 /**
  * Blog Plugin Information File
  */
@@ -16,7 +18,7 @@ class Plugin extends PluginBase
      * @return array
      */
     public function pluginDetails()
-    {        
+    {
         return [
             'name'        => 'Blog',
             'description' => 'No description provided yet...',
@@ -62,8 +64,38 @@ class Plugin extends PluginBase
                     'comment' => 'This is a custom field I have added.',
                 ],
             ]);
-
         });
+
+        Event::listen('seo.extendSeoFields', function ($fields) {
+
+            $fields = array_add($fields,
+                "seo_tag[Test]", [
+                    "label" => "Test",
+                    "tab" => "renatio.seomanager::lang.tab.meta",
+                    "comment" => "renatio.seomanager::lang.comments.meta_title",
+                    "commentHtml" => true,
+                    "cssClass" => "countable",
+                ]);
+
+			//$fields->addFields([
+			//    'test' => [
+			//        'label'   => 'Test',
+			//        'type' => 'text',
+			//    ],
+			//]);
+
+			return $fields; // remember to return modified fields array
+		});
+
+
+        Event::listen('seo.beforeComponentRender', function ($component, $page) {
+			//dd($page);
+			if ($page->url == '/info-article/:slug') {
+				$component->seoTag = $page->controller->vars['article']->seo_tag;
+                $component->seoTag['meta_title'] = "New title";
+                //dd($component->seoTag);
+			}
+		});
     }
 
     /**

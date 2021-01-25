@@ -32,4 +32,6 @@ class Articles extends ComponentBase
             ]
         ];
     }
+
+    
 }

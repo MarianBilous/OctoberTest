@@ -2,6 +2,10 @@ title = "Info article"
 url = "/info-article/:slug"
 layout = "default"
 is_hidden = 0
+meta_title = "Info article"
+meta_description = "Info article"
+robot_index = "index"
+robot_follow = "follow"
 
 [articleDetail]
 
@@ -10,22 +14,21 @@ forceUrl = 0
 ==
 <div class="card mt-4">
     <div style="text-align: center">
-        <img class="card-img-top img-fluid" src="{{ articleDetail.getSlug.image.thumb(200,auto) }}" style="width: 440px; height: auto;">
+        <img class="card-img-top img-fluid" src="{{ article.image.thumb(200,auto) }}" style="width: 440px; height: auto;">
     </div>
-
     <div class="card-body">
-        <h3 class="card-title">{{ articleDetail.getSlug.name }} </h3>
-        {{ articleDetail.getSlug.content|raw }}
+        <h3 class="card-title">{{ article.name }} </h3>
+        {{ article.content|raw }}
         <div>
-            {{ 'Date created:'|_ }} {{ articleDetail.getSlug.created_at }}
+            {{ 'Date created:'|_ }} {{ article.created_at }}
         </div>
         <div>
-            {{ 'Date updated:'|_ }} {{ articleDetail.getSlug.updated_at }}
+            {{ 'Date updated:'|_ }} {{ article.updated_at }}
         </div>
 
         <h3>{{ 'Category'|_ }}</h3>
 
-        {{ articleDetail.getSlug.category.name }}
+        {{ article.category.name }}
 
         <h3>{{ 'Tags'|_ }}</h3>
 

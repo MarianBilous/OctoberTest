@@ -6,6 +6,7 @@ storage/**
 /vendor
 .idea
 .env
+.vs
 .env.backup
 .phpunit.result.cache
 Homestead.json

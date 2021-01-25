@@ -1,7 +1,11 @@
 title = "Blog news"
 url = "/"
 layout = "default"
+meta_title = "Blog news"
+meta_description = "Blog news"
 is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
 
 [localePicker]
 forceUrl = 0
@@ -18,8 +22,7 @@ security = "all"
 ==
 <div class="col-sm-9 content-container">
     <div class="m-4">
-        <div class="row">
-            
+        <div class="row">            
             {% component 'Articles' %}
         </div>
     </div>

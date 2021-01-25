@@ -3,6 +3,7 @@
 use Cms\Classes\ComponentBase;
 use Acme\Blog\Models\Article;
 
+
 class ArticleDetail extends ComponentBase
 {
     public function componentDetails()
@@ -22,4 +23,9 @@ class ArticleDetail extends ComponentBase
     {
         return [];
     }
+
+    public function onRun()
+	{
+		$this->page['article'] = $this->getSlug();        
+	}
 }

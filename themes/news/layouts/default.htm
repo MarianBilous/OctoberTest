@@ -2,17 +2,18 @@ description = "Default layout"
 
 [staticMenu]
 code = "main-menu"
+
+[seoTags]
 ==
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>{{ this.page.title }}</title>
+        {% component 'seoTags' %}
         <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css'|theme }}">
         {% styles %}
     </head>
     <body>
-
+        
         <!-- Header -->
         <header id="layout-header">
             {% partial 'site/header' %}
