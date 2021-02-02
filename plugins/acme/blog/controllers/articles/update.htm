@@ -1,58 +1,65 @@
-<?php Block::put('breadcrumb') ?>
-    <ul>
-        <li><a href="<?= Backend::url('acme/blog/articles') ?>">Articles</a></li>
-        <li><?= e($this->pageTitle) ?></li>
-    </ul>
-<?php Block::endPut() ?>
+<?php if ($this->user->hasAccess('acme.blog.update_articles')): ?>
+    
+    <?php Block::put('breadcrumb') ?>
+        <ul>
+            <li><a href="<?= Backend::url('acme/blog/articles') ?>">Articles</a></li>
+            <li><?= e($this->pageTitle) ?></li>
+        </ul>
+    <?php Block::endPut() ?>
 
-<?php if (!$this->fatalError): ?>
+    <?php if (!$this->fatalError): ?>
 
-    <?= Form::open(['class' => 'layout']) ?>
+        <?= Form::open(['class' => 'layout']) ?>
 
-        <div class="layout-row">
-            <?= $this->formRender() ?>
-        </div>
-
-        <div class="form-buttons">
-            <div class="loading-indicator-container">
-                <button
-                    type="submit"
-                    data-request="onSave"
-                    data-browser-validate
-                    data-request-data="redirect:0"
-                    data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving Article..."
-                    class="btn btn-primary">
-                    <u>S</u>ave
-                </button>
-                <button
-                    type="button"
-                    data-request="onSave"
-                    data-browser-validate
-                    data-request-data="close:1"
-                    data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving Article..."
-                    class="btn btn-default">
-                    Save and Close
-                </button>
-                <button
-                    type="button"
-                    class="oc-icon-trash-o btn-icon danger pull-right"
-                    data-request="onDelete"
-                    data-load-indicator="Deleting Article..."
-                    data-request-confirm="Delete this article?">
-                </button>
-                <span class="btn-text">
-                    or <a href="<?= Backend::url('acme/blog/articles') ?>">Cancel</a>
-                </span>
+            <div class="layout-row">
+                <?= $this->formRender() ?>
             </div>
-        </div>
 
-    <?= Form::close() ?>
+            <div class="form-buttons">
+                <div class="loading-indicator-container">
+                    <button
+                        type="submit"
+                        data-request="onSave"
+                        data-browser-validate
+                        data-request-data="redirect:0"
+                        data-hotkey="ctrl+s, cmd+s"
+                        data-load-indicator="Saving Article..."
+                        class="btn btn-primary">
+                        <u>S</u>ave
+                    </button>
+                    <button
+                        type="button"
+                        data-request="onSave"
+                        data-browser-validate
+                        data-request-data="close:1"
+                        data-hotkey="ctrl+enter, cmd+enter"
+                        data-load-indicator="Saving Article..."
+                        class="btn btn-default">
+                        Save and Close
+                    </button>
+                    <button
+                        type="button"
+                        class="oc-icon-trash-o btn-icon danger pull-right"
+                        data-request="onDelete"
+                        data-load-indicator="Deleting Article..."
+                        data-request-confirm="Delete this article?">
+                    </button>
+                    <span class="btn-text">
+                        or <a href="<?= Backend::url('acme/blog/articles') ?>">Cancel</a>
+                    </span>
+                </div>
+            </div>
 
+        <?= Form::close() ?>
+
+    <?php else: ?>
+
+        <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+        <p><a href="<?= Backend::url('acme/blog/articles') ?>" class="btn btn-default">Return to articles list</a></p>
+
+    <?php endif ?>
+    
 <?php else: ?>
-
-    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('acme/blog/articles') ?>" class="btn btn-default">Return to articles list</a></p>
-
+    <?php App::abort(403, "Error") ?>
 <?php endif ?>
+    

@@ -206,11 +206,21 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-
         return [
-            'acme.blog.some_permission' => [
+            'acme.blog.create_articles' => [
                 'tab' => 'Blog',
-                'label' => 'Some permission'
+                'label' => 'Create articles',
+                'roles' => ['developer']
+            ],
+            'acme.blog.update_articles' => [
+                'tab' => 'Blog',
+                'label' => 'Update articles',
+                'roles' => ['developer']
+            ],
+            'acme.blog.delete_articles' => [
+                'tab' => 'Blog',
+                'label' => 'Delete articles',
+                'roles' => ['developer']
             ],
         ];
     }
