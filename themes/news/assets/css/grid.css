@@ -1,0 +1,37 @@
+/* !CONTAINERS */
+/*-----------------------------------------*/
+
+/*html,body{
+	height: 100%;
+	width: 100%;
+	max-height: none;
+	max-width: none;
+	overflow: hidden;*//*Prevent scrollbars in IE8*/
+	/*margin: 0;
+}*/
+/*body {
+	position: fixed;
+	left: 5px;
+	right: 5px;
+	top: 5px;
+	bottom: 5px;
+	height: auto;
+	width: auto;
+}*/
+
+
+
+#Frame1 {
+	position: absolute;
+	overflow: hidden;
+	border: 5px solid #fff;
+	margin: -5px 0 0 -5px;
+}
+#Frame1 {
+	width: 66.6666667%;
+	left: 0;
+}
+#Frame1 {
+	height: 66.6666667%;
+	top: 0;
+}

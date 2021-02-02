@@ -11,7 +11,7 @@ use Test\Profile\Models\Profile;
  */
 class Plugin extends PluginBase
 {
-    public $require = ['RainLab.User'];
+    //public $require = ['RainLab.User'];
 
     /**
      * Returns information about this plugin.
@@ -45,52 +45,58 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-        // UserModel::extend(function ($model)
-        // {
-        //     $model->hasOne['profile'] = ['Test\Profile\Models\Profile'];
-        // });
+         UserModel::extend(function ($model)
+         {
+             $model->hasOne['profile'] = ['Test\Profile\Models\Profile'];
+         });
 
-//        UsersController::extendListColumns(function($list, $model) {
-//            if (!$model instanceof UserModel)
-//            return;
-//
-//            $list->addColumns([
-//                'headline' => [
-//                    'label' => 'Headline',
-//                ],
-//                'about_me' => [
-//                    'label' => 'About me',
-//                ],
-//                'music' => [
-//                    'label' => 'Music',
-//                ],
-//            ]);
-//
-//        });
-//
-//        UsersController::extendFormFields(function($form, $model, $context) {
-//            if (!$model instanceof UserModel)
-//                return;
-//
-//            $form->addTabFields([
-//
-//                'headline' => [
-//                    'label' => 'Headline',
-//                    'tab' => 'Profile',
-//                ],
-//                'about_me' => [
-//                    'label' => 'About me',
-//                    'tab' => 'Profile',
-//                    'type' => 'textarea',
-//                ],
-//                'music' => [
-//                    'label' => 'Music',
-//                    'tab' => 'Profile',
-//                    'type' => 'textarea',
-//                ],
-//            ]);
-//
-//        });
+		UsersController::extendListColumns(function($list, $model) {
+		    if (!$model instanceof UserModel)
+		    return;
+
+		    $list->addColumns([
+		        'profile[headline]' => [
+		            'label' => 'Headline',
+		        ],
+		        'about_me' => [
+		            'label' => 'About me',
+		        ],
+		        'music' => [
+		            'label' => 'Music',
+		        ],
+		    ]);
+
+		});
+
+        UsersController::extendFormFields(function($form, $model, $context) {
+            if (!$model instanceof UserModel)
+                return;
+
+			if (!$model->exists)
+                return;
+
+            Profile::getFromUser($model);
+
+            $form->addTabFields([
+
+                'profile[headline]' => [
+                    'label' => 'Headline',
+                    'tab' => 'Profile',
+                    'type' => 'text',
+                ],
+                'profile[about_me]' => [
+                    'label' => 'About me',
+                    'tab' => 'Profile',
+                    'type' => 'text',
+                ],
+                'profile[music]' => [
+                    'label' => 'Music',
+                    'tab' => 'Profile',
+                    'type' => 'text',
+                ],
+            ]);
+
+        });
     }
 
     /**

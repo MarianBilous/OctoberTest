@@ -5,7 +5,7 @@ use BackendMenu;
 use Backend\Classes\Controller;
 use Illuminate\Support\Facades\Mail;
 use October\Rain\Support\Facades\Flash;
-
+use Illuminate\Contracts\Queue\Queue;
 /**
  * Contacts Back-end Controller
  */
@@ -49,19 +49,25 @@ class Contacts extends Controller
 
     public function onSendEmail()
     {
+        $fromMaile = post('email');
+		$user = Contact::find(post('userId'));
+        \Queue::push('\Acme\Blog\Classes\Jobs\MyContact', ['user' => $user, 'fromMaile' => $fromMaile]);
+    }
+
+    public function fire($job, $data)
+	{
 		$fromMaile = post('email');
 		$user = Contact::find(post('userId'));
 
-		Mail::send('acme.blog::message',
+		Mail::queue('acme.blog::message',
 		    ['fromMaile' => $fromMaile,
 		        'userEmail' => $user->email,
 		        'name' => $user->name ], function($message) use ($fromMaile, $user){
-		        $message->from($fromMaile);
-		        $message->to($user->email);
-		        $message->subject('Test message');
-		    });
+					$message->from($fromMaile);
+					$message->to($user->email);
+					$message->subject('Test message');
+				});
 
 		Flash::success("Email has been sent");
-
-    }
+	}
 }

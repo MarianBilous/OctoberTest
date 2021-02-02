@@ -1,0 +1,28 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    file_id:
+        label: Files id
+        searchable: true
+    
+    focus_x:
+        label: Focus x
+        searchable: true
+
+    focus_y:
+        label: Focus y
+        searchable: true
+
+    image_w:
+        label: Image w
+        searchable: true
+
+    image_h:
+        label: Image h
+        searchable: true

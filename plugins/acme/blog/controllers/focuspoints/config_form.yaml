@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Focus Point
+
+# Model Form Field configuration
+form: $/acme/blog/models/focuspoint/fields.yaml
+
+# Model Class name
+modelClass: Acme\Blog\Models\FocusPoint
+
+# Default redirect location
+defaultRedirect: acme/blog/focuspoints
+
+# Create page
+create:
+    title: Create Focus Point
+    redirect: acme/blog/focuspoints/update/:id
+    redirectClose: acme/blog/focuspoints
+
+# Update page
+update:
+    title: Edit Focus Point
+    redirect: acme/blog/focuspoints
+    redirectClose: acme/blog/focuspoints
+
+# Preview page
+preview:
+    title: Preview Focus Point

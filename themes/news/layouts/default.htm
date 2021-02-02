@@ -9,11 +9,15 @@ code = "main-menu"
 <html>
     <head>
         {% component 'seoTags' %}
+        <link rel="stylesheet" href="{{ 'assets/css/app.css'|theme }}">
         <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/focuspoint.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/helper-tool.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/grid.css'|theme }}">
+        
         {% styles %}
     </head>
-    <body>
-        
+    <body>        
         <!-- Header -->
         <header id="layout-header">
             {% partial 'site/header' %}
@@ -36,10 +40,48 @@ code = "main-menu"
 
 
         </section>
+       
+	<div id="Frames">
+		<!--<div class="focuspoint" id="Frame1"
+			data-focus-x="0.331"
+			data-focus-y="-0.224"
+			data-image-w="400"
+			data-image-h="300">
+			<img src="{{ 'assets/ozero_les_sneg_130421_1920x1200.jpg'|theme }}"/>
+		</div>-->
+	</div>
+	
 
+	<div id="Info">
+		<div class="helper-tool">
+			<h1>Click the image to set the FocusPoint.</h1>
+				<!--<img class="focus-target-reticle" src='{{ 'assets/img/focuspoint-target.png'|theme }}' /> -->
+			<div class="helper-tool-target">
+				<img class="helper-tool-img" src="{{ 'assets/ozero_les_sneg_130421_1920x1200.jpg'|theme }}">
+				<img class="reticle" src="{{ 'assets/img/focuspoint-target.png'|theme }}" style="top: 48.5954%; left: 46.8021%;">
+				<img class="target-overlay" src="{{ 'assets/ozero_les_sneg_130421_1920x1200.jpg'|theme }}">
+			</div>
+			<p>
+				<label for="set-src">Paste in a URL to change the image</label>
+				<input name="set-src" id="set-src" class="helper-tool-set-src" type="text">
+			</p>
+			<p>
+				<label for="data-attr">FocusPoint data- attributes:</label>
+				<input class="helper-tool-data-attr" id="data-attr" name="data-attr" type="text" placeholder="data-focus-x=&quot;0&quot; data-focus-y=&quot;0&quot; ">	
+			</p>
+			<p>
+				<label for="css3-val">CSS3 Background Position:</label>
+				<input class="helper-tool-css3-val" id="css3-val" name="css3-val" type="text" placeholder="background-position:">	
+			</p>
+		</div><!-- End Helper Tool -->
+
+</div>
         <!-- Scripts -->
 <!--        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>-->
         <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/jquery.focuspoint.helpertool.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/jquery.focuspoint.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
         {% framework extras %}
         {% scripts %}

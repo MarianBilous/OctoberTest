@@ -34,3 +34,9 @@
 1.0.9:
   - Update article table
   - create_articles_table_2.php
+1.0.10:
+  - Create focus table
+  - create_focus_points_table.php
+1.0.11:
+  - Create focus table
+  - create_focus_points_table.php

@@ -1,11 +1,15 @@
 <?php namespace Acme\Blog;
 
 use Acme\Blog\Controllers\Photos;
+use Acme\Blog\Controllers\FocusPoints;
+use Acme\Blog\Models\FocusPoint;
 use Acme\Blog\Models\Photo;
 use Backend;
 use System\Classes\PluginBase;
-
 use Illuminate\Support\Facades\Event;
+
+use System\Models\File;
+use Backend\Controllers\Files;
 
 /**
  * Blog Plugin Information File
@@ -44,6 +48,82 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+        File::extend(function ($model) {
+            $model->hasOne['focus_point'] = FocusPoint::class;
+
+			//$model->bindEvent('model.beforeCreate', function() use ($model) {
+			//    $model->focus_point = new FocusPoint;
+			//});
+        });
+
+		Event::listen('backend.form.extendFields', function ($fields) {
+			//dd($fields);
+			if (!$fields->model instanceof File)
+			    return;
+
+            if (!$fields->model->exists)
+                return;
+
+			if (!$fields->model->focus_point)
+                $fields->model->focus_point = new FocusPoint();
+
+			//FocusPoint::getFromFile($fields->model);
+
+			//if (!$fields->getController() instanceof FocusPoint)
+			//    return;
+
+            $fields->addFields([
+                'focus_point[focus_x]' => [
+                    'label' => 'Focus_x',
+                    'type' => 'text',
+                ],
+                'focus_point[focus_y]' => [
+                    'label' => 'Focus_y',
+                    'type' => 'text',
+                ],
+                'focus_point[percentage_x]' => [
+                    'label' => 'Percentage_x',
+                    'type' => 'number',
+                ],
+                'focus_point[percentage_y]' => [
+                    'label' => 'Percentage_y',
+                    'type' => 'number',
+                ],
+            ]);
+        });
+
+		//Event::listen('backend.form.extendFields', function ($fields) {
+		//    foreach (File::get() as $file) {
+		//        if ($file->focus_point === null) {
+		//            $file->focus_point = new FocusPoint;
+		//            $file->save();
+		//        }
+		//    }
+		//});
+
+		//File::extend(function($model) {
+		//    $model->addDynamicMethod('listStatuses', function($query) {
+		//        return [
+		//            1 => 'Main',
+		//            2 => 'Main 2',
+		//        ];
+		//    });
+		//});
+
+		//FocusPoints::extendFormFields(function($form, $model, $context)
+		//{
+		//    if (!$model instanceof File) {
+		//        return;
+		//    }
+
+		//    $form->addFields([
+		//        'focus[test]' => [
+		//            'label'   => 'Test',
+		//            'type' => 'text',
+		//        ],
+		//    ]);
+		//});
+
         Photos::extendFormFields(function($form, $model, $context)
         {
             if (!$model instanceof Photo) {
@@ -87,7 +167,6 @@ class Plugin extends PluginBase
 			return $fields; // remember to return modified fields array
 		});
 
-
         Event::listen('seo.beforeComponentRender', function ($component, $page) {
 			//dd($page);
 			if ($page->url == '/info-article/:slug') {
@@ -97,6 +176,7 @@ class Plugin extends PluginBase
 			}
 		});
     }
+
 
     /**
      * Registers any front-end components implemented in this plugin.
@@ -152,7 +232,8 @@ class Plugin extends PluginBase
             'Acme\Blog\FormWidgets\UniqueValue' => [
                 'label' => 'Unique Value',
                 'code' => 'uniquevalue'
-            ]
+            ],
+            'Acme\Blog\FormWidgets\FocusPointWidget' => 'focuspointwidget'
         ];
     }
 
@@ -215,6 +296,11 @@ class Plugin extends PluginBase
                         'label'       => 'Photo',
                         'icon'        => 'icon-magic',
                         'url'         => \Backend::url('acme/blog/photos'),
+                    ],
+                    'focuspoints' => [
+                        'label'       => 'Focus Point',
+                        'icon'        => 'icon-magic',
+                        'url'         => \Backend::url('acme/blog/focuspoints'),
                     ]
                 ]
             ],

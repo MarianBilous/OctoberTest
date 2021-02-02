@@ -17,6 +17,8 @@ jQuery(document).ready(function($){
         scrollDelta = 10,
         scrollOffset = 150
 
+    
+
     $(window).on('scroll', function(){
         if (!scrolling) {
             scrolling = true
