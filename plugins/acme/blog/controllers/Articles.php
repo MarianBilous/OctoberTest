@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Log;
 use October\Rain\Support\Facades\Flash;
 
 use Illuminate\Support\Facades\Event;
+// use Illuminate\Support\Facades\Response;
+// use Illuminate\Support\Facades\View;
+
 /**
  * Articles Back-end Controller
  */
@@ -20,6 +23,12 @@ class Articles extends Controller
         'Backend.Behaviors.ListController',
         'Backend.Behaviors.RelationController',
         'Backend.Behaviors.ImportExportController',
+    ];
+
+    public $requiredPermissions = [
+        'acme.blog.create_articles',
+        'acme.blog.update_articles',
+        'acme.blog.delete_articles'
     ];
 
     /**
@@ -49,6 +58,22 @@ class Articles extends Controller
         BackendMenu::setContext('Acme.Blog', 'blog', 'articles');
     }
 
+    public function create($context = null)
+    {
+        if (!$this->user->hasAccess(['acme.blog.create_articles'])) {
+            return \Response::make(\View::make('backend::access_denied'), 403);
+        }
+        return $this->asExtension('FormController')->create($context);
+    }
+
+    public function update($recordId = null, $context = null)
+    {
+        if (!$this->user->hasAccess(['acme.blog.update_articles'])) {
+            return \Response::make(\View::make('backend::access_denied'), 403);
+        }
+        return $this->asExtension('FormController')->update($recordId, $context);
+    }
+
     public function onMakeActive()
     {
         $article = new Article;
@@ -61,7 +86,7 @@ class Articles extends Controller
             }
         }
     }
-
+    
     public function onMakeActiveOne()
     {
         //Log::info(post('id'));

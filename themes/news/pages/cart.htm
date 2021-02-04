@@ -1,0 +1,23 @@
+title = "Cart"
+url = "/cart"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[Cart]
+==
+{% set obCartElementList = Cart.get() %}
+{% if obCartElementList.isNotEmpty() %}
+    {% for obCartElement in obCartElementList %}
+        {% set obOffer = obCartElement.offer %}
+        <div>Name: {{ obOffer.product.name }}</div>
+        <div>Quantity: <input type="number" value="{{ obCartElement.quantity }}"></div>
+        <div>Price: {{ obOffer.price }} {{ obOffer.currency }}</div>
+        <div>Total price: {{ obCartElement.price }} {{ obCartElement.currency }}</div>
+    {% endfor %}
+
+    <div>Total price: {{ obCartElementList.getTotalPrice() }} {{ obCartElementList.getCurrency() }}</div>
+{% else %}
+ <div>Cart is empty</div>
+{% endif %}

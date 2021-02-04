@@ -146,35 +146,35 @@ class Plugin extends PluginBase
             ]);
         });
 
-        Event::listen('seo.extendSeoFields', function ($fields) {
+        // Event::listen('seo.extendSeoFields', function ($fields) {
 
-            $fields = array_add($fields,
-                "seo_tag[Test]", [
-                    "label" => "Test",
-                    "tab" => "renatio.seomanager::lang.tab.meta",
-                    "comment" => "renatio.seomanager::lang.comments.meta_title",
-                    "commentHtml" => true,
-                    "cssClass" => "countable",
-                ]);
+        //     $fields = array_add($fields,
+        //         "seo_tag[Test]", [
+        //             "label" => "Test",
+        //             "tab" => "renatio.seomanager::lang.tab.meta",
+        //             "comment" => "renatio.seomanager::lang.comments.meta_title",
+        //             "commentHtml" => true,
+        //             "cssClass" => "countable",
+        //         ]);
 
-			//$fields->addFields([
-			//    'test' => [
-			//        'label'   => 'Test',
-			//        'type' => 'text',
-			//    ],
-			//]);
+		// 	//$fields->addFields([
+		// 	//    'test' => [
+		// 	//        'label'   => 'Test',
+		// 	//        'type' => 'text',
+		// 	//    ],
+		// 	//]);
 
-			return $fields; // remember to return modified fields array
-		});
+		// 	return $fields; // remember to return modified fields array
+		// });
 
-        Event::listen('seo.beforeComponentRender', function ($component, $page) {
-			//dd($page);
-			if ($page->url == '/info-article/:slug') {
-				$component->seoTag = $page->controller->vars['article']->seo_tag;
-                $component->seoTag['meta_title'] = "New title";
-                //dd($component->seoTag);
-			}
-		});
+        // Event::listen('seo.beforeComponentRender', function ($component, $page) {
+		// 	//dd($page);
+		// 	if ($page->url == '/info-article/:slug') {
+		// 		$component->seoTag = $page->controller->vars['article']->seo_tag;
+        //         $component->seoTag['meta_title'] = "New title";
+        //         //dd($component->seoTag);
+		// 	}
+		// });
     }
 
 
@@ -209,18 +209,15 @@ class Plugin extends PluginBase
         return [
             'acme.blog.create_articles' => [
                 'tab' => 'Blog',
-                'label' => 'Create articles',
-                'roles' => ['developer']
+                'label' => 'Create articles'
             ],
             'acme.blog.update_articles' => [
                 'tab' => 'Blog',
-                'label' => 'Update articles',
-                'roles' => ['developer']
+                'label' => 'Update articles'
             ],
             'acme.blog.delete_articles' => [
                 'tab' => 'Blog',
-                'label' => 'Delete articles',
-                'roles' => ['developer']
+                'label' => 'Delete articles'
             ],
         ];
     }
