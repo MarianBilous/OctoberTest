@@ -65,7 +65,6 @@ class Cart extends ComponentBase
     public function onAdd()
     {
         $arRequestData = Input::get('cart');
-        //dd(Input::get('cart'));
         CartProcessor::instance()->add($arRequestData, OfferCartPositionProcessor::class);
         Result::setData(CartProcessor::instance()->getCartData());
 

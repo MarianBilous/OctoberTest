@@ -1,0 +1,23 @@
+{% set obCartElementList = Cart.get() %}
+    {% if obCartElementList.isNotEmpty() %}
+        {% for obCartElement in obCartElementList %}
+            {% set obOffer = obCartElement.offer %}
+            <form>
+                <input class="offerId" value="{{ obOffer.id }}" hidden />
+                <div>Name: {{ obOffer.product.name }}</div>
+                <div>Quantity: <input class="_quantity_field" type="number" value="{{ obCartElement.quantity }}"></div>
+                <div>Price: {{ obOffer.price }} {{ obOffer.currency }}</div>
+                <button class="uk-button uk-button-secondary _cart_item_up">Up</button>
+                <button class="uk-button uk-button-secondary _offer_remove_cart_button">Remove</button>
+            </form>
+        {% endfor %}
+
+        <div>Total price: 
+            <strong class="_cart_total_cost">
+                {% partial 'cart/cart-total-price' %}    
+            </strong>
+            <!-- {{ obCartElementList.getTotalPrice() }} {{ obCartElementList.getCurrency() }} -->
+        </div>
+    {% else %}
+    <div>Cart is empty</div>
+    {% endif %}

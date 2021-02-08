@@ -52,60 +52,77 @@ code = "main-menu"
         
         <script>
             $(function(){
+                
                 $('body').on('submit', '._choose_offer_form', function (e) {
 
                     e.preventDefault();
-                    let elem = document.querySelector('[data-id]');
-
+                    //console.log($(this).data("id"))
                     var _this = $(e.currentTarget),
-                        offer_id = elem.getAttribute('data-id'),
-                        quantity = _this.find('._quantity_field').val();
+                        //offer_id = _this.data("id"),
+                        offer_id = _this.find('#offer_id').val(),
+                        quantity = _this.find('._quantity_field').val();  
 
                     if(!offer_id) {
                         return;
                     }
-                    console.log('offer_id: ' + offer_id);
-                    console.log('quantity: ' + quantity);
 
                     $.request('Cart::onAdd', {
                         data: {
                             'cart': [{'offer_id': offer_id, 'quantity': quantity}]
                         },
-                        update: {'cart/cart-items': '._cart_info_wrapper'},
-                        complete: function (data) {
+                        update: {'cart/cart-items': '._cart_info_wrapper'},                      
+                    }).done(function() {
+                        console.log("окк");
+                    }).fail(function() {
+                        console.log("error");
+                    });
+                });
 
-                            console.log(data.responseJSON)
+                $('body').on('click', '._offer_remove_cart_button', function (e) {
 
-                            $('._offer_buy_button').addClass('uk-hidden');
-                            $('._offer_in_cart_button').removeClass('uk-hidden');
+                    e.preventDefault();
+                    
+                    var _this = $(e.currentTarget),
+                        offer_id = $('.offerId').val();
+                    
+                    if(!offer_id) {
+                        return;
+                    }                    
+
+                    $.request('Cart::onRemove', {
+                        data: {
+                            'cart': [offer_id]
+                        },
+                        update: {
+                            'cart/cart-item-list': '._cart_item_list',
+                            'cart/cart-items': '._cart_info_wrapper'                            
                         }
                     });
-                    });
-                // $('.add_cart_btn').on('click', function (e) {
-
-                //     e.preventDefault();
-
-                //     let elem = document.querySelector('[data-id]');
-                //     var _this = $(e.currentTarget),
-                //         offer_id = elem.getAttribute('data-id'),                    
-                //         quantity = $('.getProd').find('._quantity_field').val();
+                });
+                
+                $('body').on('click', '._cart_item_up', function (e) {
                     
-                //     if(!offer_id) {
-                //         return;
-                //     }
-                //     console.log('offer_id: ' + offer_id);
-                //     console.log('quantity: ' + quantity);
+                    e.preventDefault();
+                    
+                    var _this = $(e.currentTarget),
+                        offer_id = $('.offerId').val(),
+                        quantity = $('._quantity_field').val();
 
-                //     $.request('Cart::onAdd', {
-                //         data: {
-                //             'cart': [{'offer_id': offer_id, 'quantity': quantity}]
-                //         },
-                //         update: {'cart/cart-items': '._cart_info_wrapper'},
-                //         complete: function(data) {
-                //             console.log(data.responseJSON)                            
-                //             }
-                //     });
-                // });               
+                    if(!offer_id) {
+                        return;
+                    }
+
+                    $.request('Cart::onUpdate', {
+                        data: {
+                            'cart': [{'offer_id': offer_id, 'quantity': quantity}]
+                        },
+                        update: {
+                            'cart/cart-items': '._cart_info_wrapper',
+                            'cart/cart-item-list': '._cart_item_list',
+                            'cart/cart-total-price': '._cart_total_cost'
+                        }
+                    });
+                });               
 
             });
         </script>

@@ -42,12 +42,7 @@ forceUrl = 0
                     {{ 'Cart'|_ }}
                 </a> -->
                 <div class="_cart_info_wrapper">
-                    <!-- <div class="uk-margin-small-right uk-animation-shake _cart_info" data-offer-list="" style="color: aliceblue;">
-                        <a class="navbar-brand uk-icon-button uk-icon" href="{{ 'cart'|page }}" uk-icon="icon: cart; ratio: 1.5"><svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" ratio="1.5"> <circle cx="7.3" cy="17.3" r="1.4"></circle> <circle cx="13.3" cy="17.3" r="1.4"></circle> <polyline fill="none" stroke="#000" points="0 2 3.2 4 5.3 12.5 16 12.5 18 6.5 8 6.5"></polyline></svg></a>
-                        <span>Goods: <strong>0</strong>,
-                            Total cost: <strong>0.00</strong>
-                        </span>
-                    </div>             -->
+                    {% partial 'cart/cart-items' %}
                 </div>
                 
             </ul>

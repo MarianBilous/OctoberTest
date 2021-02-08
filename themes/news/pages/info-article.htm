@@ -38,8 +38,7 @@ forceUrl = 0
         {% for tag in articleDetail.getSlug.tag %}
             {{ tag.name }}
         {% endfor %}
-    </div> -->
-    {# Get product item #}
+    </div> -->    
     {% set obProduct = ProductPage.get() %}
     <div data-id="{{ obProduct.id }}">
         <h1>{{ obProduct.name }}</h1>
@@ -52,6 +51,9 @@ forceUrl = 0
         {% set obOffer = obProduct.offer.first() %}
         {% if obOffer.isNotEmpty()%}  
             <span>Price: {{ obOffer.price }} {{ obOffer.currency }}</span>
+            {% if obOffer.old_price_value > 0 %}
+                <s>{{ obOffer.old_price }} {{ obOffer.currency }}</s>
+            {% endif %}
         {% endif %}
         <div>{{ obProduct.description|raw }}</div>
     </div>

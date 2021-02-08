@@ -6,18 +6,53 @@ robot_index = "index"
 robot_follow = "follow"
 
 [Cart]
-==
-{% set obCartElementList = Cart.get() %}
-{% if obCartElementList.isNotEmpty() %}
-    {% for obCartElement in obCartElementList %}
-        {% set obOffer = obCartElement.offer %}
-        <div>Name: {{ obOffer.product.name }}</div>
-        <div>Quantity: <input type="number" value="{{ obCartElement.quantity }}"></div>
-        <div>Price: {{ obOffer.price }} {{ obOffer.currency }}</div>
-        <div>Total price: {{ obCartElement.price }} {{ obCartElement.currency }}</div>
-    {% endfor %}
 
-    <div>Total price: {{ obCartElementList.getTotalPrice() }} {{ obCartElementList.getCurrency() }}</div>
-{% else %}
- <div>Cart is empty</div>
+[ShippingTypeList]
+
+[PaymentMethodList]
+
+[MakeOrder]
+==
+<div class="col-md-6 _cart_item_list">   
+    {% partial 'cart/cart-item-list' %}    
+   
+    {% set arError = MakeOrder.getErrorMessage %}
+    {% set arForm = MakeOrder.getOldFormData %}
+
+<form>
+    <label for="field-email">Email</label>
+    <input type="email" id="field-email" placeholder="Email" name="user[email]" value="{{ arForm.user.email }}">
+    {% if arError.message is not empty and arError.field == 'email' %}
+        <p>{{ arError.message }}</p>
+    {% endif %}
+
+    <label for="field-company-name">Company name</label>
+    <input type="text" id="field-company-name" placeholder="My company" name="user[property][company_name]" value="{{ arForm.user.property.company_name }}">
+
+    {% set obPaymentMethodList = PaymentMethodList.make().sort().active() %}
+    {% if obPaymentMethodList.isNotEmpty() %}
+        <div class="payment-method-list-wrapper">
+            {% for obPaymentMethod in obPaymentMethodList %}
+                <input type="radio" name="order[payment_method_id]" id="payment-{{ obPaymentMethod.id }}" value="{{ obPaymentMethod.id }}">
+                <label for="payment-{{ obPaymentMethod.id }}">{{ obPaymentMethod.name }}</label>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% set obShippingTypeList = ShippingTypeList.make().sort().active() %}
+    {% if obShippingTypeList.isNotEmpty() %}
+        <div class="payment-method-list-wrapper">
+            {% for obShippingType in obShippingTypeList %}
+                <input type="radio" name="order[shipping_type_id]" id="payment-{{ obShippingType.id }}" value="{{ obShippingType.id }}">
+                <label for="payment-{{ obShippingType.id }}">{{ obShippingType.name }}</label>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <input type="hidden" name="order[shipping_price]" value="5.50">
+    <button type="submit">Submit</button>
+</form>
+{% if arError.message is not empty %}
+    <p>{{ arError.message }}</p>
 {% endif %}
+</div>
